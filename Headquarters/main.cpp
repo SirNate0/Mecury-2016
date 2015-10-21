@@ -47,7 +47,7 @@ BottomMemoryAllocator bma;
 struct Joystick
 {
 	short x, y, x2, y2, l, r;
-	static const int BUTTONS = 13;
+	static const int BUTTONS = 11;
 	unsigned char buttons[BUTTONS];
 	void Read(SDL_Joystick* joy)
 	{
@@ -67,9 +67,10 @@ struct Joystick
 		printf("(%d, %d), (%d, %d) [%d | %d]\n", x,y,x2,y2,l,r);
 		for (int i = 0; i < BUTTONS; i++)
 			if (buttons[i])
-				printf("%d:+ ", i);
+				printf("%d:@ ", i);
 			else
 				printf("%d:  ", i);
+//			printf("A%s") todo: use proper labels for the buttons
 		printf("\n");
 
 	}
@@ -116,6 +117,7 @@ class ServerListener : public INetworkServerListener
 	int count;
 public:
 	ServerListener(): count(0) {}
+	virtual ~ServerListener() {}
 	void NewConnectionEstablished(MessageConnection *connection)
 	{
 //		const int maxMsgBytes = 256;
@@ -205,20 +207,22 @@ int main(int argc, char **argv)
 		// Run the main client loop.
 //		connection->RunModalClient();
 		int i = 1;
+		LOG(LogUser,"Press the XBox button to quit.");
 		while (connection)
 		{
 			DataSerializer data(sizeof(Joystick));
 			data.Add<Joystick>(j);
-			connection->SendMessage(10,true,false,100,i++,data.GetData(),data.BytesFilled());
+			connection->SendMessage(10,false,false,100,i++,data.GetData(),data.BytesFilled());
 //					connection->RunModalClient();
-			if (i > 1000)
+//			if (i > 1000)
+			if (j.buttons[8])
 				connection = 0;
 			SDL_Event EVENT;
 			SDL_PollEvent(&EVENT);
 			j.Read(joy);
 //			j.Print();
 //			sleep(1);
-			SDL_Delay(100);
+			SDL_Delay(50);
 			server->Process();
 		}
 //		connection->
