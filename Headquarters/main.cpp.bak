@@ -50,10 +50,51 @@ public:
 };
 
 BottomMemoryAllocator bma;
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_joystick.h>
+#include <SDL/SDL.h>
+#include <SDL/SDL_joystick.h>
 
-#include "Joystick.hpp"
+struct Joystick
+{
+	short x, y, x2, y2, l, r;
+	static const int BUTTONS = 11;
+	unsigned char buttons[BUTTONS];
+	void Read(SDL_Joystick* joy)
+	{
+		if (SDL_JoystickGetAttached(joy) == false)
+			return;
+		x = SDL_JoystickGetAxis(joy, 0);
+		y = SDL_JoystickGetAxis(joy, 1);
+		x2 = SDL_JoystickGetAxis(joy, 3);
+		y2 = SDL_JoystickGetAxis(joy, 4);
+		l = SDL_JoystickGetAxis(joy, 2);
+		r = SDL_JoystickGetAxis(joy, 5);
+		for (int i = 0; i < BUTTONS; i++)
+			buttons[i] = SDL_JoystickGetButton(joy, i);
+	}
+	void Print()
+	{
+		printf("(%d, %d), (%d, %d) [%d | %d]\n", x,y,x2,y2,l,r);
+		for (int i = 0; i < BUTTONS; i++)
+			if (buttons[i])
+				printf("%d:@ ", i);
+			else
+				printf("%d:  ", i);
+//			printf("A%s") todo: use proper labels for the buttons
+		printf("\n");
+
+	}
+//	void PrintFancy()
+//	{
+//		/*  x######			    ######X
+//		 *     X				   X
+//		 * (######,  X		 X		 X
+//		 *    X          X		   X   X
+//		 *  ######)        (######,	 X
+//		 *		------		  X
+//		 *		------	    ######)
+//		 */
+//	}
+};
 
 class JoyPrinter : public IMessageHandler
 {
@@ -115,21 +156,16 @@ public:
 		status = CLOSED_CONNECTION;
 	}
 };
-#include "DisplayJoystick.hpp"
 
 int main(int argc, char **argv)
 {
 	status = WAITING;
 
-	   if (SDL_Init( SDL_INIT_EVERYTHING) < 0)
-//		   if (SDL_Init( SDL_INIT_JOYSTICK | SDL_INIT_VIDEO) < 0)
+   if (SDL_Init( SDL_INIT_JOYSTICK) < 0)
    {
        fprintf(stderr, "Couldn't initialize SDL joystick support: %s\n", SDL_GetError());
        exit(1);
    }
-
-	DisplayJoystick disp;
-	disp.InitWindow();
    printf("%i joysticks were found.\n\n", SDL_NumJoysticks() );
    SDL_Joystick* joy = 0;
    Joystick j;
@@ -157,60 +193,50 @@ int main(int argc, char **argv)
 
 	kNet::SetLogChannels(LogUser | LogInfo | LogError);
 
-//    ServerListener serverListener;
+    ServerListener serverListener;
 	// Start listening on a port.
 	const unsigned short cServerPort = 1234;
 	   Network network;
 	   MessageListener listener;
 
-//	NetworkServer *server = network.StartServer(cServerPort, SocketOverUDP, &serverListener, true);
+	NetworkServer *server = network.StartServer(cServerPort, SocketOverUDP, &serverListener, true);
 
-//	if (server)
-//	{
-//		LOG(LogUser, "Waiting for incoming connections.");
-//		// Run the main server loop.
-//		// This never returns since we don't call NetworkServer::Stop(), but for this example, it doesn't matter.
-////		server->RunModalServer();
-//		server->SetAcceptNewConnections(true);
-//	}
+	if (server)
+	{
+		LOG(LogUser, "Waiting for incoming connections.");
+		// Run the main server loop.
+		// This never returns since we don't call NetworkServer::Stop(), but for this example, it doesn't matter.
+//		server->RunModalServer();
+		server->SetAcceptNewConnections(true);
+	}
 
 	EnableMemoryLeakLoggingAtExit();
 
 
    Ptr(MessageConnection) connection = network.Connect(argv[1], cServerPort, SocketOverUDP,  &listener);
 
-//	if (connection)
+	if (connection)
 	{
 		// Run the main client loop.
 //		connection->RunModalClient();
 		int i = 1;
 		LOG(LogUser,"Press the XBox button to quit.");
-		while (true)
+		while (connection)
 		{
 			DataSerializer data(sizeof(Joystick));
 			data.Add<Joystick>(j);
-//			connection->SendMessage(10,false,false,100,i++,data.GetData(),data.BytesFilled());
+			connection->SendMessage(10,false,false,100,i++,data.GetData(),data.BytesFilled());
 //					connection->RunModalClient();
 //			if (i > 1000)
 			if (j.buttons[8])
 				connection = 0;
-
-			// event handling
-			SDL_Event e;
-			if (SDL_PollEvent(&e))
-			{
-				if (e.type == SDL_QUIT)
-					break;
-				else if (e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_ESCAPE)
-					break;
-			}
+			SDL_Event EVENT;
+			SDL_PollEvent(&EVENT);
 			j.Read(joy);
-
 //			j.Print();
 //			sleep(1);
 			SDL_Delay(50);
-//			server->Process();
-			disp.Display(j);
+			server->Process();
 		}
 //		connection->
 	}
