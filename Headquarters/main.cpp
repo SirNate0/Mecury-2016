@@ -50,8 +50,8 @@ public:
 };
 
 BottomMemoryAllocator bma;
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_joystick.h>
+#include <SDL/SDL.h>
+#include <SDL/SDL_joystick.h>
 
 #include "Joystick.hpp"
 
@@ -121,7 +121,7 @@ int main(int argc, char **argv)
 {
 	status = WAITING;
 
-	   if (SDL_Init( SDL_INIT_EVERYTHING) < 0)
+	   if (SDL_Init( SDL_INIT_JOYSTICK) < 0)
 //		   if (SDL_Init( SDL_INIT_JOYSTICK | SDL_INIT_VIDEO) < 0)
    {
        fprintf(stderr, "Couldn't initialize SDL joystick support: %s\n", SDL_GetError());
@@ -129,9 +129,10 @@ int main(int argc, char **argv)
    }
 
 	DisplayJoystick disp;
-	disp.InitWindow();
+//	disp.InitWindow();
    printf("%i joysticks were found.\n\n", SDL_NumJoysticks() );
    SDL_Joystick* joy = 0;
+   SDL_JoystickEventState(SDL_ENABLE);
    Joystick j;
    if (SDL_NumJoysticks() > 0)
    {
@@ -179,17 +180,17 @@ int main(int argc, char **argv)
 
    Ptr(MessageConnection) connection = network.Connect(argv[1], cServerPort, SocketOverUDP,  &listener);
 
-//	if (connection)
+	if (connection)
 	{
 		// Run the main client loop.
 //		connection->RunModalClient();
 		int i = 1;
 		LOG(LogUser,"Press the XBox button to quit.");
-		while (true)
+		while (connection)
 		{
 			DataSerializer data(sizeof(Joystick));
 			data.Add<Joystick>(j);
-//			connection->SendMessage(10,false,false,100,i++,data.GetData(),data.BytesFilled());
+			connection->SendMessage(10,false,false,100,i++,data.GetData(),data.BytesFilled());
 //					connection->RunModalClient();
 //			if (i > 1000)
 			if (j.buttons[8])
@@ -205,12 +206,13 @@ int main(int argc, char **argv)
 					break;
 			}
 			j.Read(joy);
+//			j.Print();
 
 //			j.Print();
 //			sleep(1);
 			SDL_Delay(50);
 //			server->Process();
-			disp.Display(j);
+//			disp.Display(j);
 		}
 //		connection->
 	}

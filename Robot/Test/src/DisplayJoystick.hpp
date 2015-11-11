@@ -1,8 +1,8 @@
 #pragma once
 
 #ifndef RASPI
-#include <SDL/SDL.h>
-#include <SDL/SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 //#include <SDL2/SDL_video.h>
 #include <string>
 #include <iostream>
@@ -74,30 +74,33 @@ class DisplayJoystick
 public:
 	void Load(SDL_Renderer* rend)
 	{
-		bg = load_texture(rend,"Debug/img/Controller.png");
-		A = load_texture(rend,"Debug/img/A.png");
-		B = load_texture(rend,"Debug/img/B.png");
-		X = load_texture(rend,"Debug/img/X.png");
-		Y = load_texture(rend,"Debug/img/Y.png");
+		bg = load_texture(rend,"img/Controller.png");
+		A = load_texture(rend,"img/A.png");
+		B = load_texture(rend,"img/B.png");
+		X = load_texture(rend,"img/X.png");
+		Y = load_texture(rend,"img/Y.png");
 
-		L = load_texture(rend,"Debug/img/L.png");
-		R = load_texture(rend,"Debug/img/R.png");
+		L = load_texture(rend,"img/L.png");
+		R = load_texture(rend,"img/R.png");
 
-		LTrigger = load_texture(rend,"Debug/img/LTrigger.png");
-		RTrigger = load_texture(rend,"Debug/img/RTrigger.png");
+		LTrigger = load_texture(rend,"img/LTrigger.png");
+		RTrigger = load_texture(rend,"img/RTrigger.png");
 
-		LStick = load_texture(rend,"Debug/img/LStick.png");
-		RStick = load_texture(rend,"Debug/img/RStick.png");
+		LStick = load_texture(rend,"img/LStick.png");
+		RStick = load_texture(rend,"img/RStick.png");
 
-		Start = load_texture(rend,"Debug/img/Start.png");
-		Back = load_texture(rend,"Debug/img/Back.png");
+		Start = load_texture(rend,"img/Start.png");
+		Back = load_texture(rend,"img/Back.png");
 
-		XBox = load_texture(rend,"Debug/img/XBox.png");
+		XBox = load_texture(rend,"img/XBox.png");
 	}
 	SDL_Rect texr;
 	void Display(Joystick& joy)
 	{
 		joy.Print();
+		SDL_Event e;
+		SDL_PollEvent(&e);
+//		SDL_PumpEvents();
 		// clear the screen
 		SDL_RenderClear(renderer);
 		// copy the texture to the rendering context
@@ -127,6 +130,7 @@ public:
 		// flip the backbuffer
 		// this means that everything that we prepared behind the screens is actually shown
 		SDL_RenderPresent(renderer);
+//		SDL_GL_SwapWindow(win);
 	}
 
 	SDL_Window *win;
@@ -145,14 +149,20 @@ public:
 //				return 1;
 #define WIDTH 800
 #define HEIGHT 600
-#define IMG_PATH "Debug/img/Controller.png"
+#define IMG_PATH "img/Controller.png"
 		// create the window and renderer
 		// note that the renderer is accelerated
-		win = SDL_CreateWindow("Image Loading", 100, 100, WIDTH, HEIGHT, 0);
+		SDL_version v;
+		win = SDL_CreateWindow("Image Loading", 100, 100, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
 		if (win == NULL)
-			return 1;
-		renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_SOFTWARE);
-		   SDL_SetWindowGrab(win, SDL_TRUE);
+			throw;
+		SDL_GL_CreateContext(win);
+		renderer = SDL_CreateRenderer(win,-1,SDL_RENDERER_SOFTWARE);
+//		renderer = SDL_CreateSoftwareRenderer(SDL_GetWindowSurface(win));//SDL_CreateRenderer(win, -1, SDL_RENDERER_SOFTWARE);
+		if (renderer == NULL)
+			throw;
+
+//		   SDL_SetWindowGrab(win, SDL_TRUE);
 //		glEnable(GL_BLEND);
 //		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 //		SDL_GL_
@@ -161,8 +171,8 @@ public:
 		// load our image
 //		img = IMG_LoadTexture(renderer, IMG_PATH);
 		img = load_texture(renderer,IMG_PATH);
-//		if (img == NULL)
-//			throw;
+		if (img == NULL)
+			throw;
 		SDL_Surface* full = SDL_GetWindowSurface(win);
 		SDL_QueryTexture(img, NULL, NULL, &w, &h); // get the width and height of the texture
 		// put the location where we want the texture to be drawn into a rectangle
