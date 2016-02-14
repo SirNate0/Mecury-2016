@@ -17,6 +17,7 @@
 
 int status;
 static const int GOOD = 0, WAITING = 1, LOST_CONNECTION = 2, CLOSED_CONNECTION = 4;
+static const unsigned long SENSORMESSAGE = 0x77;
 
 #include "kNet.h"
 #include "kNet/DebugMemoryLeakCheck.h"
@@ -117,6 +118,11 @@ public:
 };
 #include "DisplayJoystick.hpp"
 
+struct Data
+{
+	float l, r, b;
+};
+
 int main(int argc, char **argv)
 {
 	status = WAITING;
@@ -186,11 +192,25 @@ int main(int argc, char **argv)
 //		connection->RunModalClient();
 		int i = 1;
 		LOG(LogUser,"Press the XBox button to quit.");
+
 		while (connection)
 		{
 			DataSerializer data(sizeof(Joystick));
 			data.Add<Joystick>(j);
 			connection->SendMessage(10,false,false,100,i++,data.GetData(),data.BytesFilled());
+//			connection->Process(4);//TODO: register inbound message handler
+
+			NetworkMessage* nm = connection->ReceiveMessage(10);
+			if (nm && nm->id == SENSORMESSAGE)
+			{
+				if (nm->data )// && nm->Size() == sizeof(Data))
+				{
+					Data d = *((Data *) nm->data);
+					LOGUSER("Received sensor data: %f %f %f", d.l, d.r, d.b);
+				}
+			}
+			connection->FreeMessage(nm);
+//			connection->FreeMessage(connection->ReceiveMessage(1));
 //					connection->RunModalClient();
 //			if (i > 1000)
 			if (j.buttons[8])

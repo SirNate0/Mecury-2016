@@ -13,6 +13,9 @@ using namespace std;
 
 #include "kNet/Clock.h"
 
+#include "Servo.hpp"
+#include "Sensors.hpp"
+
 using namespace kNet;
 
 enum STATUS
@@ -20,6 +23,9 @@ enum STATUS
 	GOOD, WAITING, CONNECTED, LOST_CONNECTION, CLOSED_CONNECTION
 };
 STATUS status;
+bool received = false;
+
+static const unsigned long SENSORMESSAGE = 0x77;
 
 
 bool timedOut()
@@ -90,6 +96,8 @@ public:
 		{
 			joy = *((Joystick*) data);
 			joy.Print();
+			status = GOOD;
+			received = true;
 		}
 
 //		if (Clock::SecondsSinceF(source->lastHeardTime) > TIMEOUT)
@@ -138,7 +146,7 @@ public:
 		status = CLOSED_CONNECTION;
 	}
 };
-
+#define RASPI
 #ifndef RASPI
 #include <SDL2/SDL.h>
 #include "DisplayJoystick.hpp"
@@ -185,14 +193,32 @@ int main()
 	SDL_Init(SDL_INIT_VIDEO);
 	DisplayJoystick disp;
 	disp.InitWindow();
+#else
+	Servo s;
+	Sensors sensors;
+	//using broadcast instead of send message, so we don't need it
+//	NetworkMessage nm;
+//	nm.inOrder = false;
+//	nm.id = SENSORMESSAGE;
+//	nm.reliable = false;
+//	nm.Resize(sizeof(sensors.data),true);
+//	MessageConnection conn;
 #endif
+
+
 
 	while (true)
 	{
 		server->Process();
 #ifndef RASPI
 		SDL_Event e;
-		SDL_PollEvent(&e);
+		if ( SDL_PollEvent(&e) )
+		{
+			if (e.type == SDL_QUIT)
+				break;
+			else if (e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_ESCAPE)
+				break;
+		}
 		disp.Display(joy);
 #endif
 		if (status == WAITING)
@@ -205,6 +231,14 @@ int main()
 		{
 #ifndef RASPI
 //			disp.Display(joy);
+#else
+			if (received)
+				s.Set(joy.y / 32000.0f);
+			received = false;
+//			nm.data = (char*)&(sensors.data);
+//			server->SendMessage(nm, )
+			server->BroadcastMessage(SENSORMESSAGE, false, false, 100,
+                    0, (char*)&(sensors.data), sizeof(sensors.data));
 #endif
 		}
 		else

@@ -95,6 +95,8 @@ public:
 		XBox = load_texture(rend,"img/XBox.png");
 	}
 	SDL_Rect texr;
+	SDL_Rect texrLStick;
+	SDL_Rect texrRStick;
 	void Display(Joystick& joy)
 	{
 		joy.Print();
@@ -123,6 +125,11 @@ public:
 			SDL_RenderCopy(renderer, Start, NULL, &texr);
 		if (joy.buttons[8])
 			SDL_RenderCopy(renderer, XBox, NULL, &texr);
+		texrLStick.x = int(joy.x) / 3000.;
+		printf("%d\n", texrLStick.x);
+		texrLStick.y = joy.y / 3000.;
+//			SDL_RenderCopy(renderer, LStick, &texrLStick, NULL);
+			SDL_RenderCopy(renderer, LStick, NULL, &texrLStick);
 //		if (i / 50 % 3 == 0)
 //			SDL_RenderCopy(renderer,A,NULL, &texr);
 //			SDL_RenderDrawLine(renderer, 0, 1, 200, 300);
@@ -178,6 +185,8 @@ public:
 		// put the location where we want the texture to be drawn into a rectangle
 		// I'm also scaling the texture 2x simply by setting the width and height
 		 texr.x = 0; texr.y = 0; texr.w = w*2; texr.h = h*2;
+		 texrLStick = texr;
+		 texrRStick = texr;
 		int i = 0;
 		// main loop
 //		while (1) {
