@@ -14,20 +14,35 @@
 #ifndef DRIVE_HPP
 #define DRIVE_HPP
 
-#include "Servo.hpp"
+#include "I2C.hpp"
 
 float clamp(float v, float min, float max)
 {
     return (v <= min) ? min : ((v >= max) ? max : v);
 }
 
+class Motor
+{
+//	void set(flaot val)
+//	{
+//		set(val * )
+//	}
+public:
+	void set(float joystick)
+	{
+		I2C::Write('M',(signed char)(joystick * 127));//joystick >> 24);
+	}
+
+};
+
 class Drive
 {
     public:
         void setTankSpeed(float left, float right)
         {
-            leftMotor.set(left);//
+//            leftMotor.set(left);//
             rightMotor.set(right);
+            printf("\nDriving %f %f\n", left, right);
         }
         void setArcadeSpeed(float forward, float turn)
         {
@@ -35,10 +50,10 @@ class Drive
 //            leftMotor.set(left) "tank"
 //            rightMotor.set(right);
 //            or
-            leftMotor.set(clamp(forward + turn,-1.0,1.0)); "arcade"
+//            leftMotor.set(clamp(forward + turn,-1.0,1.0)); "arcade"
             rightMotor.set(clamp(forward - turn,-1.0,1.0));
             
-        
+        }
         
         void turbo()
         {
@@ -53,13 +68,13 @@ class Drive
         }
     
     private:
-        Servo leftMotor;
-        Servo rightMotor;
+//        Motor leftMotor;
+        Motor rightMotor;
         float gas;
         float status;
         
     
-}
+};
 
 #endif /* DRIVE_HPP */
 

@@ -15,6 +15,8 @@ using namespace std;
 
 #include "Servo.hpp"
 #include "Sensors.hpp"
+#include "Temperature.hpp"
+#include "Drive.hpp"
 
 using namespace kNet;
 
@@ -152,6 +154,15 @@ public:
 #include "DisplayJoystick.hpp"
 #endif
 
+//controls:
+/*
+ * view - triggers (or other joystick?)
+ * bumpers + face button = catapult
+ * 2 buttons to open/close the claw
+ * buttons/axis for the arm
+ * steering
+ */
+
 int main()
 {
 	status = WAITING;
@@ -196,6 +207,7 @@ int main()
 #else
 	Servo s;
 	Sensors sensors;
+	Drive d;
 	//using broadcast instead of send message, so we don't need it
 //	NetworkMessage nm;
 //	nm.inOrder = false;
@@ -233,12 +245,29 @@ int main()
 //			disp.Display(joy);
 #else
 			if (received)
-				s.Set(joy.y / 32000.0f);
+			{
+				//single servo test
+//				s.Set(joy.y / 36000.0f);
+				if (joy.buttons[0])
+					s.SetServo(s.ArmClose);
+				if (joy.buttons[1])
+					s.SetServo(s.ArmOpen);
+				if (joy.buttons[2])
+					s.SetServo(s.ClawClose);
+				if (joy.buttons[3])
+					s.SetServo(s.ClawOpen);
+				if (joy.buttons[4] &&joy.buttons[5] &&joy.buttons[7] &&joy.buttons[7])
+					s.SetServo(s.TriggerOpen);
+				d.setTankSpeed(0.13f, joy.y2 / 36000.0f);
+			}
 			received = false;
+			if (joy.buttons[0])
+				Temperature::Print();
+
 //			nm.data = (char*)&(sensors.data);
 //			server->SendMessage(nm, )
-			server->BroadcastMessage(SENSORMESSAGE, false, false, 100,
-                    0, (char*)&(sensors.data), sizeof(sensors.data));
+//			server->BroadcastMessage(SENSORMESSAGE, false, false, 100,
+//                    0, (char*)&(sensors.data), sizeof(sensors.data));
 #endif
 		}
 		else

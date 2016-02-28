@@ -10,6 +10,7 @@
 #include "wiringPi/wiringPiI2C.h"
 #include <sys/ioctl.h>
 #include <errno.h>
+#include <stdio.h>
 //#ifdef __cplusplus
 //extern "C" {
 //#endif
@@ -34,6 +35,8 @@ class Setup
 
 };
 
+#include "I2C.hpp"
+
 class Servo
 {
 public:
@@ -49,6 +52,10 @@ public:
 	{
 		Set((signed char) (v * 127));
 	}
+	void Set(int i)
+	{
+		Set((signed char)i);
+	}
 	void Set(signed char v)
 	{
 		value = v;
@@ -58,7 +65,7 @@ public:
 //		unsigned char test[2] ={0};
 		int test = v;//0x0f0f0fff;
 		int fd,e;
-		int dID = 0x2;
+		int dID = 0x0c;
 		// data to be sent
 //		test[0]=0x01;
 //		test[1]=0xff;
@@ -67,12 +74,14 @@ public:
 		printf("error opening i2c channel\n\r");
 
 		if((e= wiringPiI2CWrite(fd,test))==-1){
-		printf("error writing to slave EC: %d\n\r", errno);
+		printf("error writing to slave %x EC: %d\n\r", dID, errno);
 		}else{
 
 		printf("writing hex:0x%i size:%i\n\r",test,sizeof(test));
 		}
 //		sleep(1);
+//		value = v;
+//		I2C::Write(0x0c,v);
 	}
 	signed char Get() const
 	{
@@ -88,6 +97,23 @@ public:
 	int value;
 	static const int targetAddress = 4;//2;
 	int wiringFD;
+
+	enum Servos
+	{
+		ArmOpen = 1,
+		ClawOpen = 2,
+		TriggerOpen = 3,
+		ArmClose = 11,
+		ClawClose = 12,
+		TriggerClose = 13,
+		Phone = 100 // plus angle 0-360, divided by 4
+
+	};
+
+	void SetServo(int ServoToSet)
+	{
+		I2C::Write('S',(signed char)(ServoToSet));//joystick >> 24);
+	}
 
 };
 

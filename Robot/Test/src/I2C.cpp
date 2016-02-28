@@ -7,7 +7,12 @@
 
 #include "I2C.hpp"
 
+#include "wiringPi/wiringPiI2C.h"
 #include <errno.h>
+#include <stdio.h>
+
+std::map<I2C::Device, int> I2C::fds;
+int I2C::error;
 
 I2C::I2C()
 {
@@ -22,42 +27,44 @@ I2C::~I2C()
 
 void I2C::Write(Device d, float f)
 {
-	int data = reinterpret_cast<int>(f);
+//	int data = reinterpret_cast<int>(f);
+	char* data = (char*)&f;
 	for (unsigned int i = 0; i < sizeof(data); ++i)
 	{
-		Write(d, char((data & (0xff << i)) >> i));
+		Write(d, data[i]);//char((data & (0xff << i)) >> i));
 	}
 }
-void I2C::Write(Device d, int i)
+void I2C::Write(Device d, int j)
 {
-	for (unsigned int i = 0; i < sizeof(i); ++i)
+	for (unsigned int i = 0; i < sizeof(j); ++i)
 	{
-		Write(d, char((i & (0xff << i)) >> i));
+		Write(d, (signed char)((j & (0xff << i)) >> i));
 	}
 }
-void I2C::Write(Device d, char c)
+void I2C::Write(Device d, signed char c)
 {
-		auto it = fds.find(d);
+		printf("Writing");
 		int fd, e;
-		if(it != fds.end())
-		{
-		   //element found;
-		   fd = it->second;
-		}
-		else
+//		std::map<Device, int>::iterator it = fds.find(d);
+//		if(it != fds.end())
+//		{
+//		   //element found;
+//		   fd = it->second;
+//		}
+//		else
 		{
 			fd = wiringPiI2CSetup(d);
 			if (fd == -1)
-				printf("error opening i2c channel\n\r");
-			else
-				fds[d] = fd;
+				printf("error opening i2c channel %x\n\r", (int) d);
+//			else
+//				fds[d] = fd;
 		}
 
 
 
 		if((e= wiringPiI2CWrite(fd,c))==-1)
 		{
-			printf("error writing to slave EC: %d\n\r", errno);
+			printf("error writing to slave %x EC: %d\n\r", (int)d, errno);
 		}
 //		else
 //		{
@@ -98,9 +105,9 @@ int I2C::ReadInt(Device d)
 	}
 	return data;
 }
-char I2C::ReadByte(Device d)
+int I2C::ReadByte(Device d)
 {
-	auto it = fds.find(d);
+	std::map<Device, int>::iterator it = fds.find(d);
 	int fd, e;
 	if(it != fds.end())
 	{

@@ -24,15 +24,15 @@ public:
     
     void Fire()
     {
-            ServoTrigger.set(-127); //extreme value, extreme retraction in this case
+            ServoTrigger.Set(-127); //extreme value, extreme retraction in this case
             Reset();
             fired = true;
     }
 //
     void  Reset()
     {
-            ServoReset.set(-127);
-            ServoTrigger.set(127);
+            ServoReset.Set(-127);
+            ServoTrigger.Set(127);
     }
 //
 //    void moveXAxis(float xInput)
