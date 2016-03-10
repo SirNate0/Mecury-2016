@@ -122,6 +122,21 @@ struct Data
 {
 	float l, r, b;
 };
+class SensorHandler: public IMessageHandler
+{
+public:
+	virtual void HandleMessage(MessageConnection *source, packet_id_t packetId, message_id_t messageId, const char *data, size_t numBytes)
+	{
+//		if (messageId == SENSORMESSAGE)
+			if (numBytes >= sizeof(Data))
+			{
+				Data d = *((Data*) data);
+				LOGUSER("Received sensor data: %f %f %f", d.l, d.r, d.b);
+			}
+
+	}
+
+};
 
 int main(int argc, char **argv)
 {
@@ -169,6 +184,7 @@ int main(int argc, char **argv)
 	const unsigned short cServerPort = 1234;
 	   Network network;
 	   MessageListener listener;
+	   SensorHandler sensors;
 
 //	NetworkServer *server = network.StartServer(cServerPort, SocketOverUDP, &serverListener, true);
 
@@ -192,6 +208,7 @@ int main(int argc, char **argv)
 //		connection->RunModalClient();
 		int i = 1;
 		LOG(LogUser,"Press the XBox button to quit.");
+//		connection->RegisterInboundMessageHandler(&sensors); didn't work
 
 		while (connection)
 		{
@@ -207,11 +224,26 @@ int main(int argc, char **argv)
 				{
 					Data d = *((Data *) nm->data);
 					LOGUSER("Received sensor data: %f %f %f", d.l, d.r, d.b);
+					FILE* f = fopen("out.txt","w");
+#define GUI(str) fprintf(f,"%s\n",str)
+					GUI("Connected");
+#define GUI(str) fprintf(f,"%f\n",str)
+					GUI(0.f);
+					GUI(d.b);
+					GUI(d.r);
+					GUI(d.l);
+					GUI(d.l);
+					GUI(d.l);
+					GUI(d.r);
+					GUI(d.r);
+					fflush(f);
+					fclose(f);
+
+
 				}
 			}
 			connection->FreeMessage(nm);
-//			connection->FreeMessage(connection->ReceiveMessage(1));
-//					connection->RunModalClient();
+
 //			if (i > 1000)
 			if (j.buttons[8])
 				connection = 0;

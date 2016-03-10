@@ -7,6 +7,13 @@
 //============================================================================
 
 #include <iostream>
+
+#include <wiringPi.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
 using namespace std;
 #include "kNet.h"
 #include "kNet/DebugMemoryLeakCheck.h"
@@ -208,6 +215,7 @@ int main()
 	Servo s;
 	Sensors sensors;
 	Drive d;
+	int i = 0;
 	//using broadcast instead of send message, so we don't need it
 //	NetworkMessage nm;
 //	nm.inOrder = false;
@@ -215,6 +223,49 @@ int main()
 //	nm.reliable = false;
 //	nm.Resize(sizeof(sensors.data),true);
 //	MessageConnection conn;
+
+	///Wiring pi setup
+	/*
+	 * test2.c:
+	 *      Simple test program to test the wiringPi functions
+	 *      PWM test
+	 */
+
+
+//	  int pin ;
+//	  int l ;
+//
+//	  printf ("Raspberry Pi wiringPi PWM test program\n") ;
+//
+//	  if (wiringPiSetup () == -1)
+//	    exit (1) ;
+//
+//	  for (pin = 0 ; pin < 8 ; ++pin)
+//	  {
+//	    pinMode (pin, OUTPUT) ;
+//	    digitalWrite (pin, LOW) ;
+//	  }
+//
+//	  pinMode (1, PWM_OUTPUT) ;
+//
+//	  for (;;)
+//	  {
+//	    for (l = 0 ; l < 1024 ; ++l)
+//	    {
+//	      pwmWrite (1, l) ;
+//	      delay (1) ;
+//	    }
+//
+//	    for (l = 1023 ; l >= 0 ; --l)
+//	    {
+//	      pwmWrite (1, l) ;
+//	      delay (1) ;
+//	    }
+//	  }
+
+
+
+
 #endif
 
 
@@ -256,18 +307,30 @@ int main()
 					s.SetServo(s.ClawClose);
 				if (joy.buttons[3])
 					s.SetServo(s.ClawOpen);
+				if (joy.l > 0)
+					s.SetServo(s.PhoneLeft);
+				if (joy.r > 0)
+					s.SetServo(s.PhoneRight);
+				if ((joy.l < 0 && joy.r < 0) || (joy.l > 0 && joy.r > 0))
+					s.SetServo(s.PhoneStop);
 				if (joy.buttons[4] &&joy.buttons[5] &&joy.buttons[7] &&joy.buttons[7])
 					s.SetServo(s.TriggerOpen);
-				d.setTankSpeed(0.13f, joy.y2 / 36000.0f);
+				d.setTankSpeed(joy.y / 36000.0f, joy.y2 / 36000.0f);
 			}
 			received = false;
-			if (joy.buttons[0])
-				Temperature::Print();
+//			if (joy.buttons[6])
+//				Temperature::Print();
 
-//			nm.data = (char*)&(sensors.data);
-//			server->SendMessage(nm, )
-//			server->BroadcastMessage(SENSORMESSAGE, false, false, 100,
-//                    0, (char*)&(sensors.data), sizeof(sensors.data));
+			if (i % 20 == 0)
+			{
+				sensors.Read();
+				i = 0;
+				server->BroadcastMessage(SENSORMESSAGE, false, false, 100,
+	                    0, (char*)&(sensors.data), sizeof(sensors.data));
+			}
+			i++;
+
+			sleep(20);
 #endif
 		}
 		else

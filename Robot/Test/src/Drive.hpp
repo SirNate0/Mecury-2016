@@ -15,8 +15,17 @@
 #define DRIVE_HPP
 
 #include "I2C.hpp"
+#include "wiringPi/wiringPiI2C.h"
+#include <sys/ioctl.h>
+#include <errno.h>
+#include <stdio.h>
+#include <unistd.h>
 
 float clamp(float v, float min, float max)
+{
+    return (v <= min) ? min : ((v >= max) ? max : v);
+}
+signed char clamp(signed char v, signed char min, signed char max)
 {
     return (v <= min) ? min : ((v >= max) ? max : v);
 }
@@ -41,7 +50,9 @@ class Drive
         void setTankSpeed(float left, float right)
         {
 //            leftMotor.set(left);//
-            rightMotor.set(right);
+//            rightMotor.set(right);
+        	char drive[2] = {(signed char)(left * 20), (signed char)(right * 20)};
+        	I2C::Write('M',drive, 2);//joystick >> 24);
             printf("\nDriving %f %f\n", left, right);
         }
         void setArcadeSpeed(float forward, float turn)
@@ -51,8 +62,9 @@ class Drive
 //            rightMotor.set(right);
 //            or
 //            leftMotor.set(clamp(forward + turn,-1.0,1.0)); "arcade"
-            rightMotor.set(clamp(forward - turn,-1.0,1.0));
-            
+//            rightMotor.set(clamp(forward - turn,-1.0,1.0));
+//        	char drive[2] = {forward, turn};
+//        	I2C::Write('M',drive, 2);//joystick >> 24);
         }
         
         void turbo()

@@ -106,8 +106,10 @@ public:
 		ArmClose = 11,
 		ClawClose = 12,
 		TriggerClose = 13,
-		Phone = 100 // plus angle 0-360, divided by 4
-
+		//Phone = 100 // plus angle 0-360, divided by 4
+		PhoneRight = 4,
+		PhoneLeft = 14,
+		PhoneStop = 24
 	};
 
 	void SetServo(int ServoToSet)

@@ -18,6 +18,7 @@ public:
 	~Sensors();
 	void Read();
 
+
 	//	signed char value;
 	int value;
 	static const int targetAddress = 2;

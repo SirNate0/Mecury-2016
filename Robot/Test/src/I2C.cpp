@@ -10,6 +10,8 @@
 #include "wiringPi/wiringPiI2C.h"
 #include <errno.h>
 #include <stdio.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
 
 std::map<I2C::Device, int> I2C::fds;
 int I2C::error;
@@ -73,10 +75,27 @@ void I2C::Write(Device d, signed char c)
 }
 void I2C::Write(Device d, const char* bytes, unsigned count)
 {
-	for (unsigned i = 0; i < count; ++i)
+//	for (unsigned i = 0; i < count; ++i)
+//	{
+//		Write(d, bytes[i]);
+//	}
+	int fd, e;
+	std::map<Device, int>::iterator it = fds.find(d);
+	if(it != fds.end())
 	{
-		Write(d, bytes[i]);
+	   //element found;
+	   fd = it->second;
 	}
+	else
+	{
+		fd = wiringPiI2CSetup(d);
+		if (fd == -1)
+			printf("error opening i2c channel %x\n\r", (int) d);
+		else
+			fds[d] = fd;
+	}
+	if (write(fd,bytes,count) == -1)
+		printf("Error writing %d bytes to %x\n",count, (int) d);
 }
 
 float I2C::ReadFloat(Device d)

@@ -26,3 +26,5 @@
 *.exe
 *.out
 *.app
+/JavaApplication6/nbproject/private/
+/JavaApplication6/dist/
