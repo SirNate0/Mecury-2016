@@ -18,10 +18,11 @@ struct Joystick
 	{
 		if (SDL_JoystickGetAttached(joy) == false)
 			return;
-		x = SDL_JoystickGetAxis(joy, 0);
-		y = SDL_JoystickGetAxis(joy, 1);
-		x2 = SDL_JoystickGetAxis(joy, 3);
-		y2 = SDL_JoystickGetAxis(joy, 4);
+		//I switched the joysticks
+		x2 = SDL_JoystickGetAxis(joy, 0);
+		y2 = SDL_JoystickGetAxis(joy, 1);
+		x = SDL_JoystickGetAxis(joy, 3);
+		y = SDL_JoystickGetAxis(joy, 4);
 		l = SDL_JoystickGetAxis(joy, 2);
 		r = SDL_JoystickGetAxis(joy, 5);
 		SDL_JoystickUpdate();

@@ -20,6 +20,7 @@
 #include <errno.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <math.h>
 
 float clamp(float v, float min, float max)
 {
@@ -55,8 +56,78 @@ class Drive
         	I2C::Write('M',drive, 2);//joystick >> 24);
             printf("\nDriving %f %f\n", left, right);
         }
+
+#define PI (3.14159265358979323846)
+#define PI_OVER_2 (3.14159265358979323846 / 2.0)
+#define PI_OVER_4 (3.14159265358979323846 / 4.0)
+#define threshold PI_OVER_4
+        float getLeftArcade(float theta)
+        {
+        	if (theta < -PI + threshold)
+        		return 0;
+        	else if (theta < -PI_OVER_2)
+        		return -1;
+        	else if (theta < -threshold)
+        		return ((theta) / (PI_OVER_2 - threshold));
+        	else if (theta < threshold)
+        		return 0;
+        	else if (theta < PI_OVER_2)
+        		return 1;
+        	else if (theta < -threshold)
+        		return 1.0 - ((theta - PI_OVER_2) / (PI_OVER_2 - threshold));
+        	else
+        		return 0;
+        }
+        float getRightArcade(float theta)
+        {
+        	if (theta < -PI + threshold)
+        		return 0;
+        	else if (theta < -PI_OVER_2)
+        		return 1.0 - ((theta) / (PI_OVER_2 - threshold));
+        	else if (theta < -threshold)
+        		return -1;
+        	else if (theta < threshold)
+        		return 0;
+        	else if (theta < PI_OVER_2)
+        		return ((theta - PI_OVER_2) / (PI_OVER_2 - threshold));
+        	else if (theta < -threshold)
+        		return 1;
+        	else
+        		return 0;
+        }
+
         void setArcadeSpeed(float forward, float turn)
         {
+        	float l=forward;
+			float r=forward;
+			float theta = atan2(turn,forward);
+			float radius = sqrt(forward*forward + turn*turn);
+			printf("%f %f | %f %f (f,t | theta r)\n",l,turn,theta,radius);
+			if (theta > 0)
+//				if (theta <= PI)
+				theta = (theta - PI_OVER_2) / 4.0 + PI_OVER_2;
+			else
+				theta = (theta + PI_OVER_2) / 4.0 - PI_OVER_2;
+//			l += turn;
+//			r -= turn;
+			if ((theta < threshold && theta > -threshold) || theta > PI - threshold || theta < -PI - threshold || r < 0.05)
+				l = r = 0;
+			else
+			{
+				l = radius*getLeftArcade(theta);//sin(theta - PI_OVER_2);
+				r = radius*getRightArcade(theta);//cos(theta - PI_OVER_2);
+			}
+			setTankSpeed(l,r);
+
+//			if (turn >= 0)
+//			{
+//				if (forward >= 0)
+//				{
+//
+//				}
+//			}
+
+
             //need a motor class....right?
 //            leftMotor.set(left) "tank"
 //            rightMotor.set(right);
@@ -65,6 +136,7 @@ class Drive
 //            rightMotor.set(clamp(forward - turn,-1.0,1.0));
 //        	char drive[2] = {forward, turn};
 //        	I2C::Write('M',drive, 2);//joystick >> 24);
+
         }
         
         void turbo()

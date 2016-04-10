@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-#include <wiringPi.h>
+#include "wiringPi/wiringPi.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,14 +32,18 @@ enum STATUS
 	GOOD, WAITING, CONNECTED, LOST_CONNECTION, CLOSED_CONNECTION
 };
 STATUS status;
+
 bool received = false;
+static const unsigned int TIMEOUT = 1000;//milliseconds
+int millisSinceLastPacket = 0;
+int lastMillis = millis();
 
 static const unsigned long SENSORMESSAGE = 0x77;
 
 
 bool timedOut()
 {
-	return false;
+	return (millisSinceLastPacket > TIMEOUT);
 }
 
 void displayError()
@@ -232,36 +236,19 @@ int main()
 	 */
 
 
-//	  int pin ;
-//	  int l ;
-//
-//	  printf ("Raspberry Pi wiringPi PWM test program\n") ;
-//
-//	  if (wiringPiSetup () == -1)
-//	    exit (1) ;
-//
-//	  for (pin = 0 ; pin < 8 ; ++pin)
-//	  {
-//	    pinMode (pin, OUTPUT) ;
-//	    digitalWrite (pin, LOW) ;
-//	  }
-//
-//	  pinMode (1, PWM_OUTPUT) ;
-//
-//	  for (;;)
-//	  {
-//	    for (l = 0 ; l < 1024 ; ++l)
-//	    {
-//	      pwmWrite (1, l) ;
-//	      delay (1) ;
-//	    }
-//
-//	    for (l = 1023 ; l >= 0 ; --l)
-//	    {
-//	      pwmWrite (1, l) ;
-//	      delay (1) ;
-//	    }
-//	  }
+//	  int redPWM = 18, green = 23; BCM pins
+	  int redPWM = 1, green = 4;
+
+	  printf ("Raspberry Pi wiringPi Setup.n") ;
+
+	  if (wiringPiSetup () == -1)
+		  printf("WiringPi failed!!!");
+
+
+//	  pinMode (redPWM, PWM_OUTPUT) ;
+	  pinMode (redPWM, OUTPUT) ;
+	  pinMode (green, OUTPUT) ;
+
 
 
 
@@ -273,6 +260,7 @@ int main()
 	while (true)
 	{
 		server->Process();
+//		printf("time %d\n", millisSinceLastPacket);
 #ifndef RASPI
 		SDL_Event e;
 		if ( SDL_PollEvent(&e) )
@@ -286,67 +274,92 @@ int main()
 #endif
 		if (status == WAITING)
 		{
+//			pwmWrite(redPWM,250);
+			digitalWrite(redPWM,1);
+			digitalWrite(green,1);
 			sleep(100);
 			cout << "Waiting for connection..." << endl;
 			continue;
 		}
-		if (status == GOOD && timedOut() == false)
+		if (status == GOOD)
 		{
+			if (timedOut() == false)
+			{
 #ifndef RASPI
 //			disp.Display(joy);
 #else
-			if (received)
-			{
-				//single servo test
-//				s.Set(joy.y / 36000.0f);
-				if (joy.buttons[0])
-					s.SetServo(s.ArmClose);
-				if (joy.buttons[1])
-					s.SetServo(s.ArmOpen);
-				if (joy.buttons[2])
-					s.SetServo(s.ClawClose);
-				if (joy.buttons[3])
-					s.SetServo(s.ClawOpen);
-				if (joy.l > 0)
-					s.SetServo(s.PhoneLeft);
-				if (joy.r > 0)
-					s.SetServo(s.PhoneRight);
-				if ((joy.l < 0 && joy.r < 0) || (joy.l > 0 && joy.r > 0))
-					s.SetServo(s.PhoneStop);
-				if (joy.buttons[4] &&joy.buttons[5] &&joy.buttons[7] &&joy.buttons[7])
-					s.SetServo(s.TriggerOpen);
-				d.setTankSpeed(joy.y / 36000.0f, joy.y2 / 36000.0f);
-			}
-			received = false;
-//			if (joy.buttons[6])
-//				Temperature::Print();
+	//			pwmWrite(redPWM,0);
+				digitalWrite(redPWM,0);
+				digitalWrite(green,1);
+				if (received)
+				{
+					millisSinceLastPacket = 0;
+					//single servo test
+	//				s.Set(joy.y / 36000.0f);
+					if (joy.buttons[0])
+						s.SetServo(s.ArmClose);
+					if (joy.buttons[1])
+						s.SetServo(s.ArmOpen);
+					if (joy.buttons[2])
+						s.SetServo(s.ClawClose);
+					if (joy.buttons[3])
+						s.SetServo(s.ClawOpen);
+					if (joy.l > 0)
+						s.SetServo(s.PhoneLeft);
+					if (joy.r > 0)
+						s.SetServo(s.PhoneRight);
+					if ((joy.l < 0 && joy.r < 0) || (joy.l > 0 && joy.r > 0))
+						s.SetServo(s.PhoneStop);
+					if (joy.buttons[4] &&joy.buttons[5] &&joy.buttons[7] &&joy.buttons[7])
+						s.SetServo(s.TriggerOpen);
+//					d.setTankSpeed(joy.y / 36000.0f, joy.y2 / 36000.0f);
+					d.setArcadeSpeed(joy.y / 36000.0f, joy.x / 36000.0f);
+				}
+				else
+				{
+					millisSinceLastPacket += millis() - lastMillis;
+				}
+				received = false;
+	//			if (joy.buttons[6])
+	//				Temperature::Print();
 
-			if (i % 20 == 0)
-			{
-				sensors.Read();
-				i = 0;
-				server->BroadcastMessage(SENSORMESSAGE, false, false, 100,
-	                    0, (char*)&(sensors.data), sizeof(sensors.data));
-			}
-			i++;
+				if (i % 20 == 0)
+				{
+					sensors.Read();
+					i = 0;
+					server->BroadcastMessage(SENSORMESSAGE, false, false, 100,
+							0, (char*)&(sensors.data), sizeof(sensors.data));
+				}
+				i++;
 
-			sleep(20);
-#endif
+				sleep(20);
+	#endif
+			}
+			else
+			{
+				status = LOST_CONNECTION;
+			}
 		}
-		else
-		{
-			status = LOST_CONNECTION;
-		}
-		if (status == LOST_CONNECTION)
+		else if (status == LOST_CONNECTION)
 		{
 			displayError();
+			digitalWrite(redPWM,1);
+			digitalWrite(green,0);
+			if (received)
+			{
+				status = GOOD;
+				millisSinceLastPacket = 0;
+				continue;
+			}
 			sleep(100);
-			continue;
 		}
-		if (status == CLOSED_CONNECTION)
+		else if (status == CLOSED_CONNECTION)
 			break;
+		lastMillis = millis();
 //		sleep(100);
 
 	}
+	digitalWrite(redPWM,0);
+	digitalWrite(green,0);
 	return 0;
 }
