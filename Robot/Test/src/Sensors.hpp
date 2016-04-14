@@ -12,7 +12,7 @@ class Sensors
 public:
 	struct Data
 	{
-		float l, r, b;
+		float l, r, b, f;
 	};
 	Sensors();
 	~Sensors();

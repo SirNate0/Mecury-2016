@@ -22,6 +22,7 @@ Sensors::Sensors()
 	data.l = 7.0f;
 	data.r = 8.0f;
 	data.b = 0.000077;
+	data.f = 11.11f;
 
 }
 
@@ -82,7 +83,7 @@ void Sensors::Read()
 	}
 	read(fd,&data,sizeof(data));
 
-//	printf("Read sensor data: %f %f %f\n", data.l, data.r, data.b);
+	printf("Read sensor data: %f %f %f %f\n", data.l, data.r, data.b, data.f);
 //		sleep(1);
 }
 

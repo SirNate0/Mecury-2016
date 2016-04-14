@@ -63,54 +63,55 @@ class Drive
 #define threshold PI_OVER_4
         float getLeftArcade(float theta)
         {
-        	if (theta < -PI + threshold)
-        		return 0;
-        	else if (theta < -PI_OVER_2)
-        		return -1;
-        	else if (theta < -threshold)
-        		return ((theta) / (PI_OVER_2 - threshold));
-        	else if (theta < threshold)
-        		return 0;
-        	else if (theta < PI_OVER_2)
-        		return 1;
-        	else if (theta < -threshold)
-        		return 1.0 - ((theta - PI_OVER_2) / (PI_OVER_2 - threshold));
-        	else
-        		return 0;
+            if (theta < -PI + threshold)
+                return 0.0;
+            else if (theta < -PI_OVER_2)
+                return -((theta + PI_OVER_2 + threshold) / (PI_OVER_2 - threshold));
+            else if (theta < -threshold)
+                return -1.0;
+            else if (theta < threshold)
+                return 0.0;
+            else if (theta < PI_OVER_2)
+                return 1.0;
+            else if (theta < PI-threshold)
+                return - ((theta - PI_OVER_2 - threshold) / (PI_OVER_2 - threshold));
+            else
+                return 0.0;
         }
         float getRightArcade(float theta)
         {
-        	if (theta < -PI + threshold)
-        		return 0;
-        	else if (theta < -PI_OVER_2)
-        		return 1.0 - ((theta) / (PI_OVER_2 - threshold));
-        	else if (theta < -threshold)
-        		return -1;
-        	else if (theta < threshold)
-        		return 0;
-        	else if (theta < PI_OVER_2)
-        		return ((theta - PI_OVER_2) / (PI_OVER_2 - threshold));
-        	else if (theta < -threshold)
-        		return 1;
-        	else
-        		return 0;
+            if (theta < -PI + threshold)
+                return 0.0;
+            else if (theta < -PI_OVER_2)
+                return -1.0;
+            else if (theta < -threshold)
+                return ((theta + threshold) / (PI_OVER_2 - threshold));
+            else if (theta < threshold)
+                return 0.0;
+            else if (theta < PI_OVER_2)
+                return ((theta - threshold) / (PI_OVER_2 - threshold));
+            else if (theta < PI-threshold)
+                return 1.0;
+            else
+                return 0.0;
         }
 
         void setArcadeSpeed(float forward, float turn)
         {
         	float l=forward;
 			float r=forward;
-			float theta = atan2(turn,forward);
+			float theta = atan2(forward,turn);
 			float radius = sqrt(forward*forward + turn*turn);
 			printf("%f %f | %f %f (f,t | theta r)\n",l,turn,theta,radius);
-			if (theta > 0)
-//				if (theta <= PI)
-				theta = (theta - PI_OVER_2) / 4.0 + PI_OVER_2;
-			else
-				theta = (theta + PI_OVER_2) / 4.0 - PI_OVER_2;
+			//bending theta towards y axis messes up the later part
+//			if (theta > 0)
+////				if (theta <= PI)
+//				theta = (theta - PI_OVER_2) / 4.0 + PI_OVER_2;
+//			else
+//				theta = (theta + PI_OVER_2) / 4.0 - PI_OVER_2;
 //			l += turn;
 //			r -= turn;
-			if ((theta < threshold && theta > -threshold) || theta > PI - threshold || theta < -PI - threshold || r < 0.05)
+			if ((theta < threshold && theta > -threshold) || theta > PI - threshold || theta < -PI + threshold || radius < 0.05)
 				l = r = 0;
 			else
 			{

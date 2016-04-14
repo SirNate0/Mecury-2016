@@ -260,7 +260,7 @@ int main()
 	while (true)
 	{
 		server->Process();
-//		printf("time %d\n", millisSinceLastPacket);
+		printf("time %d\n", millisSinceLastPacket);
 #ifndef RASPI
 		SDL_Event e;
 		if ( SDL_PollEvent(&e) )
@@ -277,6 +277,7 @@ int main()
 //			pwmWrite(redPWM,250);
 			digitalWrite(redPWM,1);
 			digitalWrite(green,1);
+			lastMillis = millis();
 			sleep(100);
 			cout << "Waiting for connection..." << endl;
 			continue;
@@ -313,7 +314,7 @@ int main()
 					if (joy.buttons[4] &&joy.buttons[5] &&joy.buttons[7] &&joy.buttons[7])
 						s.SetServo(s.TriggerOpen);
 //					d.setTankSpeed(joy.y / 36000.0f, joy.y2 / 36000.0f);
-					d.setArcadeSpeed(joy.y / 36000.0f, joy.x / 36000.0f);
+					d.setArcadeSpeed(joy.y2 / 36000.0f, -joy.x2 / 36000.0f);
 				}
 				else
 				{
@@ -332,11 +333,13 @@ int main()
 				}
 				i++;
 
+				lastMillis = millis();
 				sleep(20);
 	#endif
 			}
 			else
 			{
+				lastMillis = millis();
 				status = LOST_CONNECTION;
 			}
 		}
@@ -351,11 +354,11 @@ int main()
 				millisSinceLastPacket = 0;
 				continue;
 			}
+			lastMillis = millis();
 			sleep(100);
 		}
 		else if (status == CLOSED_CONNECTION)
 			break;
-		lastMillis = millis();
 //		sleep(100);
 
 	}

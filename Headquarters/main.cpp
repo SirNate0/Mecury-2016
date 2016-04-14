@@ -120,7 +120,7 @@ public:
 
 struct Data
 {
-	float l, r, b;
+	float l, r, b, f;
 };
 class SensorHandler: public IMessageHandler
 {
@@ -171,17 +171,17 @@ int main(int argc, char **argv)
 
    printf("\n\n");
 
-   if (argc < 2)
-      {
-         std::cout << "Usage: " << argv[0] << " server-ip" << std::endl;
-         return 0;
-      }
+//   if (argc < 2)
+//      {
+//         std::cout << "Usage: " << argv[0] << " server-ip" << std::endl;
+//         return 0;
+//      }
 
 	kNet::SetLogChannels(LogUser | LogInfo | LogError);
 
 //    ServerListener serverListener;
 	// Start listening on a port.
-	const unsigned short cServerPort = 1234;
+	const unsigned short cServerPort = 4321;//
 	   Network network;
 	   MessageListener listener;
 	   SensorHandler sensors;
@@ -200,7 +200,10 @@ int main(int argc, char **argv)
 	EnableMemoryLeakLoggingAtExit();
 
 
-   Ptr(MessageConnection) connection = network.Connect(argv[1], cServerPort, SocketOverUDP,  &listener);
+   Ptr(MessageConnection) connection = network.Connect(
+//		   "192.168.1.50"
+		   argv[1]
+				, cServerPort, SocketOverUDP,  &listener);
 
 	if (connection)
 	{
@@ -223,7 +226,7 @@ int main(int argc, char **argv)
 				if (nm->data )// && nm->Size() == sizeof(Data))
 				{
 					Data d = *((Data *) nm->data);
-					LOGUSER("Received sensor data: %f %f %f", d.l, d.r, d.b);
+					LOGUSER("Received sensor data: %f %f %f %f", d.l, d.r, d.b, d.f);
 					FILE* f = fopen("out.txt","w");
 #define GUI(str) fprintf(f,"%s\n",str)
 					GUI("Connected");
