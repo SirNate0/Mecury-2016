@@ -47,19 +47,19 @@ void I2C::Write(Device d, signed char c)
 {
 		printf("Writing");
 		int fd, e;
-//		std::map<Device, int>::iterator it = fds.find(d);
-//		if(it != fds.end())
-//		{
-//		   //element found;
-//		   fd = it->second;
-//		}
-//		else
+		std::map<Device, int>::iterator it = fds.find(d);
+		if(it != fds.end())
+		{
+		   //element found;
+		   fd = it->second;
+		}
+		else
 		{
 			fd = wiringPiI2CSetup(d);
 			if (fd == -1)
 				printf("error opening i2c channel %x\n\r", (int) d);
-//			else
-//				fds[d] = fd;
+			else
+				fds[d] = fd;
 		}
 
 

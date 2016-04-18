@@ -165,6 +165,18 @@ public:
 #include "DisplayJoystick.hpp"
 #endif
 
+
+void StopEverything(Servo& s, Drive& d)
+{
+	s.SetServo(Servo::PhoneStop);
+	d.setTankSpeed(0.0,0.0);
+}
+
+//void Order66()
+//{
+//	StopEverything();
+//}
+
 //controls:
 /*
  * view - triggers (or other joystick?)
@@ -176,6 +188,11 @@ public:
 
 int main()
 {
+	Servo s;
+	Sensors sensors;
+	Drive d;
+	int i = 0;
+	StopEverything(s,d);
 	status = WAITING;
 	kNet::SetLogChannels(LogUser | LogInfo | LogError);
 
@@ -216,10 +233,10 @@ int main()
 	DisplayJoystick disp;
 	disp.InitWindow();
 #else
-	Servo s;
-	Sensors sensors;
-	Drive d;
-	int i = 0;
+//	Servo s; // Moved up for StopEverything
+//	Sensors sensors;
+//	Drive d;
+//	int i = 0;
 	//using broadcast instead of send message, so we don't need it
 //	NetworkMessage nm;
 //	nm.inOrder = false;
@@ -345,6 +362,7 @@ int main()
 		}
 		else if (status == LOST_CONNECTION)
 		{
+			StopEverything(s,d);
 			displayError();
 			digitalWrite(redPWM,1);
 			digitalWrite(green,0);
@@ -364,5 +382,6 @@ int main()
 	}
 	digitalWrite(redPWM,0);
 	digitalWrite(green,0);
+	StopEverything(s,d);
 	return 0;
 }

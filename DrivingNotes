@@ -1,0 +1,2965 @@
+Turn around in T area for beanbag
+don't drop beanbag until launching
+Start towards left of the ramp
+pick up claw after launching
+
+
+Results:
+
+nathan@IceRaptor:~$ cd Projects/Mercury-2016/Headquarters/Debug/
+nathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ ./Headquarters 193.78.87.89
+1 joysticks were found.
+
+The names of the joysticks are:
+(613, -1872), (26970, 8083) [-32768 | -32768]
+0:  1:  2:  3:  4:  5:  6:  7:  8:  9:  10:  
+    Microsoft X-Box 360 pad
+
+
+0.000: Network::Init successful. gethostname returned IceRaptor
+5.3e-05: A call to socket() returned a new socket 0x       4.
+0.000145: Network::Connect: Sent a UDP Connection Start datagram to to 193.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:34654, peer: 193.78.87.89:4101, socket: 4, this: 0x1be1260).
+0.000409: Thread::Run(): Thread created.
+0.000424: Created a new NetworkWorkerThread. There are now 1 worker threads.
+0.000438: ThreadEntryPoint: Thread started with param 0x0x1bf57a0.
+0.000476: NetworkWorkerThread starting main loop.
+0.000518: Press the XBox button to quit.
+7.61695: NetworkWorkerThread quit.
+7.62701: Thread::Stop() called.
+7.62708: Deleted a NetworkWorkerThread. There are now 0 worker threads left.
+7.6271: Socket::Close(): Closing socket 193.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:34654, peer: 193.78.87.89:4101, socket: 4, this: 0x1be1260).
+7.62712: Socket::Close(): Socket shutdown(SD_BOTH) succeeded on socket 193.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:34654, peer: 193.78.87.89:4101, socket: 4, this: 0x1be1260).
+7.62713: Network::DeleteSocket: Closed socket 0x1be1260.
+nathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ ./Headquarters 193.78.87.89
+1 joysticks were found.
+
+The names of the joysticks are:
+(613, -1872), (2395, 2984) [-32768 | -32768]
+0:  1:  2:  3:  4:  5:  6:  7:  8:  9:  10:  
+    Microsoft X-Box 360 pad
+
+
+0.000: Network::Init successful. gethostname returned IceRaptor
+5.7e-05: A call to socket() returned a new socket 0x       4.
+0.000168: Network::Connect: Sent a UDP Connection Start datagram to to 193.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45400, peer: 193.78.87.89:4101, socket: 4, this: 0x1f1e260).
+0.00045: Thread::Run(): Thread created.
+0.000465: Created a new NetworkWorkerThread. There are now 1 worker threads.
+0.000494: ThreadEntryPoint: Thread started with param 0x0x1f327a0.
+0.000579: NetworkWorkerThread starting main loop.
+0.000616: Press the XBox button to quit.
+^C20.5508: NetworkWorkerThread quit.
+20.5609: Thread::Stop() called.
+20.561: Deleted a NetworkWorkerThread. There are now 0 worker threads left.
+20.561: Socket::Close(): Closing socket 193.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45400, peer: 193.78.87.89:4101, socket: 4, this: 0x1f1e260).
+20.561: Socket::Close(): Socket shutdown(SD_BOTH) succeeded on socket 193.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45400, peer: 193.78.87.89:4101, socket: 4, this: 0x1f1e260).
+20.561: Network::DeleteSocket: Closed socket 0x1f1e260.
+nathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ ./Headquarters 139.78.87.89
+1 joysticks were found.
+
+The names of the joysticks are:
+(613, -1764), (-1407, 266) [-32768 | -32768]
+0:  1:  2:  3:  4:  5:  6:  7:  8:  9:  10:  
+    Microsoft X-Box 360 pad
+
+
+0.000: Network::Init successful. gethostname returned IceRaptor
+5.5e-05: A call to socket() returned a new socket 0x       4.
+0.000146: Network::Connect: Sent a UDP Connection Start datagram to to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:53938, peer: 139.78.87.89:4101, socket: 4, this: 0x1f51260).
+0.00041: Thread::Run(): Thread created.
+0.000428: Created a new NetworkWorkerThread. There are now 1 worker threads.
+0.000443: ThreadEntryPoint: Thread started with param 0x0x1f657a0.
+0.000483: NetworkWorkerThread starting main loop.
+0.000527: Press the XBox button to quit.
+0.1293: UDPMessageConnection::ReadSocket: Received data from socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:53938, peer: 139.78.87.89:4101, socket: 4, this: 0x1f51260). Transitioned from ConnectionPending to ConnectionOK state.
+0.15094: Received sensor data: 11.748331 120.000000 120.000000 4.616803
+0.626378: Received sensor data: 11.754187 120.000000 120.000000 4.616803
+1.09784: Received sensor data: 11.754165 120.000000 120.000000 4.616803
+1.51286: Received sensor data: 11.748310 120.000000 120.000000 4.616803
+1.9892: Received sensor data: 11.732167 120.000000 120.000000 4.616803
+2.4017: Received sensor data: 11.737986 120.000000 120.000000 4.616803
+2.82068: Received sensor data: 11.739518 91.295761 95.580948 4.616803
+3.29447: Received sensor data: 12.100162 111.914963 99.370872 4.616803
+3.71564: Received sensor data: 13.114449 26.569315 25.600073 4.616803
+4.19175: Received sensor data: 11.988232 26.144917 26.575342 4.616803
+4.66976: Received sensor data: 11.985102 53.162861 49.095951 4.616803
+5.08222: Received sensor data: 11.982092 120.000000 120.000000 4.616803
+5.55776: Received sensor data: 11.992769 120.000000 120.000000 4.616803
+6.03214: Received sensor data: 14.003748 120.000000 120.000000 4.616803
+6.44657: Received sensor data: 15.047313 120.000000 120.000000 4.616803
+6.85804: Received sensor data: 15.045019 98.752350 111.975510 4.616803
+7.33354: Received sensor data: 15.060287 120.000000 120.000000 4.616803
+7.74876: Received sensor data: 14.994547 91.268845 120.000000 4.616803
+8.17122: Received sensor data: 14.971807 120.000000 120.000000 4.616803
+^C13.7323: NetworkWorkerThread quit.
+13.7424: Thread::Stop() called.
+13.7425: Deleted a NetworkWorkerThread. There are now 0 worker threads left.
+13.7425: Socket::Close(): Closing socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:53938, peer: 139.78.87.89:4101, socket: 4, this: 0x1f51260).
+13.7425: Socket::Close(): Socket shutdown(SD_BOTH) succeeded on socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:53938, peer: 139.78.87.89:4101, socket: 4, this: 0x1f51260).
+13.7425: Network::DeleteSocket: Closed socket 0x1f51260.
+nathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ ./Headquarters 139.78.87.89
+1 joysticks were found.
+
+The names of the joysticks are:
+(613, -1764), (3821, -1289) [-32768 | -32768]
+0:  1:  2:  3:  4:  5:  6:  7:  8:  9:  10:  
+    Microsoft X-Box 360 pad
+
+
+0.000: Network::Init successful. gethostname returned IceRaptor
+5.1e-05: A call to socket() returned a new socket 0x       4.
+0.000152: Network::Connect: Sent a UDP Connection Start datagram to to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:38972, peer: 139.78.87.89:4101, socket: 4, this: 0x2045260).
+0.000413: Thread::Run(): Thread created.
+0.000431: Created a new NetworkWorkerThread. There are now 1 worker threads.
+0.000443: ThreadEntryPoint: Thread started with param 0x0x20597a0.
+0.000476: NetworkWorkerThread starting main loop.
+0.000519: Press the XBox button to quit.
+0.135389: UDPMessageConnection::ReadSocket: Received data from socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:38972, peer: 139.78.87.89:4101, socket: 4, this: 0x2045260). Transitioned from ConnectionPending to ConnectionOK state.
+0.150828: Received sensor data: 26.112164 120.000000 120.000000 4.616803
+1.66018: Received sensor data: 25.712875 120.000000 120.000000 4.616803
+2.13574: Received sensor data: 26.021595 120.000000 120.000000 4.616803
+2.55206: Received sensor data: 24.302412 120.000000 120.000000 4.616803
+3.02659: Received sensor data: 13.605436 120.000000 120.000000 4.616803
+3.43998: Received sensor data: 14.245583 120.000000 120.000000 4.616803
+3.86084: Received sensor data: 14.562047 120.000000 120.000000 4.616803
+4.33559: Received sensor data: 14.734616 120.000000 120.000000 4.616803
+4.81914: Received sensor data: 14.422383 120.000000 120.000000 4.616803
+5.24095: Received sensor data: 19.339760 120.000000 120.000000 4.616803
+5.71898: Received sensor data: 19.821863 120.000000 120.000000 4.616803
+6.196: Received sensor data: 19.953106 120.000000 120.000000 4.616803
+6.61098: Received sensor data: 26.831198 120.000000 120.000000 4.616803
+7.0874: Received sensor data: 26.773645 120.000000 120.000000 4.616803
+7.50347: Received sensor data: 12.270093 120.000000 120.000000 4.616803
+7.97966: Received sensor data: 12.720181 120.000000 120.000000 4.616803
+8.39536: Received sensor data: 12.720163 120.000000 120.000000 4.616803
+8.87144: Received sensor data: 12.735624 120.000000 120.000000 4.616803
+9.28816: Received sensor data: 13.004028 120.000000 120.000000 4.616803
+9.76416: Received sensor data: 12.126743 120.000000 120.000000 4.616803
+10.1809: Received sensor data: 12.897143 120.000000 120.000000 4.616803
+10.6563: Received sensor data: 12.812779 120.000000 120.000000 4.616803
+11.1332: Received sensor data: 12.728739 120.000000 120.000000 4.616803
+11.5466: Received sensor data: 12.725332 120.000000 120.000000 4.616803
+12.0212: Received sensor data: 11.596803 120.000000 120.000000 4.616803
+12.4979: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+12.9131: Received sensor data: 36.446274 120.000000 120.000000 4.616803
+13.3869: Received sensor data: 21.182886 120.000000 120.000000 4.616803
+13.8634: Received sensor data: 21.634209 120.000000 120.000000 4.616803
+14.2766: Received sensor data: 26.800030 115.201477 120.000000 4.616803
+14.6897: Received sensor data: 29.435480 120.000000 120.000000 4.616803
+15.1128: Received sensor data: 29.352127 120.000000 120.000000 4.616803
+15.5881: Received sensor data: 28.984909 120.000000 120.000000 4.616803
+16.244: Received sensor data: 28.086399 120.000000 120.000000 4.616803
+16.4769: Received sensor data: 26.805334 120.000000 120.000000 4.616803
+31.6394: It's been 15196.12ms since last heard from other end. connectionLostTimeout=15000.00ms, so closing connection.
+31.6634: MessageConnection::Close(500 msecs): Disconnecting. connectionState = ConnectionClosed, readOpen:true, writeOpen:true.
+31.6634: MessageConnection::Close: Closed connection to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:38972, peer: 139.78.87.89:4101, socket: 4, this: 0x2045260).
+31.6897: NetworkWorkerThread quit.
+31.6997: Thread::Stop() called.
+31.6998: Deleted a NetworkWorkerThread. There are now 0 worker threads left.
+31.6998: Socket::Close(): Closing socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:38972, peer: 139.78.87.89:4101, socket: 4, this: 0x2045260).
+31.6999: Socket::Close(): Socket shutdown(SD_BOTH) succeeded on socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:38972, peer: 139.78.87.89:4101, socket: 4, this: 0x2045260).
+31.6999: Network::DeleteSocket: Closed socket 0x2045260.
+^Cnathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ ./Headquarters 1378.87.89
+1 joysticks were found.
+
+The names of the joysticks are:
+(727, -1764), (639, 2192) [-32768 | -32768]
+0:  1:  2:  3:  4:  5:  6:  7:  8:  9:  10:  
+    Microsoft X-Box 360 pad
+
+
+0.000: Network::Init successful. gethostname returned IceRaptor
+5.5e-05: A call to socket() returned a new socket 0x       4.
+0.000146: Network::Connect: Sent a UDP Connection Start datagram to to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45906, peer: 139.78.87.89:4101, socket: 4, this: 0x2602260).
+0.000406: Thread::Run(): Thread created.
+0.000421: Created a new NetworkWorkerThread. There are now 1 worker threads.
+0.00043: ThreadEntryPoint: Thread started with param 0x0x26167a0.
+0.000478: NetworkWorkerThread starting main loop.
+0.000529: Press the XBox button to quit.
+0.071458: UDPMessageConnection::ReadSocket: Received data from socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45906, peer: 139.78.87.89:4101, socket: 4, this: 0x2602260). Transitioned from ConnectionPending to ConnectionOK state.
+0.100791: Received sensor data: 18.765785 120.000000 120.000000 4.616803
+0.575787: Received sensor data: 18.744116 120.000000 120.000000 4.616803
+0.99097: Received sensor data: 18.780558 120.000000 120.000000 4.616803
+1.46757: Received sensor data: 18.776796 120.000000 120.000000 4.616803
+1.88188: Received sensor data: 18.765976 120.000000 120.000000 4.616803
+2.35587: Received sensor data: 18.773197 120.000000 120.000000 4.616803
+2.76917: Received sensor data: 21.916866 120.000000 120.000000 4.616803
+3.2455: Received sensor data: 22.159756 120.000000 120.000000 4.616803
+3.71723: Received sensor data: 18.534744 120.000000 120.000000 4.616803
+4.13392: Received sensor data: 33.764843 120.000000 120.000000 4.616803
+4.6079: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+5.08147: Received sensor data: 6.455009 8.421770 15.509794 4.616803
+5.49688: Received sensor data: 6.370733 120.000000 120.000000 4.616803
+5.96955: Received sensor data: 4.616803 53.095619 78.710220 4.616803
+6.38511: Received sensor data: 5.988853 120.000000 120.000000 4.616803
+6.86062: Received sensor data: 7.037328 120.000000 120.000000 4.616803
+7.3342: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+7.74763: Received sensor data: 4.646269 120.000000 120.000000 4.616803
+8.22291: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+8.64795: Received sensor data: 5.350011 120.000000 120.000000 4.616803
+9.12458: Received sensor data: 8.020709 120.000000 120.000000 4.616803
+9.59935: Received sensor data: 5.920444 120.000000 120.000000 4.616803
+10.0144: Received sensor data: 6.342327 120.000000 120.000000 4.616803
+10.4895: Received sensor data: 5.941591 120.000000 120.000000 4.616803
+10.9029: Received sensor data: 6.600476 120.000000 120.000000 4.616803
+11.3789: Received sensor data: 6.226460 120.000000 120.000000 4.616803
+11.7948: Received sensor data: 5.742617 120.000000 120.000000 4.616803
+12.2695: Received sensor data: 6.303895 120.000000 120.000000 4.616803
+12.7452: Received sensor data: 4.961323 120.000000 120.000000 4.616803
+13.1612: Received sensor data: 5.636251 120.000000 120.000000 4.616803
+13.6349: Received sensor data: 6.282062 120.000000 120.000000 4.616803
+14.1119: Received sensor data: 6.943002 120.000000 120.000000 4.616803
+14.5283: Received sensor data: 5.185542 120.000000 120.000000 4.616803
+15.0035: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+15.5977: Received sensor data: 4.872295 120.000000 120.000000 4.616803
+15.8915: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+16.366: Received sensor data: 5.055176 120.000000 120.000000 4.616803
+16.8408: Received sensor data: 4.752937 120.000000 120.000000 4.616803
+17.2575: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+17.7341: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+18.2085: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+18.623: Received sensor data: 5.975203 120.000000 120.000000 4.616803
+19.0973: Received sensor data: 5.769702 120.000000 120.000000 4.616803
+19.5709: Received sensor data: 4.626381 120.000000 120.000000 4.616803
+19.9884: Received sensor data: 5.716427 120.000000 120.000000 4.616803
+20.4652: Received sensor data: 6.979079 120.000000 120.000000 4.616803
+20.9427: Received sensor data: 8.864828 120.000000 120.000000 4.616803
+21.3572: Received sensor data: 6.353726 120.000000 120.000000 4.616803
+21.8324: Received sensor data: 7.978122 120.000000 120.000000 4.616803
+22.3094: Received sensor data: 9.838200 120.000000 120.000000 4.616803
+22.7261: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+23.2027: Received sensor data: 7.467124 120.000000 120.000000 4.616803
+23.6797: Received sensor data: 7.788624 120.000000 120.000000 4.616803
+24.096: Received sensor data: 5.752592 120.000000 120.000000 4.616803
+24.5237: Received sensor data: 7.801040 120.000000 120.000000 4.616803
+24.999: Received sensor data: 6.360521 120.000000 120.000000 4.616803
+25.4734: Received sensor data: 7.830194 120.000000 120.000000 4.616803
+25.8885: Received sensor data: 9.028888 120.000000 120.000000 4.616803
+26.3655: Received sensor data: 8.174784 120.000000 120.000000 4.616803
+26.7813: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+27.198: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+27.6752: Received sensor data: 8.251940 120.000000 120.000000 4.616803
+28.1505: Received sensor data: 5.929987 120.000000 120.000000 4.616803
+28.6245: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+29.0397: Received sensor data: 7.883704 120.000000 120.000000 4.616803
+29.5165: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+29.9435: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+30.4187: Received sensor data: 5.162961 120.000000 120.000000 4.616803
+30.8931: Received sensor data: 11.221655 120.000000 120.000000 4.616803
+31.368: Received sensor data: 5.020453 120.000000 120.000000 4.616803
+31.7839: Received sensor data: 120.000000 35.797844 35.579552 4.616803
+32.259: Received sensor data: 25.116716 120.000000 120.000000 4.616803
+32.6745: Received sensor data: 24.663111 120.000000 120.000000 4.616803
+33.1515: Received sensor data: 24.626335 120.000000 120.000000 4.616803
+33.6283: Received sensor data: 24.657150 120.000000 120.000000 4.616803
+34.0453: Received sensor data: 21.109615 120.000000 120.000000 4.616803
+34.5171: Received sensor data: 17.168503 120.000000 120.000000 4.616803
+34.9926: Received sensor data: 14.101377 120.000000 120.000000 4.616803
+35.4081: Received sensor data: 12.472773 120.000000 120.000000 4.616803
+35.9437: Received sensor data: 11.370226 120.000000 120.000000 4.616803
+36.3597: Received sensor data: 6.635751 120.000000 120.000000 4.616803
+36.7744: Received sensor data: 11.907347 120.000000 120.000000 4.616803
+37.2502: Received sensor data: 12.733862 120.000000 120.000000 4.616803
+37.671: Received sensor data: 12.740801 120.000000 120.000000 4.616803
+38.1488: Received sensor data: 12.737385 120.000000 120.000000 4.616803
+38.626: Received sensor data: 12.745898 120.000000 120.000000 4.616803
+39.0403: Received sensor data: 12.735615 120.000000 120.000000 4.616803
+39.5258: Received sensor data: 12.718703 120.000000 120.000000 4.616803
+39.9492: Received sensor data: 12.793699 120.000000 120.000000 4.616803
+40.4257: Received sensor data: 12.988655 120.000000 120.000000 4.616803
+40.8463: Received sensor data: 12.841800 120.000000 120.000000 4.616803
+41.3215: Received sensor data: 12.951616 120.000000 120.000000 4.616803
+41.7982: Received sensor data: 12.725376 120.000000 120.000000 4.616803
+42.2145: Received sensor data: 12.834475 120.000000 120.000000 4.616803
+42.6898: Received sensor data: 12.725438 120.000000 120.000000 4.616803
+43.165: Received sensor data: 12.748652 120.000000 120.000000 4.616803
+43.5852: Received sensor data: 12.648760 120.000000 120.000000 4.616803
+44.062: Received sensor data: 12.783633 120.000000 120.000000 4.616803
+44.4825: Received sensor data: 13.000589 120.000000 120.000000 4.616803
+44.9585: Received sensor data: 13.012898 120.000000 120.000000 4.616803
+45.4363: Received sensor data: 12.973280 120.000000 120.000000 4.616803
+45.852: Received sensor data: 13.005839 120.000000 120.000000 4.616803
+46.327: Received sensor data: 12.986349 120.000000 120.000000 4.616803
+46.7519: Received sensor data: 12.998655 120.000000 120.000000 4.616803
+47.2263: Received sensor data: 13.066925 120.000000 120.000000 4.616803
+47.6989: Received sensor data: 13.201860 94.740662 111.760292 4.616803
+48.1198: Received sensor data: 13.415571 93.153191 107.525696 4.616803
+48.5948: Received sensor data: 12.986467 111.571701 111.632713 4.616803
+49.0715: Received sensor data: 13.070333 56.660339 32.117111 4.616803
+49.4891: Received sensor data: 13.018309 111.960037 115.942017 4.616803
+49.9634: Received sensor data: 12.720155 33.269840 33.075523 4.616803
+50.4406: Received sensor data: 12.890276 87.520172 81.241005 4.616803
+50.856: Received sensor data: 12.895312 120.000000 120.000000 4.616803
+51.3294: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+51.8042: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+52.2163: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+52.6936: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+53.1698: Received sensor data: 4.645684 6.397024 15.493210 4.616803
+53.5855: Received sensor data: 9.062856 6.999548 15.535547 4.616803
+54.0635: Received sensor data: 9.220512 6.703368 15.424780 4.616803
+54.4856: Received sensor data: 9.112176 11.909761 16.247776 4.616803
+54.9613: Received sensor data: 22.164600 18.641893 19.467606 4.616803
+55.435: Received sensor data: 21.892475 18.562643 19.767244 4.616803
+55.9114: Received sensor data: 22.115498 18.625755 19.793409 4.616803
+56.325: Received sensor data: 22.154438 18.577908 19.695002 4.616803
+56.7378: Received sensor data: 22.150082 18.644247 19.678337 4.616803
+57.1558: Received sensor data: 21.946903 18.637354 19.775904 4.616803
+57.6279: Received sensor data: 22.145145 18.576626 19.679317 4.616803
+58.1035: Received sensor data: 22.419508 17.947578 19.744282 4.616803
+58.5171: Received sensor data: 22.145113 18.543373 19.699451 4.616803
+58.995: Received sensor data: 21.887390 18.264902 19.649279 4.616803
+59.4718: Received sensor data: 21.653042 18.558580 19.762678 4.616803
+59.8874: Received sensor data: 21.214575 17.945257 19.893368 4.616803
+60.3644: Received sensor data: 21.266314 18.615150 19.271479 4.616803
+60.7796: Received sensor data: 21.779293 18.601795 19.751728 4.616803
+61.2541: Received sensor data: 22.144848 18.623426 19.727409 4.616803
+61.7307: Received sensor data: 22.164944 18.442095 19.582195 4.616803
+62.1462: Received sensor data: 22.133551 18.092649 19.582186 4.616803
+62.6219: Received sensor data: 21.941523 18.575382 19.570728 4.616803
+63.0486: Received sensor data: 22.184563 17.972813 19.441679 4.616803
+63.521: Received sensor data: 21.775766 18.711308 19.653757 4.616803
+63.9956: Received sensor data: 21.397007 17.721760 19.224451 4.616803
+64.4133: Received sensor data: 21.710110 18.569984 19.636610 4.616803
+64.8886: Received sensor data: 22.623482 18.388834 19.853333 4.616803
+65.3623: Received sensor data: 22.154829 18.893665 20.005804 4.616803
+65.7776: Received sensor data: 22.125443 18.169903 19.472614 4.616803
+66.1942: Received sensor data: 22.164770 18.243618 19.721458 4.616803
+66.6669: Received sensor data: 22.429153 18.987377 19.759430 4.616803
+67.1405: Received sensor data: 21.980726 18.547245 19.699581 4.616803
+67.5582: Received sensor data: 22.159803 18.378735 19.525433 4.616803
+68.0333: Received sensor data: 21.868282 18.634821 19.595539 4.616803
+68.5082: Received sensor data: 21.916677 18.639959 19.993303 4.616803
+68.9826: Received sensor data: 22.110098 18.379118 19.644167 4.616803
+69.3975: Received sensor data: 22.134998 18.378746 19.546778 4.616803
+69.8743: Received sensor data: 21.953804 18.053204 19.870100 4.616803
+70.291: Received sensor data: 22.189707 18.547697 19.913893 4.616803
+70.7666: Received sensor data: 21.699394 17.748732 19.265255 4.616803
+71.2409: Received sensor data: 21.955814 18.257481 19.494139 4.616803
+71.6553: Received sensor data: 21.550861 18.608784 19.736378 4.616803
+72.1299: Received sensor data: 21.623581 18.620094 19.764126 4.616803
+72.6047: Received sensor data: 21.453690 18.299362 19.598076 4.616803
+73.0266: Received sensor data: 21.394537 18.264894 19.526649 4.616803
+73.5051: Received sensor data: 21.704056 18.448587 19.730473 4.616803
+73.9238: Received sensor data: 21.751282 17.799641 19.403433 4.616803
+74.3966: Received sensor data: 22.362801 18.012558 19.205820 4.616803
+74.8198: Received sensor data: 22.526508 17.171640 19.095085 4.616803
+75.2976: Received sensor data: 21.159863 17.398151 19.125395 4.616803
+75.772: Received sensor data: 21.118729 17.473740 19.365988 4.616803
+76.1942: Received sensor data: 22.154917 18.598749 19.763342 4.616803
+76.6696: Received sensor data: 21.764072 18.672749 20.490795 4.616803
+77.1458: Received sensor data: 21.805470 17.856787 20.199387 4.616803
+77.568: Received sensor data: 22.534019 16.102497 20.279858 4.616803
+78.0447: Received sensor data: 19.816698 22.654272 23.292202 4.616803
+78.4626: Received sensor data: 18.714123 22.866776 24.511864 4.616803
+78.9998: Received sensor data: 18.744089 23.182631 23.587811 4.616803
+79.4121: Received sensor data: 17.927174 23.440351 23.828018 4.616803
+79.8332: Received sensor data: 16.388603 24.553284 24.894773 4.616803
+80.3091: Received sensor data: 14.051114 26.261206 25.040720 4.616803
+80.7862: Received sensor data: 13.763689 25.545567 25.607401 4.616803
+81.2017: Received sensor data: 15.230969 24.133488 24.731638 4.616803
+81.678: Received sensor data: 14.607654 24.015709 25.122219 4.616803
+82.0941: Received sensor data: 12.536001 30.491873 35.215508 4.616803
+82.5696: Received sensor data: 9.389041 31.795177 30.643717 4.616803
+82.9921: Received sensor data: 6.076953 32.199234 33.593567 4.616803
+83.4675: Received sensor data: 4.657769 32.412098 38.226959 4.616803
+83.9432: Received sensor data: 4.960148 31.936005 30.586456 4.616803
+84.3555: Received sensor data: 5.587287 32.154316 32.725510 4.616803
+84.8309: Received sensor data: 5.687310 32.670139 33.342827 4.616803
+85.3036: Received sensor data: 5.721107 31.036673 36.244366 4.616803
+85.7196: Received sensor data: 6.773039 38.785328 30.702713 4.616803
+86.1944: Received sensor data: 8.329622 26.214153 26.450647 4.616803
+86.6706: Received sensor data: 10.065329 21.525442 22.790838 4.616803
+87.0852: Received sensor data: 10.191351 24.240257 24.600248 4.616803
+87.5602: Received sensor data: 11.611912 23.526546 24.176754 4.616803
+87.977: Received sensor data: 14.308560 22.377010 23.560114 4.616803
+88.4539: Received sensor data: 19.824224 20.660038 22.229111 4.616803
+88.9311: Received sensor data: 25.319326 16.599548 20.114298 4.616803
+89.3466: Received sensor data: 28.505106 8.104261 15.660477 4.616803
+89.8213: Received sensor data: 30.906610 6.490631 15.747879 4.616803
+90.296: Received sensor data: 31.458790 11.235239 17.292728 4.616803
+90.7154: Received sensor data: 30.160299 17.756458 20.514019 4.616803
+91.1889: Received sensor data: 24.812984 19.473597 20.966900 4.616803
+91.6634: Received sensor data: 25.784546 16.668322 19.157114 4.616803
+92.0769: Received sensor data: 26.754795 12.670130 18.067923 4.616803
+92.552: Received sensor data: 26.293106 16.420763 19.314066 4.616803
+93.0264: Received sensor data: 26.618353 19.915813 21.241156 4.616803
+93.5018: Received sensor data: 25.646891 21.060020 21.632124 4.616803
+93.9193: Received sensor data: 26.825663 20.876604 21.942165 4.616803
+94.3936: Received sensor data: 27.016460 20.280470 21.059479 4.616803
+94.8077: Received sensor data: 26.120068 21.101021 21.631237 4.616803
+95.2834: Received sensor data: 24.365246 17.985167 20.023027 4.616803
+95.7585: Received sensor data: 23.897276 19.285093 20.619524 4.616803
+96.1743: Received sensor data: 22.710794 17.488794 19.988689 4.616803
+96.6506: Received sensor data: 23.411276 18.308809 20.353916 4.616803
+97.0671: Received sensor data: 24.058416 17.714718 19.663305 4.616803
+97.5415: Received sensor data: 23.837337 16.815880 19.368982 4.616803
+98.0159: Received sensor data: 22.968016 19.642658 20.707859 4.616803
+98.4327: Received sensor data: 20.938715 19.982800 21.540058 4.616803
+98.9088: Received sensor data: 18.931574 20.459280 21.464962 4.616803
+99.3817: Received sensor data: 18.773144 20.062859 21.818037 4.616803
+99.807: Received sensor data: 19.340076 20.053047 22.975048 4.616803
+100.281: Received sensor data: 18.734020 23.250788 24.019627 4.616803
+100.755: Received sensor data: 15.479380 28.812084 28.756083 4.616803
+101.172: Received sensor data: 11.745346 34.205818 40.278946 4.616803
+101.656: Received sensor data: 4.616803 52.545033 39.823994 4.616803
+102.132: Received sensor data: 4.616803 35.050690 71.575813 4.616803
+102.548: Received sensor data: 9.075232 35.586712 58.376812 4.616803
+103.084: Received sensor data: 18.248981 27.037647 25.675760 4.616803
+103.436: Received sensor data: 19.596312 22.769512 23.720018 4.616803
+103.913: Received sensor data: 20.002077 20.468740 21.452255 4.616803
+104.334: Received sensor data: 20.050068 20.407459 21.140045 4.616803
+104.808: Received sensor data: 20.198689 20.080130 20.860855 4.616803
+105.283: Received sensor data: 21.784767 18.222713 20.487062 4.616803
+105.697: Received sensor data: 22.977116 15.266367 18.861889 4.616803
+106.12: Received sensor data: 23.233837 14.288370 17.452663 4.616803
+106.595: Received sensor data: 23.261999 14.350122 17.550896 4.616803
+107.071: Received sensor data: 22.987980 14.081514 17.438980 4.616803
+107.491: Received sensor data: 22.716402 14.173019 17.334524 4.616803
+107.966: Received sensor data: 23.014759 14.220073 17.376675 4.616803
+108.44: Received sensor data: 22.686146 14.062558 17.839085 4.616803
+108.857: Received sensor data: 23.758717 14.636042 17.589859 4.616803
+109.333: Received sensor data: 25.740000 16.359776 19.197731 4.616803
+109.808: Received sensor data: 29.409622 17.537991 19.760500 4.616803
+110.224: Received sensor data: 27.512186 19.493553 20.778397 4.616803
+110.696: Received sensor data: 20.619190 21.495918 23.385105 4.616803
+111.17: Received sensor data: 17.729893 18.702873 21.225693 4.616803
+111.651: Received sensor data: 19.707592 16.771614 20.056780 4.616803
+112.007: Received sensor data: 22.045488 15.510157 19.315130 4.616803
+112.481: Received sensor data: 25.538425 13.891309 18.364246 4.616803
+112.957: Received sensor data: 29.020706 12.221942 17.280766 4.616803
+113.431: Received sensor data: 29.221527 10.341741 16.034779 4.616803
+113.847: Received sensor data: 35.273094 6.185804 15.619115 4.616803
+114.322: Received sensor data: 51.863964 5.886865 16.499168 4.616803
+114.798: Received sensor data: 31.853607 10.138727 16.403965 4.616803
+115.211: Received sensor data: 28.916042 17.746365 19.786049 4.616803
+115.687: Received sensor data: 24.815517 22.036232 22.100687 4.616803
+116.161: Received sensor data: 21.656834 22.075062 23.208561 4.616803
+116.576: Received sensor data: 19.897373 21.678421 22.120579 4.616803
+117.115: Received sensor data: 19.874399 21.684437 23.040348 4.616803
+117.531: Received sensor data: 18.730206 21.665348 23.000570 4.616803
+117.946: Received sensor data: 15.809855 21.070007 22.862747 4.616803
+118.422: Received sensor data: 11.655052 23.863073 23.541004 4.616803
+118.899: Received sensor data: 9.880523 22.817371 24.549173 4.616803
+119.312: Received sensor data: 10.838377 19.019854 21.692812 4.616803
+119.786: Received sensor data: 12.814815 21.286375 22.460268 4.616803
+120.262: Received sensor data: 13.799089 22.534334 25.084446 4.616803
+120.678: Received sensor data: 14.207441 29.457754 30.149097 4.616803
+121.153: Received sensor data: 15.405540 31.598816 32.241978 4.616803
+121.576: Received sensor data: 14.098001 32.547676 42.071030 4.616803
+122.052: Received sensor data: 16.915123 28.923950 28.541821 4.616803
+122.528: Received sensor data: 21.410803 28.406591 29.206472 4.616803
+122.941: Received sensor data: 24.168247 19.352428 21.739235 4.616803
+123.417: Received sensor data: 25.188002 20.042866 21.399227 4.616803
+123.892: Received sensor data: 26.802807 19.459572 20.304523 4.616803
+124.306: Received sensor data: 24.923754 19.687901 20.996677 4.616803
+124.782: Received sensor data: 22.956490 18.200129 20.475256 4.616803
+125.196: Received sensor data: 22.956339 17.779560 19.958855 4.616803
+125.67: Received sensor data: 23.827583 21.943087 22.906309 4.616803
+126.083: Received sensor data: 24.160877 27.508877 27.876820 4.616803
+126.557: Received sensor data: 14.272504 32.152973 44.346638 4.616803
+127.032: Received sensor data: 6.889145 42.547150 72.847855 4.616803
+127.447: Received sensor data: 4.948657 44.007179 35.332924 4.616803
+127.858: Received sensor data: 5.073966 63.224915 65.464325 4.616803
+128.33: Received sensor data: 5.517602 38.005524 59.992664 4.616803
+128.748: Received sensor data: 5.193742 60.532402 61.459705 4.616803
+129.223: Received sensor data: 4.977981 40.545120 56.656219 4.616803
+129.699: Received sensor data: 5.235808 33.178425 43.096268 4.616803
+130.122: Received sensor data: 7.937354 29.955761 53.011513 4.616803
+130.597: Received sensor data: 10.670248 28.805542 50.080029 4.616803
+131.071: Received sensor data: 11.916138 26.621353 27.622946 4.616803
+131.546: Received sensor data: 12.881755 28.255487 34.637527 4.616803
+131.962: Received sensor data: 11.398980 30.629568 44.506996 4.616803
+132.382: Received sensor data: 10.445921 30.690191 30.800415 4.616803
+132.856: Received sensor data: 10.394207 29.430676 27.758139 4.616803
+133.331: Received sensor data: 12.795628 24.814852 28.702503 4.616803
+133.756: Received sensor data: 14.667064 26.555859 27.372564 4.616803
+134.23: Received sensor data: 14.889450 26.016199 27.374640 4.616803
+134.705: Received sensor data: 11.881148 29.537088 30.200405 4.616803
+135.117: Received sensor data: 9.682795 30.253498 30.850183 4.616803
+135.592: Received sensor data: 9.938303 26.656193 26.133968 4.616803
+136.066: Received sensor data: 11.095961 25.531836 26.467373 4.616803
+136.478: Received sensor data: 12.211232 21.555798 22.007229 4.616803
+136.951: Received sensor data: 13.873276 23.034405 23.109686 4.616803
+137.373: Received sensor data: 12.578508 28.474148 29.591793 4.616803
+137.85: Received sensor data: 9.990694 29.892139 30.660496 4.616803
+138.325: Received sensor data: 8.270164 28.502701 32.240612 4.616803
+138.74: Received sensor data: 8.948915 28.233082 28.996502 4.616803
+139.22: Received sensor data: 10.070707 24.508482 25.382069 4.616803
+139.696: Received sensor data: 12.280592 22.242777 23.398537 4.616803
+140.11: Received sensor data: 13.050224 23.928902 23.496798 4.616803
+140.584: Received sensor data: 13.264410 24.332275 24.315842 4.616803
+141.062: Received sensor data: 15.334165 22.260794 24.203861 4.616803
+141.478: Received sensor data: 17.455572 20.963591 22.017109 4.616803
+141.953: Received sensor data: 18.787785 18.424856 20.612713 4.616803
+142.372: Received sensor data: 20.747608 23.196600 23.944006 4.616803
+142.845: Received sensor data: 19.707205 28.601089 29.314951 4.616803
+143.262: Received sensor data: 19.382109 29.942932 30.454630 4.616803
+143.738: Received sensor data: 19.489243 27.344824 27.852139 4.616803
+144.155: Received sensor data: 26.765890 28.280621 29.714207 4.616803
+144.632: Received sensor data: 54.482796 22.776361 23.515888 4.616803
+145.108: Received sensor data: 62.729607 22.447012 22.656158 4.616803
+145.582: Received sensor data: 36.357933 22.234308 23.677692 4.616803
+145.997: Received sensor data: 34.017971 24.595339 24.870678 4.616803
+146.474: Received sensor data: 34.198875 21.466085 22.721920 4.616803
+146.888: Received sensor data: 32.410919 20.494267 21.933250 4.616803
+147.364: Received sensor data: 34.575279 23.499910 23.190826 4.616803
+147.839: Received sensor data: 31.048151 23.724417 23.436855 4.616803
+148.263: Received sensor data: 14.866751 29.178257 27.374985 4.616803
+148.735: Received sensor data: 10.934606 26.890408 26.675894 4.616803
+149.162: Received sensor data: 11.256165 24.738552 25.977732 4.616803
+149.64: Received sensor data: 12.052128 23.527254 25.218288 4.616803
+150.064: Received sensor data: 11.964432 26.340973 26.178900 4.616803
+150.541: Received sensor data: 9.707884 32.677666 36.567673 4.616803
+151.016: Received sensor data: 7.148818 34.286427 63.120312 4.616803
+151.434: Received sensor data: 7.502087 30.638636 38.391918 4.616803
+151.911: Received sensor data: 10.762401 28.286728 28.689011 4.616803
+152.386: Received sensor data: 10.755264 33.184860 32.674709 4.616803
+152.801: Received sensor data: 14.348036 29.459812 30.791531 4.616803
+153.279: Received sensor data: 21.050629 23.832403 25.095978 4.616803
+153.756: Received sensor data: 21.222992 24.141323 24.059437 4.616803
+154.29: Received sensor data: 22.662960 16.417276 19.228426 4.616803
+154.646: Received sensor data: 25.243097 15.301836 18.917042 4.616803
+155.123: Received sensor data: 24.747009 19.317648 21.116299 4.616803
+155.54: Received sensor data: 24.694172 19.775127 20.612202 4.616803
+156.015: Received sensor data: 25.008316 19.685823 20.594732 4.616803
+156.491: Received sensor data: 23.693588 20.038105 20.803801 4.616803
+156.905: Received sensor data: 24.216908 19.675591 21.109959 4.616803
+157.379: Received sensor data: 19.936171 21.720455 22.497223 4.616803
+157.854: Received sensor data: 17.915840 21.641537 22.360607 4.616803
+158.328: Received sensor data: 18.583187 20.206364 22.044512 4.616803
+158.742: Received sensor data: 20.591949 20.157345 21.169786 4.616803
+159.216: Received sensor data: 19.816036 20.221212 21.307409 4.616803
+159.633: Received sensor data: 16.223179 24.933163 26.590145 4.616803
+160.108: Received sensor data: 14.789114 25.227442 25.964443 4.616803
+160.585: Received sensor data: 14.020432 25.063225 24.288773 4.616803
+161.004: Received sensor data: 14.203748 25.848373 27.082392 4.616803
+161.478: Received sensor data: 14.564262 26.661798 26.795233 4.616803
+161.951: Received sensor data: 14.707457 24.054684 26.310284 4.616803
+162.363: Received sensor data: 14.586444 23.588261 23.250319 4.616803
+162.838: Received sensor data: 14.588713 23.354401 24.041431 4.616803
+163.314: Received sensor data: 14.003285 23.476414 24.380753 4.616803
+163.728: Received sensor data: 13.283010 23.466888 24.440044 4.616803
+164.203: Received sensor data: 12.030379 21.817009 22.230818 4.616803
+164.626: Received sensor data: 10.958884 20.265583 21.071712 4.616803
+165.104: Received sensor data: 10.591271 19.868443 20.607552 4.616803
+165.581: Received sensor data: 10.607315 19.761768 19.976192 4.616803
+165.997: Received sensor data: 10.663800 18.625744 20.890591 4.616803
+166.473: Received sensor data: 10.866337 16.050159 19.101154 4.616803
+166.896: Received sensor data: 10.952330 14.090853 19.781368 4.616803
+167.371: Received sensor data: 11.774652 13.021504 18.541611 4.616803
+167.844: Received sensor data: 11.814510 13.116457 18.386068 4.616803
+168.322: Received sensor data: 12.020853 12.979296 17.217617 4.616803
+168.734: Received sensor data: 12.467855 12.974310 16.936535 4.616803
+169.211: Received sensor data: 13.052492 14.481578 18.466494 4.616803
+169.63: Received sensor data: 15.240265 22.436487 22.914673 4.616803
+170.106: Received sensor data: 14.051474 24.533012 25.192348 4.616803
+170.582: Received sensor data: 14.867717 22.869917 23.945559 4.616803
+170.995: Received sensor data: 9.068483 24.930592 25.562908 4.616803
+171.42: Received sensor data: 4.771424 79.050766 54.907661 4.616803
+171.896: Received sensor data: 4.659612 32.035366 32.433201 4.616803
+172.373: Received sensor data: 4.670650 35.531551 34.005276 4.616803
+172.785: Received sensor data: 6.584698 30.495762 33.437141 4.616803
+173.261: Received sensor data: 52.744141 22.790846 23.574764 4.616803
+173.675: Received sensor data: 16.454609 24.045574 23.897814 4.616803
+174.151: Received sensor data: 21.860491 26.667820 26.768427 4.616803
+174.627: Received sensor data: 16.021786 49.797859 30.620804 4.616803
+175.04: Received sensor data: 4.747176 78.137253 52.651329 4.616803
+175.515: Received sensor data: 6.368967 120.000000 120.000000 4.616803
+175.989: Received sensor data: 6.483037 120.000000 111.944786 4.616803
+176.403: Received sensor data: 6.572726 63.063377 63.214558 4.616803
+176.878: Received sensor data: 6.561687 120.000000 120.000000 4.616803
+177.353: Received sensor data: 6.536757 115.987755 120.000000 4.616803
+177.771: Received sensor data: 10.118345 20.859785 23.744181 4.616803
+178.307: Received sensor data: 11.543477 11.865602 17.245676 4.616803
+178.72: Received sensor data: 11.899872 10.645405 16.097544 4.616803
+179.196: Received sensor data: 14.773190 9.418696 16.416365 4.616803
+179.612: Received sensor data: 12.663858 10.253011 16.847952 4.616803
+180.04: Received sensor data: 13.273947 9.674438 16.267622 4.616803
+180.516: Received sensor data: 13.365954 9.715424 16.394531 4.616803
+180.931: Received sensor data: 12.808055 11.132391 16.944567 4.616803
+181.467: Received sensor data: 12.179673 10.582512 17.035559 4.616803
+181.882: Received sensor data: 14.143339 14.848805 18.392164 4.616803
+182.355: Received sensor data: 16.382740 16.035282 19.382208 4.616803
+182.769: Received sensor data: 18.245960 17.497208 20.219357 4.616803
+183.246: Received sensor data: 18.301891 22.298014 22.781067 4.616803
+183.724: Received sensor data: 17.045860 25.396099 25.551886 4.616803
+184.139: Received sensor data: 13.578217 26.817450 27.314859 4.616803
+184.614: Received sensor data: 11.793701 23.393177 25.322735 4.616803
+185.091: Received sensor data: 18.157158 26.338673 27.688023 4.616803
+185.507: Received sensor data: 120.000000 25.595755 26.724689 4.616803
+185.983: Received sensor data: 120.000000 24.510471 24.774252 4.616803
+186.406: Received sensor data: 120.000000 23.719620 23.508482 4.616803
+186.883: Received sensor data: 120.000000 23.213825 24.642189 4.616803
+187.36: Received sensor data: 120.000000 22.567913 23.722027 4.616803
+187.775: Received sensor data: 19.418522 21.932692 23.254299 4.616803
+188.251: Received sensor data: 20.962643 20.536228 21.748539 4.616803
+188.67: Received sensor data: 21.210800 20.305840 21.171656 4.616803
+189.147: Received sensor data: 21.378170 20.436666 21.048763 4.616803
+189.623: Received sensor data: 21.411045 20.355301 21.030941 4.616803
+190.044: Received sensor data: 23.336399 19.115946 21.400473 4.616803
+190.519: Received sensor data: 25.746433 18.643524 20.195881 4.616803
+190.996: Received sensor data: 25.398678 18.980957 20.672617 4.616803
+191.409: Received sensor data: 22.556236 22.218960 24.339806 4.616803
+191.884: Received sensor data: 16.803776 27.162939 29.679434 4.616803
+192.303: Received sensor data: 13.510405 30.414410 31.406284 4.616803
+192.779: Received sensor data: 13.777620 30.722691 30.908920 4.616803
+193.254: Received sensor data: 20.637081 26.918116 27.021688 4.616803
+193.667: Received sensor data: 28.000492 26.500019 26.471958 4.616803
+194.14: Received sensor data: 27.142914 27.521511 28.097462 4.616803
+194.615: Received sensor data: 27.324478 27.514843 27.965878 4.616803
+195.031: Received sensor data: 26.751637 27.559372 27.860754 4.616803
+195.508: Received sensor data: 26.848318 27.448654 27.838757 4.616803
+195.983: Received sensor data: 26.889334 27.201935 27.950649 4.616803
+196.4: Received sensor data: 26.348949 27.552402 27.236469 4.616803
+196.877: Received sensor data: 26.669926 26.558146 27.601780 4.616803
+197.293: Received sensor data: 26.838043 27.774887 27.829483 4.616803
+197.768: Received sensor data: 27.528858 26.953568 26.906418 4.616803
+198.185: Received sensor data: 25.963055 17.615398 21.932837 4.616803
+198.661: Received sensor data: 27.464520 73.736900 76.126579 4.616803
+199.084: Received sensor data: 26.834507 60.479713 67.452652 4.616803
+199.557: Received sensor data: 26.729132 27.526896 27.673746 4.616803
+200.03: Received sensor data: 28.338263 66.148285 82.117195 4.616803
+200.45: Received sensor data: 27.256809 25.143547 27.118244 4.616803
+200.925: Received sensor data: 27.581793 51.267567 58.181507 4.616803
+201.403: Received sensor data: 24.871311 26.925182 32.528595 4.616803
+201.82: Received sensor data: 14.564328 79.156387 71.571655 4.616803
+202.296: Received sensor data: 14.577538 52.169411 49.918144 4.616803
+202.718: Received sensor data: 12.368450 57.491730 48.158802 4.616803
+203.193: Received sensor data: 115.150719 70.027199 86.158165 4.616803
+203.676: Received sensor data: 120.000000 109.426048 92.266411 4.616803
+204.102: Received sensor data: 120.000000 84.217667 82.745186 4.616803
+204.527: Received sensor data: 120.000000 97.318527 94.309265 4.616803
+205.002: Received sensor data: 4.616803 84.118515 73.680786 4.616803
+205.418: Received sensor data: 4.616803 73.580780 74.292404 4.616803
+205.896: Received sensor data: 4.616803 66.948410 85.141396 4.616803
+206.369: Received sensor data: 4.616803 68.467911 44.516224 4.616803
+206.788: Received sensor data: 20.555759 85.285896 76.243835 4.616803
+207.262: Received sensor data: 15.838445 91.898804 103.798080 4.616803
+207.738: Received sensor data: 15.529459 59.764503 30.136896 4.616803
+208.161: Received sensor data: 15.829921 90.052170 54.189369 4.616803
+208.636: Received sensor data: 15.624455 89.689369 83.066086 4.616803
+209.051: Received sensor data: 21.164089 70.357414 50.258190 4.616803
+209.528: Received sensor data: 25.880009 73.827774 53.745689 4.616803
+210.005: Received sensor data: 25.830404 36.975155 35.433891 4.616803
+210.419: Received sensor data: 24.547777 60.783600 60.675621 4.616803
+210.893: Received sensor data: 29.159033 34.357700 32.342003 4.616803
+211.308: Received sensor data: 32.532242 33.059242 36.996262 4.616803
+211.788: Received sensor data: 15.731270 33.453571 33.080433 4.616803
+212.212: Received sensor data: 14.202904 30.213003 28.167103 4.616803
+212.689: Received sensor data: 13.091986 30.721807 31.025394 4.616803
+213.162: Received sensor data: 15.820292 30.504889 31.054132 4.616803
+213.577: Received sensor data: 16.845934 29.922657 30.809698 4.616803
+214.052: Received sensor data: 15.846365 30.505978 30.783985 4.616803
+214.53: Received sensor data: 15.815138 30.295135 31.036407 4.616803
+214.897: Received sensor data: 15.708139 30.768036 31.188757 4.616803
+215.373: Received sensor data: 15.414391 30.389582 30.996922 4.616803
+215.848: Received sensor data: 19.519114 27.786901 28.129765 4.616803
+216.271: Received sensor data: 27.133322 28.846979 28.243298 4.616803
+216.746: Received sensor data: 27.085730 28.797619 29.576101 4.616803
+217.221: Received sensor data: 26.661667 29.146946 35.350033 4.616803
+217.638: Received sensor data: 16.123171 35.824261 40.597149 4.616803
+218.114: Received sensor data: 11.300848 37.074364 40.388542 4.616803
+218.588: Received sensor data: 11.082718 38.612560 41.298687 4.616803
+219.004: Received sensor data: 11.095840 38.042870 45.849808 4.616803
+219.479: Received sensor data: 18.065655 28.936096 31.947277 4.616803
+219.956: Received sensor data: 25.895880 26.481268 26.693563 4.616803
+220.372: Received sensor data: 29.319290 26.724522 27.152191 4.616803
+220.85: Received sensor data: 29.104208 25.718304 26.354752 4.616803
+221.272: Received sensor data: 28.923374 27.448954 27.998158 4.616803
+221.747: Received sensor data: 28.193991 26.745096 26.610245 4.616803
+222.222: Received sensor data: 46.889267 26.340672 26.692577 4.616803
+222.642: Received sensor data: 30.077215 24.656723 24.257717 4.616803
+223.119: Received sensor data: 29.827585 27.404678 27.351238 4.616803
+223.596: Received sensor data: 29.078537 26.471781 26.881994 4.616803
+224.012: Received sensor data: 28.786648 26.272278 26.491177 4.616803
+224.488: Received sensor data: 29.392242 25.620749 26.186779 4.616803
+224.965: Received sensor data: 27.610889 25.435957 26.430105 4.616803
+225.383: Received sensor data: 28.439474 27.414419 27.839767 4.616803
+225.858: Received sensor data: 28.456020 27.378765 27.774567 4.616803
+226.274: Received sensor data: 27.054874 30.942333 34.962017 4.616803
+226.75: Received sensor data: 23.830145 120.000000 91.094208 4.616803
+227.225: Received sensor data: 23.686586 120.000000 120.000000 4.616803
+227.64: Received sensor data: 22.925943 120.000000 120.000000 4.616803
+228.115: Received sensor data: 32.571468 115.345901 120.000000 4.616803
+228.589: Received sensor data: 120.000000 87.703857 102.469421 4.616803
+229.063: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+229.477: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+229.955: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+230.369: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+230.847: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+231.271: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+231.747: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+232.223: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+232.636: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+233.171: Received sensor data: 120.000000 90.644699 89.995880 4.616803
+233.532: Received sensor data: 120.000000 92.731987 107.133911 4.616803
+234.006: Received sensor data: 120.000000 115.482704 120.000000 4.616803
+234.419: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+234.895: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+235.372: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+235.79: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+236.267: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+236.742: Received sensor data: 32.241863 120.000000 120.000000 4.616803
+237.159: Received sensor data: 32.506279 120.000000 120.000000 4.616803
+237.635: Received sensor data: 32.589058 120.000000 120.000000 4.616803
+238.111: Received sensor data: 32.473930 120.000000 120.000000 4.616803
+238.523: Received sensor data: 32.435371 120.000000 120.000000 4.616803
+239.056: Received sensor data: 27.945820 47.760159 71.770897 4.616803
+239.532: Received sensor data: 27.781826 18.384636 20.810551 4.616803
+239.886: Received sensor data: 26.637182 16.221510 18.883427 4.616803
+240.309: Received sensor data: 28.063086 15.981415 19.216358 4.616803
+240.787: Received sensor data: 26.893215 15.365651 18.906963 4.616803
+241.264: Received sensor data: 27.580227 14.087801 18.406536 4.616803
+241.68: Received sensor data: 28.110962 14.094414 17.692036 4.616803
+242.157: Received sensor data: 28.785217 14.226954 17.524990 4.616803
+242.584: Received sensor data: 27.249170 14.112816 17.475302 4.616803
+243.061: Received sensor data: 27.231237 14.294886 17.612072 4.616803
+243.538: Received sensor data: 28.000147 14.272699 17.629892 4.616803
+243.957: Received sensor data: 28.063175 13.773066 17.484056 4.616803
+244.434: Received sensor data: 27.712378 14.361765 17.537554 4.616803
+244.911: Received sensor data: 27.993631 14.206151 17.581076 4.616803
+245.331: Received sensor data: 27.995163 14.556679 17.670181 4.616803
+245.81: Received sensor data: 28.023371 14.461443 17.721985 4.616803
+246.225: Received sensor data: 27.932261 14.334287 17.601101 4.616803
+246.702: Received sensor data: 28.110401 14.581419 17.770748 4.616803
+247.178: Received sensor data: 25.621363 19.200443 22.073246 4.616803
+247.597: Received sensor data: 25.673538 18.647581 19.749121 4.616803
+248.074: Received sensor data: 26.116690 19.758875 20.941572 4.616803
+248.552: Received sensor data: 24.707256 19.021370 20.135273 4.616803
+248.967: Received sensor data: 24.657639 18.675495 20.224667 4.616803
+249.387: Received sensor data: 24.574364 18.937771 20.432850 4.616803
+249.863: Received sensor data: 22.696266 21.179880 21.948000 4.616803
+250.338: Received sensor data: 22.190399 21.225924 22.121483 4.616803
+250.753: Received sensor data: 22.150127 21.037680 22.237947 4.616803
+251.228: Received sensor data: 22.051105 24.464634 24.472492 4.616803
+251.705: Received sensor data: 22.115917 46.361012 25.767630 4.616803
+252.121: Received sensor data: 22.194853 20.696972 21.640852 4.616803
+252.599: Received sensor data: 22.414871 23.989859 35.253643 4.616803
+253.073: Received sensor data: 21.215216 44.444912 34.557724 4.616803
+253.549: Received sensor data: 22.201395 37.953888 46.281029 4.616803
+253.965: Received sensor data: 21.401724 19.330008 20.444387 4.616803
+254.441: Received sensor data: 20.875032 20.026173 21.959179 4.616803
+254.917: Received sensor data: 18.107136 15.967043 20.859165 4.616803
+255.333: Received sensor data: 16.806421 18.124487 21.340881 4.616803
+255.809: Received sensor data: 17.525776 13.494550 18.385731 4.616803
+256.226: Received sensor data: 16.132046 24.562840 25.160000 4.616803
+256.7: Received sensor data: 15.761246 17.789446 20.106709 4.616803
+257.124: Received sensor data: 15.619664 35.792595 44.793064 4.616803
+257.603: Received sensor data: 15.739143 22.986837 22.399635 4.616803
+258.079: Received sensor data: 16.123936 24.144152 25.554232 4.616803
+258.554: Received sensor data: 17.102886 25.577709 26.609415 4.616803
+259.026: Received sensor data: 17.440735 32.147240 35.684776 4.616803
+259.384: Received sensor data: 18.428837 21.297794 22.681677 4.616803
+259.86: Received sensor data: 18.305248 22.275511 22.899408 4.616803
+260.336: Received sensor data: 18.206978 23.269236 22.469641 4.616803
+260.811: Received sensor data: 18.055584 21.970776 23.317583 4.616803
+261.226: Received sensor data: 18.493641 22.838572 23.268986 4.616803
+261.7: Received sensor data: 22.051456 18.108864 21.355795 4.616803
+262.119: Received sensor data: 20.731073 19.005688 21.486813 4.616803
+262.596: Received sensor data: 23.228176 17.933746 19.708141 4.616803
+263.073: Received sensor data: 24.902592 30.584726 23.791029 4.616803
+263.49: Received sensor data: 24.495218 49.008408 29.283382 4.616803
+263.966: Received sensor data: 24.377325 74.233917 70.355171 4.616803
+264.382: Received sensor data: 24.632292 49.686352 52.123772 4.616803
+264.859: Received sensor data: 24.516890 49.198200 47.788380 4.616803
+265.334: Received sensor data: 22.731730 110.067406 115.682510 4.616803
+265.749: Received sensor data: 23.034706 30.644192 21.902634 4.616803
+266.225: Received sensor data: 24.070801 15.691791 18.351862 4.616803
+266.651: Received sensor data: 23.686794 18.849119 20.386234 4.616803
+267.128: Received sensor data: 23.564018 14.825363 18.654003 4.616803
+267.603: Received sensor data: 23.564018 14.825363 18.654003 4.616803
+268.027: Received sensor data: 23.564018 14.825363 18.654003 4.616803
+268.502: Received sensor data: 23.564018 14.825363 18.654003 4.616803
+268.921: Received sensor data: 23.564018 14.825363 18.654003 4.616803
+269.397: Received sensor data: 23.673494 40.518562 26.244284 4.616803
+269.874: Received sensor data: 23.897535 21.693642 22.277225 4.616803
+270.3: Received sensor data: 23.916056 64.317886 40.603981 4.616803
+270.776: Received sensor data: 23.753193 15.581358 18.822309 4.616803
+271.253: Received sensor data: 23.753193 15.581358 18.822309 4.616803
+271.73: Received sensor data: 23.753193 15.581358 18.822309 4.616803
+272.147: Received sensor data: 23.753193 15.581358 18.822309 4.616803
+272.623: Received sensor data: 25.985035 16.742950 20.311771 4.616803
+273.05: Received sensor data: 27.955185 16.256590 19.587170 4.616803
+273.588: Received sensor data: 26.147263 12.514950 17.849974 4.616803
+274.002: Received sensor data: 27.250599 15.754631 19.022787 4.616803
+274.416: Received sensor data: 25.091791 16.517143 20.436968 4.616803
+274.892: Received sensor data: 22.901226 46.324493 31.721516 4.616803
+275.367: Received sensor data: 22.624224 43.673515 39.265514 4.616803
+275.783: Received sensor data: 23.119335 52.498634 55.591270 4.616803
+276.259: Received sensor data: 19.821924 22.268080 36.480919 4.616803
+276.735: Received sensor data: 17.692846 32.217255 35.189175 4.616803
+277.15: Received sensor data: 17.143660 24.044846 24.627586 4.616803
+277.626: Received sensor data: 17.645306 17.482891 20.418818 4.616803
+278.104: Received sensor data: 15.727989 18.148144 21.297194 4.616803
+278.518: Received sensor data: 17.155331 13.425807 18.278088 4.616803
+278.994: Received sensor data: 16.821533 17.391357 20.140469 4.616803
+279.468: Received sensor data: 16.926624 20.058514 20.780849 4.616803
+279.881: Received sensor data: 17.000036 23.026117 23.543797 4.616803
+280.357: Received sensor data: 16.704462 21.780975 22.938116 4.616803
+280.831: Received sensor data: 16.569492 51.882793 38.778667 4.616803
+281.246: Received sensor data: 16.796513 19.432116 21.410938 4.616803
+281.722: Received sensor data: 17.463676 31.139683 24.288464 4.616803
+282.136: Received sensor data: 17.353872 37.266075 25.434460 4.616803
+282.612: Received sensor data: 19.906132 15.197775 19.291605 4.616803
+283.027: Received sensor data: 24.190083 49.247673 52.358543 4.616803
+283.503: Received sensor data: 24.192480 17.634306 20.186300 4.616803
+283.977: Received sensor data: 24.146124 16.194483 19.941774 4.616803
+284.394: Received sensor data: 24.709246 18.886843 20.887146 4.616803
+284.87: Received sensor data: 24.500410 17.088112 19.156687 4.616803
+285.344: Received sensor data: 24.908764 13.132879 17.702974 4.616803
+285.763: Received sensor data: 25.283318 18.549633 19.736263 4.616803
+286.24: Received sensor data: 24.578365 16.553377 18.829958 4.616803
+286.717: Received sensor data: 24.036270 19.839207 21.556950 4.616803
+287.132: Received sensor data: 22.847078 34.208920 41.487297 4.616803
+287.605: Received sensor data: 23.815105 68.849625 50.002464 4.616803
+288.078: Received sensor data: 23.539328 29.156855 22.241644 4.616803
+288.495: Received sensor data: 22.795868 47.457478 51.532356 4.616803
+288.971: Received sensor data: 22.399012 15.482542 23.994392 4.616803
+289.447: Received sensor data: 21.694492 8.178599 16.221483 4.616803
+289.863: Received sensor data: 21.870884 50.111992 40.505348 4.616803
+290.34: Received sensor data: 21.452602 16.566586 19.523170 4.616803
+290.755: Received sensor data: 22.341772 16.048229 19.754515 4.616803
+291.23: Received sensor data: 22.216303 13.198584 17.929211 4.616803
+291.703: Received sensor data: 21.851257 14.214993 18.460224 4.616803
+292.116: Received sensor data: 20.556223 35.973904 20.678448 4.616803
+292.591: Received sensor data: 22.102102 48.699322 56.826241 4.616803
+293.067: Received sensor data: 21.854952 25.393986 29.555988 4.616803
+293.491: Received sensor data: 21.697069 17.436829 19.306612 4.616803
+293.969: Received sensor data: 21.813381 13.273142 19.826038 4.616803
+294.443: Received sensor data: 21.865154 15.092257 20.237919 4.616803
+294.857: Received sensor data: 22.197262 16.856707 20.207556 4.616803
+295.335: Received sensor data: 22.106598 17.118725 19.864435 4.616803
+295.811: Received sensor data: 22.046497 16.911303 19.576895 4.616803
+296.226: Received sensor data: 21.957541 16.597284 19.089384 4.616803
+296.702: Received sensor data: 21.957541 16.597284 19.089384 4.616803
+297.126: Received sensor data: 21.957541 16.597284 19.089384 4.616803
+297.599: Received sensor data: 21.957541 16.597284 19.089384 4.616803
+298.074: Received sensor data: 21.957541 16.597284 19.089384 4.616803
+298.496: Received sensor data: 21.872120 16.867626 19.303888 4.616803
+299.035: Received sensor data: 21.872120 16.867626 19.303888 4.616803
+299.393: Received sensor data: 21.872120 16.867626 19.303888 4.616803
+299.867: Received sensor data: 21.872120 16.867626 19.303888 4.616803
+300.342: Received sensor data: 22.651020 13.654696 18.042885 4.616803
+300.758: Received sensor data: 22.859859 16.009558 18.469908 4.616803
+301.234: Received sensor data: 22.966963 17.295719 19.077562 4.616803
+301.711: Received sensor data: 22.966963 17.295719 19.077562 4.616803
+302.127: Received sensor data: 22.966963 17.295719 19.077562 4.616803
+302.603: Received sensor data: 22.966963 17.295719 19.077562 4.616803
+303.028: Received sensor data: 22.966963 17.295719 19.077562 4.616803
+303.504: Received sensor data: 22.823055 17.155041 18.993368 4.616803
+303.982: Received sensor data: 22.823055 17.155041 18.993368 4.616803
+322.124: It's been 18182.35ms since last heard from other end. connectionLostTimeout=15000.00ms, so closing connection.
+322.161: MessageConnection::Close(500 msecs): Disconnecting. connectionState = ConnectionClosed, readOpen:true, writeOpen:true.
+322.161: MessageConnection::Close: Closed connection to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45906, peer: 139.78.87.89:4101, socket: 4, this: 0x2602260).
+322.174: NetworkWorkerThread quit.
+322.184: Thread::Stop() called.
+322.184: Deleted a NetworkWorkerThread. There are now 0 worker threads left.
+322.184: Socket::Close(): Closing socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45906, peer: 139.78.87.89:4101, socket: 4, this: 0x2602260).
+322.184: Socket::Close(): Socket shutdown(SD_BOTH) succeeded on socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:45906, peer: 139.78.87.89:4101, socket: 4, this: 0x2602260).
+322.184: Network::DeleteSocket: Closed socket 0x2602260.
+nathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ ./Headquarters 139.78.87.89
+1 joysticks were found.
+
+The names of the joysticks are:
+(1297, -899), (0, -496) [-32768 | -32768]
+0:  1:  2:  3:  4:  5:  6:  7:  8:  9:  10:  
+    Microsoft X-Box 360 pad
+
+
+0.000: Network::Init successful. gethostname returned IceRaptor
+5.6e-05: A call to socket() returned a new socket 0x       4.
+0.000167: Network::Connect: Sent a UDP Connection Start datagram to to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:37037, peer: 139.78.87.89:4101, socket: 4, this: 0x1f29140).
+0.000446: Thread::Run(): Thread created.
+0.00048: ThreadEntryPoint: Thread started with param 0x0x1f3d680.
+0.000522: NetworkWorkerThread starting main loop.
+0.000535: Created a new NetworkWorkerThread. There are now 1 worker threads.
+0.050712: Press the XBox button to quit.
+0.128985: UDPMessageConnection::ReadSocket: Received data from socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:37037, peer: 139.78.87.89:4101, socket: 4, this: 0x1f29140). Transitioned from ConnectionPending to ConnectionOK state.
+0.273329: Received sensor data: 22.966015 14.587347 17.987339 4.616803
+0.696271: Received sensor data: 22.372410 14.891482 18.297915 4.616803
+1.17812: Received sensor data: 22.283943 16.618353 18.905863 4.616803
+1.65343: Received sensor data: 22.538065 16.314989 18.817356 4.616803
+2.06939: Received sensor data: 22.508276 37.339188 26.413996 4.616803
+2.48278: Received sensor data: 23.137764 16.991480 19.247566 4.616803
+3.07929: Received sensor data: 23.014610 15.184759 18.564569 4.616803
+3.43339: Received sensor data: 22.709850 15.814064 18.403023 4.616803
+3.84743: Received sensor data: 23.003891 58.258930 65.623978 4.616803
+4.26532: Received sensor data: 22.993219 16.911894 19.068054 4.616803
+4.80442: Received sensor data: 23.030912 47.811714 38.205368 4.616803
+5.15764: Received sensor data: 22.778421 17.642122 19.248165 4.616803
+5.63162: Received sensor data: 22.469372 48.204208 42.077847 4.616803
+6.10843: Received sensor data: 22.267467 25.520632 29.678120 4.616803
+6.7007: Received sensor data: 22.315195 43.019886 32.593346 4.616803
+6.99425: Received sensor data: 22.873880 17.072468 20.065449 4.616803
+7.46991: Received sensor data: 22.998507 27.281857 29.957870 4.616803
+7.94257: Received sensor data: 22.987591 42.662491 32.299599 4.616803
+8.3011: Received sensor data: 22.139694 16.621864 19.317394 4.616803
+8.7763: Received sensor data: 22.987885 14.895070 18.121042 4.616803
+9.194: Received sensor data: 22.306393 37.748741 22.761213 4.616803
+9.6687: Received sensor data: 22.263399 15.278689 19.235836 4.616803
+10.083: Received sensor data: 22.263399 15.278689 19.235836 4.616803
+10.557: Received sensor data: 22.263399 15.278689 19.235836 4.616803
+11.0935: Received sensor data: 22.263399 15.278689 19.235836 4.616803
+11.567: Received sensor data: 22.263399 15.278689 19.235836 4.616803
+12.1043: Received sensor data: 22.302872 15.153801 19.191509 4.616803
+12.338: Received sensor data: 22.302872 15.153801 19.191509 4.616803
+12.8162: Received sensor data: 22.302872 15.153801 19.191509 4.616803
+13.2923: Received sensor data: 22.302872 15.153801 19.191509 4.616803
+13.7063: Received sensor data: 22.971678 11.732359 16.796963 4.616803
+14.2414: Received sensor data: 22.983253 22.239130 25.922726 4.616803
+14.5964: Received sensor data: 23.074324 13.038983 19.056080 4.616803
+15.0743: Received sensor data: 23.434191 17.367348 28.658381 4.616803
+15.5514: Received sensor data: 23.581188 9.753360 16.453938 4.616803
+15.9647: Received sensor data: 23.843281 14.305883 18.090628 4.616803
+16.4387: Received sensor data: 23.831793 16.143341 18.500561 4.616803
+16.8586: Received sensor data: 23.831793 16.143341 18.500561 4.616803
+17.3329: Received sensor data: 23.831793 16.143341 18.500561 4.616803
+17.8088: Received sensor data: 23.831793 16.143341 18.500561 4.616803
+18.224: Received sensor data: 23.657475 16.344080 18.824627 4.616803
+18.6974: Received sensor data: 23.854717 12.554338 17.651268 4.616803
+19.1171: Received sensor data: 23.261463 13.463931 17.874615 4.616803
+19.594: Received sensor data: 23.603531 16.602459 18.627701 4.616803
+20.0185: Received sensor data: 23.145781 41.874130 34.406048 4.616803
+20.4929: Received sensor data: 23.557835 16.466307 18.631336 4.616803
+20.9129: Received sensor data: 24.060896 16.662466 18.744991 4.616803
+21.3885: Received sensor data: 23.730785 16.377735 18.862286 4.616803
+21.8659: Received sensor data: 22.570333 13.583223 17.357637 4.616803
+22.2793: Received sensor data: 22.945499 17.695189 20.315811 4.616803
+22.7555: Received sensor data: 23.469791 16.648251 18.873802 4.616803
+23.1706: Received sensor data: 23.774567 16.020393 18.411970 4.616803
+23.6458: Received sensor data: 23.728779 16.645252 18.786116 4.616803
+24.0626: Received sensor data: 23.724541 16.512621 18.757935 4.616803
+24.5397: Received sensor data: 23.820618 16.329144 18.849909 4.616803
+25.0166: Received sensor data: 23.638577 20.075274 20.354927 4.616803
+25.4981: Received sensor data: 23.307056 16.252270 19.231012 4.616803
+25.9113: Received sensor data: 23.581089 16.502081 18.706959 4.616803
+26.3361: Received sensor data: 23.732372 15.903658 18.405653 4.616803
+26.8122: Received sensor data: 23.171980 16.457207 18.900705 4.616803
+27.2268: Received sensor data: 22.597069 15.532087 18.379276 4.616803
+27.6399: Received sensor data: 22.993416 16.288843 18.745167 4.616803
+28.0557: Received sensor data: 22.882147 16.416693 18.792349 4.616803
+28.5309: Received sensor data: 22.418808 37.618546 29.244663 4.616803
+28.945: Received sensor data: 22.982544 16.422604 18.782446 4.616803
+29.3575: Received sensor data: 22.982641 16.361164 18.485004 4.616803
+29.7736: Received sensor data: 23.389730 15.311699 18.757793 4.616803
+30.2481: Received sensor data: 22.355572 13.721499 17.931688 4.616803
+30.6608: Received sensor data: 22.315941 15.471657 18.435205 4.616803
+31.1441: Received sensor data: 23.269764 14.683406 17.843143 4.616803
+31.5585: Received sensor data: 23.779894 13.310946 17.494949 4.616803
+32.034: Received sensor data: 23.831951 14.851942 18.535080 4.616803
+32.4486: Received sensor data: 23.826107 14.114569 17.833702 4.616803
+32.8614: Received sensor data: 23.459209 12.463778 17.419682 4.616803
+33.2751: Received sensor data: 24.606258 14.144167 17.452616 4.616803
+33.6996: Received sensor data: 24.360035 10.519892 16.548462 4.616803
+34.1755: Received sensor data: 22.408760 13.477864 17.759460 4.616803
+34.5871: Received sensor data: 22.777409 13.840098 17.534389 4.616803
+35.1217: Received sensor data: 23.635759 13.004123 17.386154 4.616803
+35.5379: Received sensor data: 23.837267 11.818272 16.907738 4.616803
+35.9523: Received sensor data: 23.886196 44.875359 35.021122 4.616803
+36.4278: Received sensor data: 23.808926 9.578584 16.237543 4.616803
+36.9629: Received sensor data: 23.834522 12.910327 17.352020 4.616803
+37.3177: Received sensor data: 23.687809 10.650049 16.577965 4.616803
+37.7942: Received sensor data: 23.797594 13.461058 17.104435 4.616803
+38.2668: Received sensor data: 23.849026 14.835840 17.957546 4.616803
+38.6874: Received sensor data: 24.058670 14.632006 17.978123 4.616803
+39.1618: Received sensor data: 24.859278 15.332623 18.042688 4.616803
+39.5734: Received sensor data: 23.598707 15.650653 18.214670 4.616803
+39.9972: Received sensor data: 23.367928 13.904683 17.571550 4.616803
+40.4749: Received sensor data: 23.063848 10.066843 15.965187 4.616803
+40.9519: Received sensor data: 23.063848 10.066843 15.965187 4.616803
+41.3677: Received sensor data: 23.063848 10.066843 15.965187 4.616803
+41.8423: Received sensor data: 23.063848 10.066843 15.965187 4.616803
+42.3178: Received sensor data: 23.063848 10.066843 15.965187 4.616803
+42.7337: Received sensor data: 23.993046 14.944530 18.211802 4.616803
+43.1546: Received sensor data: 23.878075 15.618647 18.153988 4.616803
+43.6294: Received sensor data: 22.806595 33.889931 36.111965 4.616803
+44.1029: Received sensor data: 23.890591 23.707661 25.584177 4.616803
+44.5187: Received sensor data: 21.831244 9.514683 16.617826 4.616803
+44.9955: Received sensor data: 24.614277 13.427444 17.521833 4.616803
+45.4091: Received sensor data: 23.795618 12.941210 17.623945 4.616803
+45.9467: Received sensor data: 22.709274 14.394876 17.821899 4.616803
+61.8654: Received sensor data: 23.935806 11.232406 16.988070 4.616803
+62.3374: Received sensor data: 22.823887 7.508788 15.691884 4.616803
+62.7491: Received sensor data: 22.469454 13.773481 18.828045 4.616803
+63.2267: Received sensor data: 23.654774 15.122917 17.995905 4.616803
+63.6406: Received sensor data: 22.883993 8.398633 16.483639 4.616803
+64.0524: Received sensor data: 23.210281 12.630145 17.554516 4.616803
+64.5271: Received sensor data: 22.547127 12.497721 16.823006 4.616803
+64.9399: Received sensor data: 23.257393 9.401314 16.363449 4.616803
+65.4139: Received sensor data: 22.732224 11.909597 18.124393 4.616803
+65.8283: Received sensor data: 22.865496 11.250463 16.694794 4.616803
+66.243: Received sensor data: 21.938309 8.769936 16.995497 4.616803
+66.6556: Received sensor data: 23.159576 10.078981 16.503288 4.616803
+67.0761: Received sensor data: 23.045572 35.220844 26.157602 4.616803
+67.553: Received sensor data: 22.158882 15.885361 19.027073 4.616803
+68.0312: Received sensor data: 23.685232 12.545302 17.821156 4.616803
+68.5072: Received sensor data: 22.480997 14.775922 19.507397 4.616803
+68.9206: Received sensor data: 23.372028 16.212934 18.585447 4.616803
+69.3941: Received sensor data: 23.649672 16.689793 18.715366 4.616803
+69.8688: Received sensor data: 23.540493 13.832926 17.966278 4.616803
+70.2842: Received sensor data: 23.837591 17.069300 18.855509 4.616803
+70.8215: Received sensor data: 23.650133 17.153233 18.930183 4.616803
+71.2375: Received sensor data: 23.551836 16.406155 18.931278 4.616803
+71.6508: Received sensor data: 22.827545 15.243075 17.385328 4.616803
+72.1276: Received sensor data: 24.013073 16.590130 19.834652 4.616803
+72.5431: Received sensor data: 24.887188 13.782855 19.231155 4.616803
+73.0199: Received sensor data: 27.289469 13.380770 17.643452 4.616803
+73.4958: Received sensor data: 25.598658 13.658110 17.257298 4.616803
+73.9094: Received sensor data: 25.416361 13.534747 17.598577 4.616803
+74.383: Received sensor data: 26.916101 62.581348 46.016899 4.616803
+74.8573: Received sensor data: 26.741812 13.034876 17.538797 4.616803
+75.2707: Received sensor data: 25.476976 32.275063 21.145597 4.616803
+75.8064: Received sensor data: 25.879257 12.517574 17.309849 4.616803
+76.1668: Received sensor data: 25.584320 44.882717 35.613396 4.616803
+76.6459: Received sensor data: 25.635052 14.057592 18.102564 4.616803
+77.1209: Received sensor data: 27.000711 16.144665 23.657333 4.616803
+77.5955: Received sensor data: 25.816519 28.567158 33.183895 4.616803
+78.0082: Received sensor data: 25.599623 10.626822 17.089451 4.616803
+78.4834: Received sensor data: 23.674421 11.830829 17.039026 4.616803
+78.8968: Received sensor data: 26.045898 8.850101 16.493122 4.616803
+79.4326: Received sensor data: 24.009296 12.157750 18.056759 4.616803
+79.8471: Received sensor data: 26.523212 40.089844 20.645884 4.616803
+80.26: Received sensor data: 26.011774 13.066833 17.998077 4.616803
+80.7338: Received sensor data: 24.858490 13.420660 17.621090 4.616803
+81.2109: Received sensor data: 25.165651 13.156042 17.535143 4.616803
+81.7434: Received sensor data: 26.781693 11.676317 17.238985 4.616803
+82.0454: Received sensor data: 26.039169 12.378007 16.980312 4.616803
+82.5209: Received sensor data: 26.070704 13.507017 17.211851 4.616803
+82.9947: Received sensor data: 25.552608 13.256487 17.290249 4.616803
+83.3572: Received sensor data: 26.211802 13.406795 16.970089 4.616803
+83.8305: Received sensor data: 26.663361 13.174990 17.394669 4.616803
+84.4871: Received sensor data: 25.561958 13.569310 17.146164 4.616803
+84.7189: Received sensor data: 26.237774 13.471178 17.285622 4.616803
+85.0723: Received sensor data: 24.001209 11.451508 16.598244 4.616803
+85.554: Received sensor data: 25.900936 12.364554 16.988647 4.616803
+86.0299: Received sensor data: 26.133984 12.694613 17.094904 4.616803
+86.6835: Received sensor data: 25.969992 13.498967 17.132694 4.616803
+86.9755: Received sensor data: 25.840307 13.519350 17.099646 4.616803
+87.3295: Received sensor data: 26.334513 13.105748 17.044571 4.616803
+87.8042: Received sensor data: 25.554577 13.186587 17.044601 4.616803
+88.3373: Received sensor data: 25.638498 13.392138 17.104731 4.616803
+88.6914: Received sensor data: 25.713547 13.551949 17.399290 4.616803
+89.2277: Received sensor data: 26.075155 13.506361 17.059101 4.616803
+89.5829: Received sensor data: 25.644474 13.263910 17.221083 4.616803
+90.0606: Received sensor data: 25.673599 13.596514 17.262344 4.616803
+90.5957: Received sensor data: 26.052906 13.521688 17.383770 4.616803
+90.9496: Received sensor data: 25.949265 13.525159 17.124830 4.616803
+91.4878: Received sensor data: 26.084534 13.480603 17.356817 4.616803
+91.8422: Received sensor data: 25.673605 13.498387 17.321903 4.616803
+92.3156: Received sensor data: 26.286261 13.544588 17.262012 4.616803
+92.8489: Received sensor data: 25.904102 13.437126 18.248344 4.616803
+93.2026: Received sensor data: 24.849567 16.292675 20.289186 4.616803
+93.7393: Received sensor data: 23.951090 19.049364 21.500706 4.616803
+94.0923: Received sensor data: 22.171862 17.902615 21.439581 4.616803
+94.5077: Received sensor data: 21.486691 20.918558 22.323299 4.616803
+95.0435: Received sensor data: 19.981855 24.367456 25.189499 4.616803
+95.4078: Received sensor data: 18.889683 24.788841 25.181850 4.616803
+95.829: Received sensor data: 19.377104 22.756100 23.991219 4.616803
+96.2424: Received sensor data: 20.411413 22.873158 23.544470 4.616803
+96.7779: Received sensor data: 20.733257 22.765982 24.422554 4.616803
+97.2001: Received sensor data: 20.712465 22.455807 22.872753 4.616803
+97.7348: Received sensor data: 20.600597 22.237225 23.091833 4.616803
+98.0888: Received sensor data: 20.643938 22.061237 22.403259 4.616803
+98.6236: Received sensor data: 21.300474 22.237965 23.264099 4.616803
+98.978: Received sensor data: 23.725929 21.208368 22.145317 4.616803
+99.4514: Received sensor data: 33.395702 21.277716 21.688231 4.616803
+99.8652: Received sensor data: 120.000000 23.477551 24.780909 4.616803
+100.339: Received sensor data: 120.000000 23.414944 24.102787 4.616803
+100.752: Received sensor data: 120.000000 22.824966 22.818899 4.616803
+101.167: Received sensor data: 120.000000 24.612122 23.859158 4.616803
+101.642: Received sensor data: 32.950523 111.412315 120.000000 4.616803
+102.057: Received sensor data: 31.534159 120.000000 120.000000 4.616803
+102.532: Received sensor data: 32.521816 90.158119 115.518898 4.616803
+102.947: Received sensor data: 57.004707 67.122002 47.649796 4.616803
+103.483: Received sensor data: 32.552788 88.896820 103.478783 4.616803
+103.836: Received sensor data: 32.221992 89.069923 89.756958 4.616803
+104.312: Received sensor data: 52.437897 102.306435 107.627930 4.616803
+104.727: Received sensor data: 35.422997 115.596657 120.000000 4.616803
+105.261: Received sensor data: 34.236889 120.000000 120.000000 4.616803
+105.675: Received sensor data: 39.070496 115.884109 120.000000 4.616803
+106.151: Received sensor data: 34.663540 115.927208 120.000000 4.616803
+106.568: Received sensor data: 50.285927 84.842453 90.284927 4.616803
+107.044: Received sensor data: 34.421989 120.000000 115.898270 4.616803
+107.519: Received sensor data: 32.677567 98.983353 115.717056 4.616803
+107.935: Received sensor data: 30.801992 6.808917 15.529877 4.616803
+108.411: Received sensor data: 31.719830 63.832939 59.742256 4.616803
+108.829: Received sensor data: 31.357601 111.105736 115.942017 4.616803
+109.306: Received sensor data: 32.993530 107.609329 107.643845 4.616803
+109.783: Received sensor data: 120.000000 29.023794 39.604652 4.616803
+110.257: Received sensor data: 25.065783 30.010412 32.955643 4.616803
+110.741: Received sensor data: 71.073959 24.015657 25.636974 4.616803
+111.157: Received sensor data: 29.454136 26.468021 26.893017 4.616803
+111.633: Received sensor data: 28.110468 26.461945 26.024851 4.616803
+112.05: Received sensor data: 25.479877 31.148075 49.499557 4.616803
+112.524: Received sensor data: 15.965665 29.096945 29.227718 4.616803
+112.94: Received sensor data: 16.249741 28.373318 28.560614 4.616803
+113.415: Received sensor data: 10.436892 30.093800 30.135044 4.616803
+113.893: Received sensor data: -nan -nan -nan -nan
+114.31: Received sensor data: 5.460136 27.824558 27.998699 4.616803
+114.786: Received sensor data: 6.993124 26.450165 26.122799 4.616803
+115.261: Received sensor data: 8.074833 24.046318 23.247738 4.616803
+115.677: Received sensor data: 8.503260 25.115368 24.823557 4.616803
+116.151: Received sensor data: 8.543081 25.368031 24.637531 4.616803
+116.687: Received sensor data: 8.835994 26.678150 26.976513 4.616803
+117.043: Received sensor data: 9.472402 27.277344 28.375309 4.616803
+117.52: Received sensor data: 9.020965 34.130096 40.736271 4.616803
+117.996: Received sensor data: 8.384616 120.000000 111.899490 4.616803
+118.472: Received sensor data: 7.475404 97.413467 67.754829 4.616803
+118.887: Received sensor data: 120.000000 33.058487 49.033379 4.616803
+119.304: Received sensor data: 120.000000 24.122879 26.737972 4.616803
+119.779: Received sensor data: 120.000000 19.537342 20.375515 4.616803
+120.255: Received sensor data: 120.000000 19.381199 20.554630 4.616803
+120.671: Received sensor data: 120.000000 19.105541 20.166351 4.616803
+121.147: Received sensor data: 120.000000 22.460520 23.500427 4.616803
+121.573: Received sensor data: 120.000000 27.402065 25.375008 4.616803
+122.048: Received sensor data: 8.648435 27.236155 26.577276 4.616803
+122.522: Received sensor data: 7.167123 26.945349 36.186703 4.616803
+122.942: Received sensor data: 9.445311 26.928425 27.270544 4.616803
+123.415: Received sensor data: 91.697853 24.329212 25.037498 4.616803
+123.892: Received sensor data: 120.000000 26.284588 27.979147 4.616803
+124.307: Received sensor data: 120.000000 24.958546 25.834492 4.616803
+124.782: Received sensor data: 120.000000 25.530230 24.197512 4.616803
+125.256: Received sensor data: 23.387390 26.496460 26.470089 4.616803
+125.67: Received sensor data: 120.000000 25.563421 26.923656 4.616803
+126.147: Received sensor data: 115.638504 24.737913 25.126354 4.616803
+126.624: Received sensor data: 120.000000 24.722828 24.836029 4.616803
+127.037: Received sensor data: 120.000000 33.910488 48.137566 4.616803
+127.51: Received sensor data: 13.247104 120.000000 103.253342 4.616803
+137.922: Received sensor data: 5.107565 7.671829 15.732391 4.616803
+138.334: Received sensor data: 6.070352 6.926156 15.688457 4.616803
+138.752: Received sensor data: 6.024512 6.652102 15.519079 4.616803
+139.225: Received sensor data: 5.453650 6.833768 15.801396 4.616803
+139.637: Received sensor data: 5.149441 6.515048 15.720541 4.616803
+140.05: Received sensor data: 5.632089 6.679187 15.563753 4.616803
+140.524: Received sensor data: 5.396785 6.674126 15.648405 4.616803
+141.058: Received sensor data: 5.134707 6.941223 15.530363 4.616803
+141.532: Received sensor data: 5.126948 6.742162 15.512503 4.616803
+141.826: Received sensor data: 5.188554 6.904223 15.600218 4.616803
+142.302: Received sensor data: 5.205373 6.993944 15.646832 4.616803
+142.78: Received sensor data: 5.315145 7.063759 15.611661 4.616803
+143.193: Received sensor data: 5.337228 5.730870 15.566690 4.616803
+143.669: Received sensor data: 5.321797 5.872699 15.705803 4.616803
+144.083: Received sensor data: 5.364818 6.211345 15.909198 4.616803
+144.559: Received sensor data: 4.616803 4.616803 15.807935 4.616803
+145.033: Received sensor data: 15.817720 19.298000 20.313366 4.616803
+145.448: Received sensor data: 15.465406 20.490093 20.545170 4.616803
+145.866: Received sensor data: 17.171806 19.138159 20.157141 4.616803
+146.342: Received sensor data: 15.779225 18.728207 20.010843 4.616803
+146.818: Received sensor data: 111.899048 19.547306 21.519760 4.616803
+147.242: Received sensor data: 120.000000 19.946501 21.592657 4.616803
+147.656: Received sensor data: 120.000000 20.884159 23.041889 4.616803
+148.132: Received sensor data: 120.000000 21.249037 22.541279 4.616803
+148.607: Received sensor data: 24.620895 20.899832 22.807232 4.616803
+149.143: Received sensor data: 23.814873 21.058765 22.244396 4.616803
+149.496: Received sensor data: 23.429325 20.736248 22.315033 4.616803
+149.912: Received sensor data: 16.240156 120.000000 120.000000 4.616803
+150.388: Received sensor data: 20.905876 120.000000 120.000000 4.616803
+150.862: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+151.277: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+151.755: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+152.174: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+152.648: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+153.185: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+153.538: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+153.954: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+154.431: Received sensor data: 120.000000 71.674492 45.355736 4.616803
+154.858: Received sensor data: 14.498726 111.621689 120.000000 4.616803
+155.335: Received sensor data: 14.249849 120.000000 120.000000 4.616803
+155.748: Received sensor data: 14.234944 120.000000 120.000000 4.616803
+156.221: Received sensor data: 11.358171 120.000000 120.000000 4.616803
+156.695: Received sensor data: 10.684744 120.000000 120.000000 4.616803
+157.17: Received sensor data: 10.689592 120.000000 120.000000 4.616803
+157.582: Received sensor data: 10.648499 120.000000 120.000000 4.616803
+158.057: Received sensor data: 4.616803 120.000000 120.000000 4.616803
+158.531: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+159.007: Received sensor data: 120.000000 88.044975 102.889481 4.616803
+159.421: Received sensor data: 120.000000 115.816261 120.000000 4.616803
+159.895: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+160.314: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+160.909: Received sensor data: 120.000000 84.954750 111.811317 4.616803
+161.262: Received sensor data: 120.000000 115.705399 107.473732 4.616803
+161.675: Received sensor data: 120.000000 60.523701 49.736458 4.616803
+162.149: Received sensor data: 120.000000 120.000000 95.175735 4.616803
+162.568: Received sensor data: 120.000000 111.156693 91.613754 4.616803
+163.043: Received sensor data: 120.000000 110.655029 115.777786 4.616803
+163.466: Received sensor data: 120.000000 76.651154 82.380806 4.616803
+164.066: Received sensor data: 120.000000 115.693871 120.000000 4.616803
+164.419: Received sensor data: 120.000000 101.663864 111.646835 4.616803
+164.846: Received sensor data: 120.000000 102.384438 81.851547 4.616803
+165.321: Received sensor data: 12.301130 120.000000 120.000000 4.616803
+165.795: Received sensor data: 27.160671 115.482704 120.000000 4.616803
+166.211: Received sensor data: 25.762533 120.000000 120.000000 4.616803
+166.686: Received sensor data: 11.612413 93.190552 107.304672 4.616803
+167.101: Received sensor data: 37.166237 78.465759 76.307678 4.616803
+167.577: Received sensor data: 120.000000 33.831993 41.430412 4.616803
+168.052: Received sensor data: 15.076838 27.820148 28.585140 4.616803
+168.468: Received sensor data: 21.791973 25.634836 26.485809 4.616803
+168.944: Received sensor data: 14.578059 28.004253 28.283260 4.616803
+169.359: Received sensor data: 41.960506 26.839773 27.993296 4.616803
+169.834: Received sensor data: 12.876654 31.307108 30.627583 4.616803
+170.311: Received sensor data: 120.000000 45.805740 62.560646 4.616803
+170.726: Received sensor data: 120.000000 37.218922 61.290588 4.616803
+171.203: Received sensor data: 120.000000 66.996597 72.382446 4.616803
+171.617: Received sensor data: 120.000000 107.774246 77.905785 4.616803
+172.091: Received sensor data: 120.000000 78.672928 58.735863 4.616803
+172.565: Received sensor data: 120.000000 83.221046 74.251907 4.616803
+172.981: Received sensor data: 120.000000 77.764877 61.824383 4.616803
+173.456: Received sensor data: 120.000000 79.065681 54.979725 4.616803
+173.881: Received sensor data: 120.000000 82.997147 91.701462 4.616803
+174.356: Received sensor data: 120.000000 111.828659 74.485420 4.616803
+174.832: Received sensor data: 111.975510 99.357712 78.245071 4.616803
+175.305: Received sensor data: 34.059196 91.335953 91.656380 4.616803
+175.72: Received sensor data: 33.694939 115.856384 120.000000 4.616803
+176.193: Received sensor data: 33.371132 103.428543 111.960037 4.616803
+176.605: Received sensor data: 26.908911 34.326290 46.609497 4.616803
+177.079: Received sensor data: 120.000000 32.763710 40.878708 4.616803
+177.492: Received sensor data: 120.000000 35.278893 38.714394 4.616803
+177.969: Received sensor data: 120.000000 69.784279 71.683189 4.616803
+178.385: Received sensor data: 120.000000 40.128181 42.351219 4.616803
+178.861: Received sensor data: 120.000000 98.957962 107.578781 4.616803
+179.338: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+179.758: Received sensor data: 120.000000 85.887764 76.841599 4.616803
+180.233: Received sensor data: 120.000000 68.466385 63.981495 4.616803
+180.656: Received sensor data: 120.000000 120.000000 115.972275 4.616803
+181.134: Received sensor data: 120.000000 101.687065 95.233330 4.616803
+181.55: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+182.026: Received sensor data: 41.358482 120.000000 115.972275 4.616803
+182.441: Received sensor data: 33.151318 120.000000 115.942017 4.616803
+182.917: Received sensor data: 32.931618 106.279518 94.457626 4.616803
+183.332: Received sensor data: 33.475796 115.898270 120.000000 4.616803
+183.807: Received sensor data: 54.877266 65.251297 35.995277 4.616803
+184.281: Received sensor data: 32.974693 120.000000 120.000000 4.616803
+184.7: Received sensor data: 32.237045 111.030151 90.946053 4.616803
+185.175: Received sensor data: 32.943840 120.000000 120.000000 4.616803
+185.593: Received sensor data: 33.930122 68.629890 57.346336 4.616803
+186.068: Received sensor data: 35.756676 120.000000 120.000000 4.616803
+186.541: Received sensor data: 35.737339 120.000000 120.000000 4.616803
+186.954: Received sensor data: 35.720146 120.000000 111.260498 4.616803
+187.488: Received sensor data: 34.805561 88.535622 84.729164 4.616803
+187.843: Received sensor data: 34.259922 120.000000 120.000000 4.616803
+188.319: Received sensor data: 38.124458 110.451149 115.829453 4.616803
+188.796: Received sensor data: 35.435890 106.620865 86.641747 4.616803
+189.21: Received sensor data: 33.002007 115.172752 107.037743 4.616803
+189.684: Received sensor data: 32.536823 31.823919 44.230484 4.616803
+190.104: Received sensor data: 31.228603 8.729010 16.096287 4.616803
+190.58: Received sensor data: 30.669546 9.400820 16.004988 4.616803
+191.054: Received sensor data: 30.993179 9.614573 16.011736 4.616803
+191.467: Received sensor data: 30.889084 11.366758 16.545071 4.616803
+191.943: Received sensor data: 32.155022 11.624249 16.271748 4.616803
+192.363: Received sensor data: 32.695000 7.683668 15.596217 4.616803
+192.841: Received sensor data: 32.738903 13.438059 17.368258 4.616803
+193.257: Received sensor data: 33.388969 17.048590 17.346821 4.616803
+193.732: Received sensor data: 29.342041 15.418182 18.777475 4.616803
+194.205: Received sensor data: 32.453773 23.767078 23.422216 4.616803
+194.619: Received sensor data: 31.301586 23.801525 24.706785 4.616803
+195.096: Received sensor data: 30.888630 31.958118 31.755112 4.616803
+195.573: Received sensor data: 31.142506 29.238398 29.011786 4.616803
+195.986: Received sensor data: 30.822598 30.135189 31.088581 4.616803
+196.461: Received sensor data: 30.887186 31.692295 32.004353 4.616803
+196.878: Received sensor data: 30.943979 31.743282 31.557995 4.616803
+197.355: Received sensor data: 120.000000 29.648890 37.969921 4.616803
+197.831: Received sensor data: 120.000000 110.921494 94.700706 4.616803
+198.244: Received sensor data: 49.454609 120.000000 120.000000 4.616803
+198.719: Received sensor data: 82.441109 115.617310 120.000000 4.616803
+199.194: Received sensor data: 37.017262 120.000000 120.000000 4.616803
+199.611: Received sensor data: 74.698341 110.267799 120.000000 4.616803
+200.087: Received sensor data: 120.000000 88.518112 86.119171 4.616803
+200.51: Received sensor data: 120.000000 106.644920 120.000000 4.616803
+200.986: Received sensor data: 120.000000 115.491600 120.000000 4.616803
+201.46: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+201.874: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+202.349: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+202.825: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+203.3: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+203.712: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+204.19: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+204.664: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+205.077: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+205.551: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+206.025: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+206.499: Received sensor data: 120.000000 115.790428 120.000000 4.616803
+206.972: Received sensor data: 120.000000 79.089066 78.591705 4.616803
+207.387: Received sensor data: 120.000000 115.671288 120.000000 4.616803
+207.806: Received sensor data: 120.000000 115.360703 120.000000 4.616803
+208.28: Received sensor data: 120.000000 111.048485 120.000000 4.616803
+208.756: Received sensor data: 120.000000 115.375832 120.000000 4.616803
+209.172: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+209.646: Received sensor data: 120.000000 111.899048 120.000000 4.616803
+210.066: Received sensor data: 120.000000 111.016380 107.061440 4.616803
+210.542: Received sensor data: 120.000000 93.597366 111.857895 4.616803
+211.017: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+211.432: Received sensor data: 94.355331 120.000000 120.000000 4.616803
+211.91: Received sensor data: 29.800476 51.506897 70.603516 4.616803
+212.386: Received sensor data: 30.213364 105.355873 101.493378 4.616803
+212.801: Received sensor data: 30.685581 111.348465 120.000000 4.616803
+213.277: Received sensor data: 31.359585 120.000000 111.639122 4.616803
+213.752: Received sensor data: 32.958359 88.776779 82.697495 4.616803
+214.24: Received sensor data: 31.795269 69.691788 66.171524 4.616803
+214.655: Received sensor data: 31.736765 105.682396 111.268494 4.616803
+215.076: Received sensor data: 31.772625 105.159607 80.816551 4.616803
+215.553: Received sensor data: 58.028828 97.752243 106.824814 4.616803
+216.031: Received sensor data: 31.490458 76.893951 61.243633 4.616803
+216.445: Received sensor data: 54.622040 98.416519 107.722336 4.616803
+216.918: Received sensor data: 29.958673 89.398636 115.957031 4.616803
+217.337: Received sensor data: 32.076523 89.198967 72.698044 4.616803
+217.815: Received sensor data: 46.519497 36.943230 40.539165 4.616803
+218.292: Received sensor data: 27.557632 24.147066 28.763132 4.616803
+218.706: Received sensor data: 57.102844 65.125153 39.186340 4.616803
+219.182: Received sensor data: 29.413813 103.712296 73.665924 4.616803
+219.657: Received sensor data: 30.276794 92.222595 86.211296 4.616803
+220.134: Received sensor data: 33.233765 115.375832 120.000000 4.616803
+220.549: Received sensor data: 29.745640 120.000000 111.799850 4.616803
+220.968: Received sensor data: 27.138371 114.948776 85.365860 4.616803
+221.444: Received sensor data: 28.864737 81.293999 80.823212 4.616803
+221.919: Received sensor data: 25.963739 115.482704 120.000000 4.616803
+222.334: Received sensor data: 27.889124 95.362167 93.285713 4.616803
+222.81: Received sensor data: 27.216732 77.630737 71.914452 4.616803
+223.284: Received sensor data: 25.999546 105.294838 88.095108 4.616803
+223.696: Received sensor data: 24.795122 110.111618 111.450661 4.616803
+224.171: Received sensor data: 120.000000 110.336472 101.674896 4.616803
+224.646: Received sensor data: 120.000000 57.368694 68.193886 4.616803
+225.122: Received sensor data: 120.000000 57.301392 45.968712 4.616803
+225.536: Received sensor data: 120.000000 95.642044 103.020615 4.616803
+226.014: Received sensor data: 120.000000 71.481522 92.119553 4.616803
+226.488: Received sensor data: 120.000000 31.091610 36.091942 4.616803
+227.024: Received sensor data: 120.000000 28.102093 21.800108 4.616803
+227.326: Received sensor data: 120.000000 28.185902 27.861124 4.616803
+227.861: Received sensor data: 120.000000 30.545721 31.538315 4.616803
+228.276: Received sensor data: 120.000000 26.673111 26.682180 4.616803
+228.751: Received sensor data: 120.000000 26.279306 25.958897 4.616803
+229.164: Received sensor data: 84.859253 24.720951 24.790964 4.616803
+229.641: Received sensor data: 4.616803 5.286016 15.527415 4.616803
+230.117: Received sensor data: 4.807632 5.512484 15.690419 4.616803
+230.531: Received sensor data: 5.759577 4.890562 15.453188 4.616803
+231.008: Received sensor data: 27.044033 19.131258 21.281071 4.616803
+231.485: Received sensor data: 24.525856 17.181677 19.290268 4.616803
+231.902: Received sensor data: 24.620781 18.085215 19.487183 4.616803
+232.496: Received sensor data: 24.584526 17.424673 19.123650 4.616803
+232.852: Received sensor data: 24.527031 19.139061 20.317507 4.616803
+233.267: Received sensor data: 23.577406 13.407437 16.446548 4.616803
+233.742: Received sensor data: 22.808954 15.987417 19.115971 4.616803
+234.16: Received sensor data: 21.143423 13.458227 17.974911 4.616803
+234.635: Received sensor data: 19.763344 16.848978 19.779593 4.616803
+235.111: Received sensor data: 19.966497 11.854986 17.205336 4.616803
+235.525: Received sensor data: 16.726334 11.370720 16.709854 4.616803
+236.002: Received sensor data: 14.468309 15.412756 18.543638 4.616803
+236.478: Received sensor data: 13.577397 21.609135 21.820425 4.616803
+236.891: Received sensor data: 13.392314 48.230328 42.340515 4.616803
+237.307: Received sensor data: 15.540500 24.733713 21.642002 4.616803
+237.783: Received sensor data: 19.202934 34.496189 27.370123 4.616803
+238.258: Received sensor data: 27.436575 19.604715 22.072388 4.616803
+238.678: Received sensor data: 39.737217 15.351483 15.992612 4.616803
+239.155: Received sensor data: 38.309093 7.824757 15.762774 4.616803
+239.582: Received sensor data: 37.648399 4.647560 15.485031 4.616803
+240.056: Received sensor data: 37.618401 4.618491 15.504436 4.616803
+240.531: Received sensor data: 37.509281 4.807656 15.509684 4.616803
+240.947: Received sensor data: 36.248371 4.686391 15.496908 4.616803
+241.422: Received sensor data: 45.684105 4.768167 15.820590 4.616803
+241.839: Received sensor data: 74.886467 4.616803 15.488193 4.616803
+242.316: Received sensor data: 111.929306 4.617286 15.668472 4.616803
+242.79: Received sensor data: 120.000000 8.868857 15.784922 4.616803
+243.205: Received sensor data: 120.000000 29.279652 22.190212 4.616803
+243.621: Received sensor data: 34.435772 48.532341 27.701242 4.616803
+244.037: Received sensor data: 22.334080 30.993494 29.654913 4.616803
+244.514: Received sensor data: 10.743628 32.870075 44.810844 4.616803
+244.988: Received sensor data: 7.789448 32.272713 38.048412 4.616803
+245.404: Received sensor data: 7.678404 34.518982 33.615234 4.616803
+245.88: Received sensor data: 7.606235 32.879189 37.219452 4.616803
+246.3: Received sensor data: 6.211706 32.500385 36.224846 4.616803
+246.774: Received sensor data: 6.893748 52.716560 43.812828 4.616803
+247.246: Received sensor data: 6.698128 38.462696 42.348778 4.616803
+247.662: Received sensor data: 5.030427 36.780605 75.605530 4.616803
+248.197: Received sensor data: 4.616803 42.470638 38.610619 4.616803
+248.612: Received sensor data: 4.641500 36.123940 43.375912 4.616803
+249.146: Received sensor data: 8.462629 54.253517 84.726974 4.616803
+249.503: Received sensor data: 12.899185 60.073528 40.562279 4.616803
+249.98: Received sensor data: 17.715092 24.673992 25.224178 4.616803
+250.453: Received sensor data: 19.925549 51.483917 36.569191 4.616803
+250.868: Received sensor data: 21.323383 52.049522 49.306946 4.616803
+251.344: Received sensor data: 22.174906 20.620901 20.606079 4.616803
+251.76: Received sensor data: 21.854364 19.514952 20.533546 4.616803
+252.247: Received sensor data: 22.071735 19.080494 20.196243 4.616803
+252.662: Received sensor data: 21.849220 19.581619 20.367954 4.616803
+253.137: Received sensor data: 22.291983 44.005558 27.808874 4.616803
+253.551: Received sensor data: 23.110079 14.118396 17.802097 4.616803
+254.028: Received sensor data: 22.329090 16.614723 19.532692 4.616803
+254.451: Received sensor data: 22.940430 14.374445 18.262445 4.616803
+254.926: Received sensor data: 24.507906 15.531672 18.503107 4.616803
+255.34: Received sensor data: 26.993341 14.077632 18.176741 4.616803
+255.815: Received sensor data: 26.796000 17.733736 20.197750 4.616803
+256.291: Received sensor data: 26.342823 18.902800 20.604918 4.616803
+256.766: Received sensor data: 18.435308 56.447052 65.960915 4.616803
+257.243: Received sensor data: 19.209364 40.909428 29.043880 4.616803
+257.718: Received sensor data: 19.107233 84.732613 84.332291 4.616803
+258.132: Received sensor data: 19.261328 65.802040 70.278709 4.616803
+258.609: Received sensor data: 19.276459 57.783363 67.753761 4.616803
+259.023: Received sensor data: 27.936148 36.958294 38.335354 4.616803
+259.498: Received sensor data: 120.000000 22.307159 22.606453 4.616803
+259.912: Received sensor data: 120.000000 16.308317 18.849794 4.616803
+260.388: Received sensor data: 120.000000 17.079086 18.893354 4.616803
+260.811: Received sensor data: 31.052862 19.577021 21.042475 4.616803
+261.286: Received sensor data: 23.586849 17.079868 19.794474 4.616803
+261.76: Received sensor data: 21.277647 19.900057 22.149023 4.616803
+262.173: Received sensor data: 22.124660 17.048244 19.763025 4.616803
+262.649: Received sensor data: 23.823202 17.641937 20.026415 4.616803
+263.187: Received sensor data: 24.640131 14.536931 18.245314 4.616803
+263.542: Received sensor data: 23.826105 20.477016 25.557364 4.616803
+264.019: Received sensor data: 23.893663 8.806464 16.090687 4.616803
+264.433: Received sensor data: 22.985016 18.303988 20.343054 4.616803
+264.908: Received sensor data: 25.482559 10.895407 16.373684 4.616803
+265.332: Received sensor data: 30.738531 10.777939 16.141344 4.616803
+265.746: Received sensor data: 32.298164 8.481018 15.596392 4.616803
+266.222: Received sensor data: 33.689228 7.151122 16.010326 4.616803
+266.697: Received sensor data: 35.367786 7.366624 15.432864 4.616803
+267.11: Received sensor data: 36.210785 7.215549 15.484406 4.616803
+267.524: Received sensor data: 35.442757 7.088337 15.474500 4.616803
+268.003: Received sensor data: 34.848869 7.936679 15.895386 4.616803
+268.477: Received sensor data: 36.987396 6.214042 15.575006 4.616803
+268.953: Received sensor data: 34.754421 5.290249 15.676211 4.616803
+269.372: Received sensor data: 31.921280 8.755699 15.869522 4.616803
+269.85: Received sensor data: 29.211752 8.426317 15.946498 4.616803
+270.325: Received sensor data: 27.257298 8.881592 15.637833 4.616803
+270.74: Received sensor data: 27.221027 8.692472 15.703961 4.616803
+271.213: Received sensor data: 26.935736 8.323675 15.421514 4.616803
+271.629: Received sensor data: 29.456844 7.914352 15.252542 4.616803
+272.103: Received sensor data: 27.964685 10.144526 15.974997 4.616803
+272.576: Received sensor data: 27.936047 10.398162 15.811172 4.616803
+272.99: Received sensor data: 27.836117 11.793978 16.648640 4.616803
+273.468: Received sensor data: 29.173481 11.957673 16.856903 4.616803
+273.883: Received sensor data: 27.290150 9.732287 15.844523 4.616803
+274.359: Received sensor data: 28.762186 9.869100 15.964403 4.616803
+274.773: Received sensor data: 29.903614 9.465180 15.948519 4.616803
+275.196: Received sensor data: 30.011185 11.182372 16.575186 4.616803
+275.671: Received sensor data: 28.710453 11.535910 16.947037 4.616803
+276.147: Received sensor data: 25.455969 19.084536 22.510555 4.616803
+276.621: Received sensor data: 23.706646 13.754105 18.368525 4.616803
+277.093: Received sensor data: 22.904118 24.354635 23.727709 4.616803
+277.505: Received sensor data: 22.987688 14.866936 18.444914 4.616803
+277.981: Received sensor data: 23.968699 53.046150 42.010471 4.616803
+278.454: Received sensor data: 25.453358 23.352953 27.329809 4.616803
+278.87: Received sensor data: 25.182125 18.614391 19.020626 4.616803
+279.346: Received sensor data: 25.513416 31.597433 34.398590 4.616803
+279.769: Received sensor data: 25.574772 24.196255 23.397205 4.616803
+280.244: Received sensor data: 23.821012 15.685682 19.486282 4.616803
+280.719: Received sensor data: 22.400890 46.741371 48.598885 4.616803
+281.258: Received sensor data: 23.097809 59.482941 53.053883 4.616803
+281.671: Received sensor data: 22.797215 38.343727 32.876854 4.616803
+282.026: Received sensor data: 21.888485 14.979616 18.281410 4.616803
+282.5: Received sensor data: 24.438961 41.882862 36.892414 4.616803
+282.976: Received sensor data: 25.853857 16.116344 18.734261 4.616803
+283.391: Received sensor data: 26.825603 25.552784 21.045761 4.616803
+283.805: Received sensor data: 32.233349 25.140413 25.591717 4.616803
+284.278: Received sensor data: 28.536337 84.470581 38.656055 4.616803
+284.754: Received sensor data: 28.516132 115.500587 99.336388 4.616803
+285.232: Received sensor data: 120.000000 57.474480 65.834206 4.616803
+285.647: Received sensor data: 120.000000 16.838736 20.773186 4.616803
+286.125: Received sensor data: 120.000000 9.969014 16.913172 4.616803
+286.541: Received sensor data: 120.000000 16.941092 23.521063 4.616803
+287.017: Received sensor data: 115.898270 29.103546 28.956268 4.616803
+287.432: Received sensor data: 120.000000 29.142282 27.245102 4.616803
+287.908: Received sensor data: 23.533358 6.341702 15.511601 4.616803
+288.38: Received sensor data: 4.749829 5.239070 15.366129 4.616803
+288.795: Received sensor data: 7.892136 6.413666 15.291452 4.616803
+289.27: Received sensor data: 7.718897 7.124766 15.313418 4.616803
+289.747: Received sensor data: 30.457249 13.897903 17.028225 4.616803
+290.164: Received sensor data: 30.867987 14.971393 17.624990 4.616803
+290.642: Received sensor data: 29.320263 20.917728 18.061079 4.616803
+291.066: Received sensor data: 28.692480 13.251744 17.290159 4.616803
+291.541: Received sensor data: 29.387690 33.598717 34.913097 4.616803
+292.02: Received sensor data: 28.086483 15.203852 17.750938 4.616803
+292.44: Received sensor data: 27.971069 15.469134 17.692928 4.616803
+292.914: Received sensor data: 27.496567 34.587181 38.804211 4.616803
+293.389: Received sensor data: 26.773993 42.573879 25.828770 4.616803
+293.864: Received sensor data: 25.610256 19.272661 19.024073 4.616803
+294.278: Received sensor data: 26.668240 13.450223 17.731632 4.616803
+294.752: Received sensor data: 25.902578 31.541967 31.945156 4.616803
+295.171: Received sensor data: 26.478968 25.687647 28.912680 4.616803
+295.646: Received sensor data: 26.778530 15.391619 18.172527 4.616803
+296.123: Received sensor data: 26.840515 15.432096 17.966721 4.616803
+296.539: Received sensor data: 26.701712 46.781609 41.412914 4.616803
+297.017: Received sensor data: 26.427176 10.659162 16.831272 4.616803
+297.492: Received sensor data: 26.102152 46.928196 45.599876 4.616803
+297.905: Received sensor data: 26.773792 10.571405 16.630646 4.616803
+298.38: Received sensor data: 25.870667 12.887520 16.964190 4.616803
+298.798: Received sensor data: 26.504282 15.470815 17.967382 4.616803
+299.274: Received sensor data: 26.795752 13.844320 17.037373 4.616803
+299.75: Received sensor data: 26.829184 14.300331 17.608444 4.616803
+300.224: Received sensor data: 26.499645 14.302980 17.246929 4.616803
+300.64: Received sensor data: 26.788523 14.736769 17.742506 4.616803
+301.117: Received sensor data: 26.632044 15.521260 17.871454 4.616803
+301.59: Received sensor data: 24.418751 9.069704 15.604715 4.616803
+302.005: Received sensor data: 26.703419 14.853987 17.820910 4.616803
+302.429: Received sensor data: 28.109253 22.722578 19.315678 4.616803
+302.904: Received sensor data: 26.882620 16.871130 22.493742 4.616803
+303.378: Received sensor data: 26.532177 15.328897 17.855942 4.616803
+303.853: Received sensor data: 28.009109 15.059547 18.612373 4.616803
+304.267: Received sensor data: 28.055573 13.865893 17.436710 4.616803
+304.745: Received sensor data: 27.570246 14.227696 17.620859 4.616803
+305.167: Received sensor data: 29.861866 11.091825 16.678810 4.616803
+305.641: Received sensor data: 29.930370 11.760071 16.015366 4.616803
+306.064: Received sensor data: 29.925900 7.986196 15.580515 4.616803
+306.599: Received sensor data: 29.921900 9.569469 16.256020 4.616803
+307.013: Received sensor data: 31.128901 9.946270 15.768778 4.616803
+307.489: Received sensor data: 31.535934 66.020485 39.102516 4.616803
+307.961: Received sensor data: 29.375360 18.482777 20.071785 4.616803
+308.436: Received sensor data: 27.915752 20.692980 21.338936 4.616803
+308.791: Received sensor data: 28.391043 15.832990 18.571438 4.616803
+309.268: Received sensor data: 28.619467 49.610546 41.656044 4.616803
+309.692: Received sensor data: 28.852285 20.502773 20.811649 4.616803
+310.168: Received sensor data: 28.868240 19.976547 22.171150 4.616803
+310.641: Received sensor data: 36.163078 17.867283 19.631046 4.616803
+311.054: Received sensor data: 35.924679 18.718735 19.663742 4.616803
+311.53: Received sensor data: 37.121613 19.066700 19.756554 4.616803
+312.006: Received sensor data: 36.453148 18.867878 19.966204 4.616803
+312.545: Received sensor data: 36.019115 33.048012 21.742085 4.616803
+312.898: Received sensor data: 44.382851 19.997137 19.752790 4.616803
+313.374: Received sensor data: 44.533535 23.644753 20.159134 4.616803
+313.789: Received sensor data: 73.150436 40.943718 36.923164 4.616803
+314.207: Received sensor data: 25.190439 14.748769 18.949522 4.616803
+314.681: Received sensor data: 21.856953 61.268291 48.259838 4.616803
+315.154: Received sensor data: 22.971970 21.125452 21.790127 4.616803
+315.569: Received sensor data: 23.371372 20.541546 21.011223 4.616803
+316.044: Received sensor data: 22.902987 72.324768 49.187641 4.616803
+316.519: Received sensor data: 23.035440 41.016388 22.994766 4.616803
+316.993: Received sensor data: 22.929373 45.282673 33.448437 4.616803
+317.408: Received sensor data: 23.442202 10.014788 16.609579 4.616803
+317.884: Received sensor data: 22.955673 21.245783 22.019234 4.616803
+318.359: Received sensor data: 23.339880 25.448376 22.985476 4.616803
+318.775: Received sensor data: 22.888002 20.012098 21.000219 4.616803
+319.249: Received sensor data: 22.982887 20.631313 20.987963 4.616803
+319.666: Received sensor data: 22.945709 21.133902 21.184357 4.616803
+320.143: Received sensor data: 22.919121 45.523594 40.397213 4.616803
+320.619: Received sensor data: 22.635931 15.533989 18.385113 4.616803
+321.037: Received sensor data: 22.918839 20.651375 21.434113 4.616803
+321.512: Received sensor data: 22.956108 21.034517 21.532995 4.616803
+321.983: Received sensor data: 23.899364 12.640947 17.113886 4.616803
+322.4: Received sensor data: 22.676413 32.328102 26.150539 4.616803
+322.877: Received sensor data: 21.401525 21.686642 21.955051 4.616803
+323.354: Received sensor data: 17.855722 44.330635 35.506947 4.616803
+323.771: Received sensor data: 14.479654 18.560740 20.579502 4.616803
+324.197: Received sensor data: 11.916435 22.525599 22.924524 4.616803
+324.674: Received sensor data: 11.976042 14.287580 18.701923 4.616803
+325.151: Received sensor data: 11.913231 15.983376 19.149235 4.616803
+325.628: Received sensor data: 11.639297 20.766598 21.472824 4.616803
+326.044: Received sensor data: 12.233286 51.393616 39.562675 4.616803
+326.522: Received sensor data: 14.128451 23.714634 22.456583 4.616803
+326.938: Received sensor data: 15.677633 19.305861 20.309353 4.616803
+327.476: Received sensor data: 17.677326 20.349583 21.698566 4.616803
+327.839: Received sensor data: 18.733564 19.791367 21.259041 4.616803
+328.316: Received sensor data: 19.977982 18.143230 20.188229 4.616803
+328.732: Received sensor data: 20.652693 19.219324 21.104824 4.616803
+329.21: Received sensor data: 19.332409 21.326012 22.644367 4.616803
+329.687: Received sensor data: 16.601856 23.991543 25.427700 4.616803
+330.103: Received sensor data: 13.445590 24.584854 25.284735 4.616803
+330.58: Received sensor data: 11.487769 22.014294 22.718424 4.616803
+330.998: Received sensor data: 11.776293 23.806105 23.668056 4.616803
+331.479: Received sensor data: 12.967273 23.569544 24.960201 4.616803
+331.955: Received sensor data: 14.011824 23.793049 24.542194 4.616803
+332.432: Received sensor data: 14.535942 25.489697 25.464352 4.616803
+332.909: Received sensor data: 12.899038 23.852840 25.188530 4.616803
+333.324: Received sensor data: 10.918871 27.957989 26.866079 4.616803
+333.74: Received sensor data: 9.633270 23.959644 25.921457 4.616803
+334.215: Received sensor data: 9.500633 44.624645 48.135231 4.616803
+334.64: Received sensor data: 10.040029 27.064768 27.161154 4.616803
+335.116: Received sensor data: 10.356760 54.223682 51.173512 4.616803
+335.591: Received sensor data: 10.118848 30.743114 30.662449 4.616803
+336.066: Received sensor data: 9.686877 57.025124 41.288174 4.616803
+336.481: Received sensor data: 9.762716 31.662609 49.389435 4.616803
+336.901: Received sensor data: 10.403776 15.322794 19.193275 4.616803
+337.376: Received sensor data: 11.256836 42.872478 34.135506 4.616803
+337.853: Received sensor data: 12.445399 44.060169 31.414576 4.616803
+338.329: Received sensor data: 14.144040 89.415047 87.712723 4.616803
+338.743: Received sensor data: 16.478878 24.008978 24.219940 4.616803
+339.218: Received sensor data: 18.626823 56.054329 52.717274 4.616803
+339.64: Received sensor data: 20.327057 115.717064 110.938942 4.616803
+340.116: Received sensor data: 21.093285 88.611877 111.199753 4.616803
+340.592: Received sensor data: 22.749968 16.910761 19.473799 4.616803
+341.007: Received sensor data: 23.493525 20.856426 21.756233 4.616803
+341.48: Received sensor data: 22.386322 15.364119 18.650789 4.616803
+341.905: Received sensor data: 22.430065 12.900862 17.190067 4.616803
+342.378: Received sensor data: 22.646502 15.893625 18.327370 4.616803
+342.853: Received sensor data: 23.010103 9.954912 16.243626 4.616803
+343.328: Received sensor data: 24.565990 10.148142 16.380596 4.616803
+343.751: Received sensor data: 26.078848 11.368730 17.357639 4.616803
+344.228: Received sensor data: 25.647287 14.330157 18.004192 4.616803
+344.643: Received sensor data: 25.542458 12.132765 17.374714 4.616803
+345.117: Received sensor data: 26.037085 17.994776 19.946234 4.616803
+345.53: Received sensor data: 25.620642 13.237363 17.516092 4.616803
+346.004: Received sensor data: 25.687235 12.998037 17.817661 4.616803
+346.479: Received sensor data: 24.871603 17.913933 19.152334 4.616803
+346.954: Received sensor data: 24.543695 19.133404 20.951162 4.616803
+347.37: Received sensor data: 23.036594 19.354692 20.664545 4.616803
+347.846: Received sensor data: 22.130020 19.923618 21.864418 4.616803
+348.381: Received sensor data: 21.310070 18.804090 20.667965 4.616803
+348.747: Received sensor data: 22.972116 18.754803 20.641258 4.616803
+349.222: Received sensor data: 21.890062 13.236033 17.523972 4.616803
+349.646: Received sensor data: 20.141619 20.544880 22.406685 4.616803
+350.122: Received sensor data: 19.001379 22.307783 23.295319 4.616803
+350.597: Received sensor data: 19.241714 14.415095 17.955034 4.616803
+351.012: Received sensor data: 18.833614 20.774216 22.216269 4.616803
+351.489: Received sensor data: 19.020611 20.937164 23.437771 4.616803
+351.908: Received sensor data: 19.520351 19.307529 20.971502 4.616803
+352.386: Received sensor data: 19.333694 21.671406 22.418636 4.616803
+352.801: Received sensor data: 18.436010 20.255436 22.576256 4.616803
+353.217: Received sensor data: 16.499964 40.509304 44.481628 4.616803
+353.694: Received sensor data: 13.375218 32.473091 34.267902 4.616803
+354.111: Received sensor data: 11.082327 31.371204 26.353893 4.616803
+354.586: Received sensor data: 9.344179 17.348473 20.005386 4.616803
+354.999: Received sensor data: 8.475386 32.463123 36.365993 4.616803
+355.475: Received sensor data: 8.249501 38.789486 37.000057 4.616803
+355.951: Received sensor data: 9.806943 23.294004 23.878965 4.616803
+356.428: Received sensor data: 10.643950 31.361530 28.074795 4.616803
+356.904: Received sensor data: 10.901209 26.687054 25.574348 4.616803
+357.318: Received sensor data: 9.605326 12.862190 17.854149 4.616803
+357.796: Received sensor data: 8.289006 27.339396 27.331882 4.616803
+358.273: Received sensor data: 7.640648 26.757696 27.445246 4.616803
+358.686: Received sensor data: 8.673139 27.229254 26.297781 4.616803
+359.161: Received sensor data: 11.235495 22.011774 22.843140 4.616803
+359.637: Received sensor data: 13.889990 20.289639 21.796722 4.616803
+360.051: Received sensor data: 16.609547 16.886173 19.116968 4.616803
+360.527: Received sensor data: 19.536640 7.873802 15.614482 4.616803
+360.945: Received sensor data: 21.329638 11.900605 16.876276 4.616803
+361.422: Received sensor data: 26.308893 9.752484 16.105835 4.616803
+361.839: Received sensor data: 120.000000 87.496094 85.963875 4.616803
+362.315: Received sensor data: 120.000000 110.944923 120.000000 4.616803
+362.79: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+363.205: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+363.679: Received sensor data: 120.000000 115.693871 120.000000 4.616803
+364.154: Received sensor data: 120.000000 115.927223 120.000000 4.616803
+364.629: Received sensor data: 120.000000 68.464767 63.394947 4.616803
+365.164: Received sensor data: 120.000000 69.151321 60.187279 4.616803
+365.467: Received sensor data: 120.000000 34.465710 37.169800 4.616803
+365.942: Received sensor data: 120.000000 37.891800 42.978432 4.616803
+366.365: Received sensor data: 120.000000 74.697487 81.328064 4.616803
+366.838: Received sensor data: 120.000000 115.439758 98.439957 4.616803
+367.313: Received sensor data: 120.000000 115.482704 120.000000 4.616803
+367.735: Received sensor data: 120.000000 104.188576 105.762184 4.616803
+368.208: Received sensor data: 120.000000 120.000000 115.957031 4.616803
+368.684: Received sensor data: 120.000000 71.071869 78.746948 4.616803
+369.11: Received sensor data: 120.000000 60.482178 48.708675 4.616803
+369.587: Received sensor data: 98.128777 115.145340 111.284203 4.616803
+370.002: Received sensor data: 120.000000 93.430557 98.458107 4.616803
+370.48: Received sensor data: 120.000000 9.322325 16.156992 4.616803
+370.955: Received sensor data: 120.000000 72.717361 66.250549 4.616803
+371.368: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+371.846: Received sensor data: 120.000000 120.000000 120.000000 4.616803
+372.321: Received sensor data: 120.000000 87.008537 62.932838 4.616803
+372.736: Received sensor data: 120.000000 52.928627 43.207821 4.616803
+373.223: Received sensor data: 120.000000 83.907906 68.462990 4.616803
+373.637: Received sensor data: 120.000000 80.315643 60.402092 4.616803
+374.114: Received sensor data: 120.000000 71.736916 71.040970 4.616803
+374.528: Received sensor data: 120.000000 109.762779 84.350815 4.616803
+375.005: Received sensor data: 93.726334 99.133438 86.986710 4.616803
+375.479: Received sensor data: 120.000000 74.414948 68.183868 4.616803
+375.895: Received sensor data: 22.051334 92.955383 89.953308 4.616803
+376.371: Received sensor data: 22.425188 78.082993 62.689861 4.616803
+376.788: Received sensor data: 24.591480 63.338512 54.271801 4.616803
+377.206: Received sensor data: 19.958208 83.116035 37.304096 4.616803
+377.683: Received sensor data: 24.758591 111.328079 120.000000 4.616803
+378.16: Received sensor data: 120.000000 46.562382 37.999958 4.616803
+378.637: Received sensor data: 69.854179 114.369652 88.785713 4.616803
+379.056: Received sensor data: 120.000000 69.665253 41.676800 4.616803
+379.531: Received sensor data: 91.230988 72.148972 59.069801 4.616803
+379.955: Received sensor data: 37.853443 58.442516 44.763466 4.616803
+380.433: Received sensor data: 23.088799 114.695267 96.797104 4.616803
+380.908: Received sensor data: 93.263977 120.000000 111.530617 4.616803
+381.324: Received sensor data: 95.534546 115.638489 111.573441 4.616803
+381.801: Received sensor data: 120.000000 83.992752 115.856384 4.616803
+399.196: It's been 17305.33ms since last heard from other end. connectionLostTimeout=15000.00ms, so closing connection.
+399.23: MessageConnection::Close(500 msecs): Disconnecting. connectionState = ConnectionClosed, readOpen:true, writeOpen:true.
+399.23: MessageConnection::Close: Closed connection to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:37037, peer: 139.78.87.89:4101, socket: 4, this: 0x1f29140).
+399.246: NetworkWorkerThread quit.
+399.256: Thread::Stop() called.
+399.256: Deleted a NetworkWorkerThread. There are now 0 worker threads left.
+399.256: Socket::Close(): Closing socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:37037, peer: 139.78.87.89:4101, socket: 4, this: 0x1f29140).
+399.256: Socket::Close(): Socket shutdown(SD_BOTH) succeeded on socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:37037, peer: 139.78.87.89:4101, socket: 4, this: 0x1f29140).
+399.256: Network::DeleteSocket: Closed socket 0x1f29140.
+nathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ ./Headquarters 139.78.87.89
+1 joysticks were found.
+
+The names of the joysticks are:
+(955, -359), (2504, -156) [-32768 | -32768]
+0:  1:  2:  3:  4:  5:  6:  7:  8:  9:  10:  
+    Microsoft X-Box 360 pad
+
+
+0.000: Network::Init successful. gethostname returned IceRaptor
+6.1e-05: A call to socket() returned a new socket 0x       4.
+0.000169: Network::Connect: Sent a UDP Connection Start datagram to to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:40064, peer: 139.78.87.89:4101, socket: 4, this: 0x861260).
+0.000543: ThreadEntryPoint: Thread started with param 0x0x8757a0.
+0.000601: NetworkWorkerThread starting main loop.
+0.000613: Thread::Run(): Thread created.
+0.000638: Created a new NetworkWorkerThread. There are now 1 worker threads.
+0.050808: Press the XBox button to quit.
+0.078545: UDPMessageConnection::ReadSocket: Received data from socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:40064, peer: 139.78.87.89:4101, socket: 4, this: 0x861260). Transitioned from ConnectionPending to ConnectionOK state.
+0.222409: Received sensor data: 20.053789 20.605206
+0.699478: Received sensor data: 20.191563 20.406258
+1.11618: Received sensor data: 20.463118 20.418390
+1.60091: Received sensor data: 20.246136 20.665497
+2.0155: Received sensor data: 20.217703 20.546680
+2.49145: Received sensor data: 20.263357 20.415876
+2.96592: Received sensor data: 20.476841 20.454473
+3.38182: Received sensor data: 20.361370 20.444859
+3.8582: Received sensor data: 20.253040 20.648241
+4.33344: Received sensor data: 20.204466 20.613335
+4.7492: Received sensor data: 20.089798 20.231924
+5.22555: Received sensor data: 20.283606 20.459423
+5.7006: Received sensor data: 20.429365 20.215542
+6.11734: Received sensor data: 19.665516 20.428442
+6.59426: Received sensor data: 20.213390 20.436596
+7.01782: Received sensor data: 20.095892 20.413794
+7.49484: Received sensor data: 20.424065 20.291779
+7.97256: Received sensor data: 18.356161 20.665997
+8.38768: Received sensor data: 20.402220 20.393557
+8.86237: Received sensor data: 16.923597 20.447691
+9.33992: Received sensor data: 20.423429 20.308023
+9.75654: Received sensor data: 20.183222 20.643864
+10.2333: Received sensor data: 20.319578 20.450447
+10.7096: Received sensor data: 20.016550 20.613869
+11.1248: Received sensor data: 20.355478 20.440437
+11.6028: Received sensor data: 20.223850 20.223354
+12.0172: Received sensor data: 20.161310 19.961216
+12.4943: Received sensor data: 20.419685 20.478567
+12.9707: Received sensor data: 20.229464 20.461613
+13.3903: Received sensor data: 20.307875 20.473871
+13.8672: Received sensor data: 20.051992 20.614027
+14.294: Received sensor data: 20.128273 20.648062
+14.7675: Received sensor data: 20.220091 20.222578
+15.2424: Received sensor data: 20.115847 20.661478
+15.6598: Received sensor data: 20.104883 20.631535
+16.1377: Received sensor data: 20.050877 20.661154
+16.6147: Received sensor data: 20.428717 20.617785
+17.0283: Received sensor data: 20.259254 20.372572
+17.5046: Received sensor data: 20.054617 20.508301
+17.9306: Received sensor data: 20.287958 20.431145
+18.4042: Received sensor data: 19.987852 20.221336
+18.8811: Received sensor data: 20.389999 20.627022
+19.3012: Received sensor data: 20.286711 20.837065
+19.776: Received sensor data: 20.389643 20.614101
+20.2503: Received sensor data: 20.023869 20.443666
+20.6628: Received sensor data: 20.433235 20.434877
+21.1389: Received sensor data: 20.146610 20.091463
+21.5546: Received sensor data: 20.519032 20.643826
+22.0309: Received sensor data: 21.451216 19.969194
+22.5061: Received sensor data: 22.497568 19.339762
+22.9219: Received sensor data: 23.514324 18.764196
+23.3984: Received sensor data: 23.447208 18.166395
+23.8224: Received sensor data: 24.226665 17.650438
+24.2991: Received sensor data: 24.434143 17.040119
+24.7738: Received sensor data: 22.697712 16.700365
+25.1879: Received sensor data: 22.905769 17.676405
+25.6659: Received sensor data: 23.598154 17.162634
+26.0914: Received sensor data: 23.405415 16.691330
+26.5679: Received sensor data: 23.553268 16.215807
+27.1047: Received sensor data: 22.563374 17.168777
+27.4595: Received sensor data: 21.057684 18.578474
+27.9369: Received sensor data: 19.960285 19.986248
+28.3628: Received sensor data: 18.544714 20.843950
+28.8394: Received sensor data: 17.068901 22.105089
+29.3152: Received sensor data: 14.169493 24.256792
+29.7289: Received sensor data: 12.299974 27.757339
+30.2033: Received sensor data: 10.216332 28.928934
+30.679: Received sensor data: 7.635043 29.316172
+31.098: Received sensor data: 8.853437 29.306925
+31.5718: Received sensor data: 17.113869 26.688190
+32.047: Received sensor data: 16.009050 26.802868
+32.4586: Received sensor data: 15.914850 26.803034
+32.9325: Received sensor data: 14.803711 26.709568
+33.4121: Received sensor data: 14.810789 27.025848
+33.9476: Received sensor data: 15.634253 25.550037
+34.2408: Received sensor data: 17.087976 23.981813
+34.7737: Received sensor data: 19.541027 22.365580
+35.1274: Received sensor data: 23.558849 20.158741
+35.6026: Received sensor data: 30.446819 16.521763
+36.0258: Received sensor data: 36.412064 9.481222
+36.5023: Received sensor data: 36.298496 4.901670
+36.977: Received sensor data: 38.726170 4.616803
+37.3921: Received sensor data: 38.498611 4.616803
+37.9288: Received sensor data: 37.956703 4.616803
+38.285: Received sensor data: 33.087303 7.663271
+38.7607: Received sensor data: 30.971226 8.505608
+39.2354: Received sensor data: 30.668665 8.499336
+39.6517: Received sensor data: 27.787882 10.610364
+40.1272: Received sensor data: 28.234390 10.274194
+40.6025: Received sensor data: 26.864267 12.175388
+41.0151: Received sensor data: 27.408482 13.018260
+41.4294: Received sensor data: 25.760117 13.222074
+41.9077: Received sensor data: 22.753563 17.660961
+42.4462: Received sensor data: 20.596712 18.771219
+42.8016: Received sensor data: 21.311989 20.658110
+43.7617: Received sensor data: 21.172823 18.740572
+43.8139: Received sensor data: 18.271797 19.990288
+44.106: Received sensor data: 14.264948 23.707897
+44.5208: Received sensor data: 11.679503 27.922501
+44.9942: Received sensor data: 9.360778 30.793341
+45.4063: Received sensor data: 8.380072 32.258831
+45.8183: Received sensor data: 11.756514 32.441704
+46.2304: Received sensor data: 26.056442 28.605810
+46.6446: Received sensor data: 120.000000 21.877975
+47.0669: Received sensor data: 120.000000 14.354053
+47.5407: Received sensor data: 120.000000 13.608098
+47.8976: Received sensor data: 120.000000 13.005771
+48.3717: Received sensor data: 120.000000 14.064047
+48.7836: Received sensor data: 9.297984 120.000000
+49.2657: Received sensor data: 82.462166 20.480412
+49.6191: Received sensor data: 27.408146 24.353134
+50.0319: Received sensor data: 27.548910 23.624813
+50.5043: Received sensor data: 16.445612 82.925812
+50.9162: Received sensor data: 10.747572 6.003845
+51.3281: Received sensor data: 35.501656 15.240115
+51.7402: Received sensor data: 36.400944 30.283604
+52.2139: Received sensor data: 120.000000 120.000000
+52.6897: Received sensor data: 120.000000 87.388771
+53.1053: Received sensor data: 120.000000 38.346992
+53.5792: Received sensor data: 120.000000 62.882244
+53.9986: Received sensor data: 120.000000 54.664398
+54.4746: Received sensor data: 120.000000 46.546577
+54.9563: Received sensor data: 120.000000 38.430199
+55.6145: Received sensor data: 120.000000 38.458504
+55.9664: Received sensor data: 120.000000 62.895222
+56.259: Received sensor data: 120.000000 38.501808
+56.6749: Received sensor data: 120.000000 38.459156
+57.1504: Received sensor data: 120.000000 38.313515
+57.5657: Received sensor data: 120.000000 58.911064
+58.0393: Received sensor data: 120.000000 38.429333
+58.4529: Received sensor data: 120.000000 38.390125
+58.9292: Received sensor data: 120.000000 120.000000
+59.346: Received sensor data: 120.000000 115.927208
+59.8825: Received sensor data: 120.000000 120.000000
+60.2363: Received sensor data: 120.000000 120.000000
+60.7124: Received sensor data: 120.000000 120.000000
+61.0747: Received sensor data: 120.000000 120.000000
+61.5527: Received sensor data: 120.000000 120.000000
+62.027: Received sensor data: 120.000000 120.000000
+62.6216: Received sensor data: 120.000000 120.000000
+62.9771: Received sensor data: 120.000000 120.000000
+63.3891: Received sensor data: 120.000000 120.000000
+64.7076: Received sensor data: 120.000000 120.000000
+64.758: Received sensor data: 120.000000 120.000000
+64.8084: Received sensor data: 120.000000 120.000000
+65.1626: Received sensor data: 120.000000 120.000000
+65.6375: Received sensor data: 120.000000 120.000000
+66.5328: Received sensor data: 115.927208 120.000000
+66.5831: Received sensor data: 120.000000 120.000000
+66.9352: Received sensor data: 120.000000 120.000000
+67.9021: Received sensor data: 120.000000 120.000000
+67.9544: Received sensor data: 107.699120 120.000000
+68.669: Received sensor data: 120.000000 120.000000
+68.7193: Received sensor data: 98.917809 120.000000
+69.0721: Received sensor data: 87.826019 115.491592
+69.486: Received sensor data: 95.758797 120.000000
+69.8996: Received sensor data: 95.895798 120.000000
+70.5536: Received sensor data: 107.917068 120.000000
+70.8467: Received sensor data: 95.370651 120.000000
+71.3249: Received sensor data: 120.000000 107.798660
+71.7387: Received sensor data: 120.000000 34.058571
+72.2126: Received sensor data: 120.000000 30.907522
+72.6267: Received sensor data: 120.000000 30.915350
+73.1021: Received sensor data: 120.000000 30.783817
+73.5767: Received sensor data: 27.975300 33.004200
+73.9914: Received sensor data: 20.335459 33.980850
+74.4669: Received sensor data: 11.329905 30.528996
+75.3033: Received sensor data: 6.899995 120.000000
+75.4743: Received sensor data: 15.835362 50.587864
+76.9266: Received sensor data: 29.526178 120.000000
+77.3392: Received sensor data: 61.193928 120.000000
+77.7529: Received sensor data: 5.880283 120.000000
+78.2282: Received sensor data: 4.633086 120.000000
+78.7035: Received sensor data: 4.616803 120.000000
+79.1171: Received sensor data: 4.616803 120.000000
+79.5917: Received sensor data: 4.616803 120.000000
+80.011: Received sensor data: 4.616803 120.000000
+80.4288: Received sensor data: 4.616803 120.000000
+80.908: Received sensor data: 10.336555 120.000000
+81.3837: Received sensor data: 13.067266 120.000000
+81.8003: Received sensor data: 11.715266 120.000000
+82.2768: Received sensor data: 4.616803 120.000000
+82.7512: Received sensor data: 6.609625 120.000000
+83.1665: Received sensor data: 10.323562 120.000000
+83.6417: Received sensor data: 10.241355 120.000000
+84.1166: Received sensor data: 10.091594 120.000000
+84.5291: Received sensor data: 4.621968 115.972275
+85.0042: Received sensor data: 6.363561 38.359104
+85.4805: Received sensor data: 7.544217 36.222923
+85.8938: Received sensor data: 7.449574 36.101875
+86.3684: Received sensor data: 7.929604 31.859076
+86.8447: Received sensor data: 7.948311 28.801783
+87.2599: Received sensor data: 10.746489 26.927246
+87.7352: Received sensor data: 15.952021 24.609529
+88.1624: Received sensor data: 17.548864 21.667866
+88.6391: Received sensor data: 18.552588 21.378836
+89.0555: Received sensor data: 20.464226 19.896254
+89.5315: Received sensor data: 21.103680 22.057631
+89.9532: Received sensor data: 22.179565 24.675692
+90.4301: Received sensor data: 25.775644 25.389439
+90.9072: Received sensor data: 30.437923 22.846672
+91.3232: Received sensor data: 32.241653 18.406450
+91.8: Received sensor data: 29.095755 15.774068
+92.2225: Received sensor data: 27.891430 13.415129
+92.697: Received sensor data: 28.546152 12.463076
+93.1706: Received sensor data: 25.972727 13.412684
+93.6453: Received sensor data: 26.509420 13.121408
+94.0621: Received sensor data: 27.555216 12.939359
+94.5369: Received sensor data: 26.672266 11.972964
+94.9612: Received sensor data: 24.244740 13.925882
+95.4373: Received sensor data: 25.333122 15.014316
+95.8598: Received sensor data: 26.522808 14.230774
+96.3356: Received sensor data: 26.547077 13.004019
+96.8128: Received sensor data: 26.512201 13.698216
+97.2273: Received sensor data: 26.361954 15.037827
+97.7035: Received sensor data: 24.345325 15.382579
+98.1809: Received sensor data: 24.545952 17.066782
+98.5956: Received sensor data: 26.969929 16.992718
+99.0722: Received sensor data: 29.386143 14.614995
+99.4975: Received sensor data: 31.660877 12.052411
+99.9706: Received sensor data: 30.869984 10.445349
+100.445: Received sensor data: 29.295155 9.538687
+100.863: Received sensor data: 27.315485 9.277029
+101.341: Received sensor data: 26.337347 10.498991
+101.817: Received sensor data: 25.250301 12.217146
+102.233: Received sensor data: 26.520868 12.455415
+102.71: Received sensor data: 25.688786 12.693654
+103.185: Received sensor data: 25.429224 13.642090
+103.599: Received sensor data: 24.634480 15.258759
+104.017: Received sensor data: 24.585423 15.825458
+104.492: Received sensor data: 26.523523 14.534613
+104.969: Received sensor data: 27.512058 13.018338
+105.386: Received sensor data: 27.704330 12.710482
+105.861: Received sensor data: 29.135721 11.823177
+106.335: Received sensor data: 32.422169 10.406486
+106.761: Received sensor data: 30.186478 8.365148
+107.237: Received sensor data: 30.636562 9.098680
+107.713: Received sensor data: 29.156708 9.319305
+108.128: Received sensor data: 29.259792 9.588583
+108.606: Received sensor data: 29.291519 10.058178
+109.081: Received sensor data: 27.839819 10.650867
+109.498: Received sensor data: 27.225790 12.328512
+109.973: Received sensor data: 24.036032 14.828066
+110.393: Received sensor data: 22.681456 16.288391
+110.866: Received sensor data: 22.036711 17.183882
+111.344: Received sensor data: 21.907965 18.179607
+111.76: Received sensor data: 21.937571 18.345829
+112.235: Received sensor data: 22.735195 17.699078
+112.708: Received sensor data: 22.562931 17.251490
+113.13: Received sensor data: 22.662642 17.666660
+113.608: Received sensor data: 23.342886 17.860783
+114.144: Received sensor data: 22.865324 17.959007
+114.497: Received sensor data: 20.005587 18.221182
+114.975: Received sensor data: 17.107811 18.775593
+115.393: Received sensor data: 15.202489 18.585793
+115.869: Received sensor data: 13.516080 17.946739
+116.345: Received sensor data: 12.298637 17.673088
+116.76: Received sensor data: 11.198439 17.738613
+117.235: Received sensor data: 12.384001 15.698286
+117.71: Received sensor data: 10.520678 15.028456
+118.127: Received sensor data: 10.272894 15.549639
+118.601: Received sensor data: 10.350200 15.838362
+119.016: Received sensor data: 10.105227 16.045956
+119.492: Received sensor data: 10.258440 15.419458
+119.967: Received sensor data: 11.366590 15.193468
+120.382: Received sensor data: 12.397157 15.851603
+120.857: Received sensor data: 12.461325 15.421948
+121.281: Received sensor data: 17.751833 12.732482
+121.756: Received sensor data: 25.262501 10.582169
+122.233: Received sensor data: 18.526749 22.586088
+122.647: Received sensor data: 15.591187 28.896130
+123.124: Received sensor data: 15.254732 54.357960
+123.6: Received sensor data: 20.529543 55.040916
+124.015: Received sensor data: 30.298471 23.265686
+124.49: Received sensor data: 15.694895 7.166472
+124.965: Received sensor data: 11.509500 11.298414
+125.389: Received sensor data: 8.284915 14.296765
+125.865: Received sensor data: 8.265251 15.911234
+126.342: Received sensor data: 9.000376 14.450417
+126.818: Received sensor data: 8.855421 14.562347
+127.234: Received sensor data: 7.965027 19.659359
+127.649: Received sensor data: 14.673022 16.253078
+128.126: Received sensor data: 19.195734 15.821034
+128.602: Received sensor data: 22.727694 16.634666
+129.02: Received sensor data: 23.549080 17.653543
+129.497: Received sensor data: 25.496000 17.345205
+129.923: Received sensor data: 30.590603 14.018126
+130.397: Received sensor data: 36.150681 11.087965
+130.875: Received sensor data: 120.000000 11.833368
+131.29: Received sensor data: 120.000000 10.816690
+131.767: Received sensor data: 120.000000 19.325733
+132.189: Received sensor data: 120.000000 20.577168
+132.666: Received sensor data: 83.220528 20.652830
+133.143: Received sensor data: 88.538635 19.644901
+133.56: Received sensor data: 120.000000 120.000000
+134.038: Received sensor data: 111.944786 120.000000
+134.515: Received sensor data: 85.986740 120.000000
+134.932: Received sensor data: 78.510178 33.635586
+135.409: Received sensor data: 94.886864 21.030575
+135.837: Received sensor data: 95.554619 120.000000
+136.312: Received sensor data: 79.203728 120.000000
+136.785: Received sensor data: 99.004745 120.000000
+137.202: Received sensor data: 69.486092 120.000000
+137.677: Received sensor data: 111.914963 120.000000
+138.152: Received sensor data: 107.375023 120.000000
+138.567: Received sensor data: 120.000000 120.000000
+139.041: Received sensor data: 115.740860 120.000000
+139.518: Received sensor data: 78.237976 120.000000
+139.932: Received sensor data: 107.377762 120.000000
+140.407: Received sensor data: 120.000000 120.000000
+140.882: Received sensor data: 90.432182 120.000000
+141.3: Received sensor data: 115.682518 120.000000
+141.776: Received sensor data: 62.835716 120.000000
+142.199: Received sensor data: 120.000000 120.000000
+142.674: Received sensor data: 115.912636 120.000000
+143.15: Received sensor data: 120.000000 120.000000
+143.57: Received sensor data: 111.975510 120.000000
+144.045: Received sensor data: 102.988686 120.000000
+144.52: Received sensor data: 60.732849 120.000000
+144.935: Received sensor data: 98.543587 120.000000
+145.411: Received sensor data: 115.927223 120.000000
+145.887: Received sensor data: 87.434425 120.000000
+146.302: Received sensor data: 66.743057 120.000000
+146.774: Received sensor data: 111.975510 120.000000
+147.252: Received sensor data: 120.000000 99.568344
+147.667: Received sensor data: 120.000000 24.534645
+148.204: Received sensor data: 120.000000 25.713734
+148.617: Received sensor data: 120.000000 34.145180
+149.031: Received sensor data: 120.000000 111.506004
+149.505: Received sensor data: 120.000000 120.000000
+149.926: Received sensor data: 120.000000 111.886024
+150.4: Received sensor data: 120.000000 29.389221
+150.875: Received sensor data: 120.000000 23.260117
+151.293: Received sensor data: 120.000000 22.174801
+151.766: Received sensor data: 120.000000 19.603819
+152.241: Received sensor data: 120.000000 19.570415
+152.658: Received sensor data: 120.000000 19.552223
+153.133: Received sensor data: 120.000000 21.438955
+153.608: Received sensor data: 120.000000 22.075392
+154.023: Received sensor data: 120.000000 22.525581
+154.501: Received sensor data: 19.929203 25.243160
+154.979: Received sensor data: 16.616503 26.878260
+155.396: Received sensor data: 15.622273 24.964212
+155.872: Received sensor data: 15.662743 25.417719
+156.291: Received sensor data: 17.153675 23.827106
+156.765: Received sensor data: 18.119394 22.427103
+157.24: Received sensor data: 18.051819 22.325483
+157.656: Received sensor data: 18.604671 23.781050
+158.132: Received sensor data: 18.680004 23.730701
+158.606: Received sensor data: 18.069530 24.608732
+159.019: Received sensor data: 17.561520 24.614876
+159.494: Received sensor data: 16.114168 25.653727
+159.97: Received sensor data: 15.255450 25.713009
+160.383: Received sensor data: 14.035925 26.560040
+160.861: Received sensor data: 13.276243 25.595709
+161.336: Received sensor data: 13.263178 25.686359
+161.753: Received sensor data: 12.867632 25.653208
+162.229: Received sensor data: 12.793908 25.686092
+162.656: Received sensor data: 12.908943 25.739857
+163.131: Received sensor data: 12.904218 25.661234
+163.607: Received sensor data: 12.904218 25.661234
+164.03: Received sensor data: 12.904218 25.661234
+164.504: Received sensor data: 12.904218 25.661234
+164.918: Received sensor data: 12.904218 25.661234
+165.334: Received sensor data: 12.650633 25.575039
+165.81: Received sensor data: 12.650633 25.575039
+166.287: Received sensor data: 12.650633 25.575039
+166.703: Received sensor data: 12.650633 25.575039
+167.178: Received sensor data: 12.650633 25.575039
+167.653: Received sensor data: 12.716994 24.573036
+168.066: Received sensor data: 12.708471 24.669605
+168.543: Received sensor data: 12.708471 24.669605
+169.018: Received sensor data: 12.708471 24.669605
+169.433: Received sensor data: 12.708471 24.669605
+169.908: Received sensor data: 12.708471 24.669607
+170.33: Received sensor data: 12.708471 24.669607
+170.804: Received sensor data: 12.708471 24.669607
+171.28: Received sensor data: 12.708471 24.669607
+171.702: Received sensor data: 12.703156 25.212162
+172.177: Received sensor data: 12.694643 25.939304
+172.653: Received sensor data: 12.694643 25.939304
+173.069: Received sensor data: 12.694643 25.939304
+173.545: Received sensor data: 12.694643 25.939304
+173.964: Received sensor data: 12.686472 25.969400
+174.439: Received sensor data: 12.686472 25.969400
+174.864: Received sensor data: 12.686472 25.969400
+175.343: Received sensor data: 12.686472 25.969400
+175.821: Received sensor data: 12.686472 25.969400
+176.238: Received sensor data: 12.429614 26.140509
+176.715: Received sensor data: 12.418910 26.263296
+177.134: Received sensor data: 12.420793 25.674709
+177.609: Received sensor data: 11.821866 25.699512
+178.087: Received sensor data: 11.771290 25.719723
+178.509: Received sensor data: 11.700142 25.766500
+178.983: Received sensor data: 11.700142 25.766500
+179.459: Received sensor data: 11.700142 25.766500
+179.872: Received sensor data: 11.700142 25.766500
+180.349: Received sensor data: 11.789451 25.615671
+180.771: Received sensor data: 11.825200 25.719784
+181.247: Received sensor data: 11.771916 25.680836
+181.724: Received sensor data: 11.802776 25.706699
+182.138: Received sensor data: 11.707614 25.583052
+182.615: Received sensor data: 11.811697 25.633657
+183.031: Received sensor data: 11.860968 25.627743
+183.508: Received sensor data: 11.924860 26.867731
+183.925: Received sensor data: 11.957875 26.718399
+184.403: Received sensor data: 11.971362 26.758472
+184.881: Received sensor data: 11.942660 26.510962
+185.297: Received sensor data: 11.932189 26.600632
+185.774: Received sensor data: 11.966892 25.834335
+186.201: Received sensor data: 11.966892 25.834335
+186.679: Received sensor data: 11.966892 25.834335
+187.094: Received sensor data: 11.966892 25.834335
+187.509: Received sensor data: 11.991701 26.023270
+187.986: Received sensor data: 11.923254 26.736988
+188.402: Received sensor data: 11.483810 26.795065
+188.88: Received sensor data: 11.921740 26.688919
+189.358: Received sensor data: 12.493566 26.775082
+189.774: Received sensor data: 13.869168 24.977865
+190.252: Received sensor data: 13.542211 25.692673
+190.668: Received sensor data: 13.527397 25.726431
+191.081: Received sensor data: 12.986204 26.823917
+191.557: Received sensor data: 12.177861 26.832142
+191.973: Received sensor data: 12.462999 26.838726
+192.57: Received sensor data: 12.193436 26.838196
+192.871: Received sensor data: 12.199697 26.823843
+193.346: Received sensor data: 12.209219 26.795361
+194.062: Received sensor data: 12.277064 26.716904
+194.415: Received sensor data: 12.272146 26.802868
+194.832: Received sensor data: 12.290309 26.781229
+195.247: Received sensor data: 12.193506 26.802872
+195.665: Received sensor data: 12.299672 26.752308
+196.137: Received sensor data: 12.239789 26.649097
+196.619: Received sensor data: 11.777833 26.811127
+197.096: Received sensor data: 11.772772 26.831135
+197.57: Received sensor data: 11.724901 26.845333
+197.99: Received sensor data: 11.711877 26.788671
+198.466: Received sensor data: 11.719019 27.055630
+198.886: Received sensor data: 11.721927 26.788616
+199.359: Received sensor data: 11.044847 28.000311
+199.956: Received sensor data: 11.031833 28.023876
+200.249: Received sensor data: 11.021453 28.161266
+200.726: Received sensor data: 11.017490 27.984928
+201.2: Received sensor data: 11.011055 28.071033
+201.615: Received sensor data: 11.009960 28.032772
+202.092: Received sensor data: 11.009960 28.032772
+202.508: Received sensor data: 11.009960 28.032772
+202.986: Received sensor data: 11.009960 28.032772
+203.462: Received sensor data: 11.009960 28.032772
+203.875: Received sensor data: 11.030567 28.000479
+204.29: Received sensor data: 11.033175 28.115879
+204.768: Received sensor data: 11.035697 28.078968
+205.246: Received sensor data: 11.048642 28.086996
+205.661: Received sensor data: 11.035673 27.918600
+206.138: Received sensor data: 11.010013 28.518459
+206.615: Received sensor data: 11.029245 28.161591
+207.029: Received sensor data: 11.014147 28.023966
+207.507: Received sensor data: 11.035662 27.970230
+207.928: Received sensor data: 11.031975 28.000406
+208.404: Received sensor data: 11.030622 27.985264
+208.881: Received sensor data: 11.011226 28.294886
+209.297: Received sensor data: 11.039621 28.395849
+209.773: Received sensor data: 11.112730 28.454071
+210.249: Received sensor data: 11.052576 28.094772
+210.666: Received sensor data: 11.046097 28.102804
+211.142: Received sensor data: 11.046097 28.102804
+211.617: Received sensor data: 11.046097 28.102804
+212.031: Received sensor data: 11.046097 28.102804
+212.458: Received sensor data: 11.046097 28.102804
+212.936: Received sensor data: 11.017794 28.047720
+213.41: Received sensor data: 10.760522 27.922934
+213.886: Received sensor data: 10.775293 27.993464
+214.302: Received sensor data: 10.807569 27.946829
+214.777: Received sensor data: 10.464167 26.847509
+215.192: Received sensor data: 10.282836 26.788656
+215.667: Received sensor data: 10.292974 26.774618
+216.144: Received sensor data: 11.799766 25.659519
+216.565: Received sensor data: 12.176115 25.666759
+217.043: Received sensor data: 12.171474 25.639912
+217.461: Received sensor data: 12.171674 25.673870
+217.937: Received sensor data: 12.171674 25.673870
+218.413: Received sensor data: 12.171674 25.673870
+218.828: Received sensor data: 12.171674 25.673870
+219.303: Received sensor data: 12.961574 25.248068
+219.841: Received sensor data: 12.970172 25.706686
+220.194: Received sensor data: 12.982697 25.646694
+220.669: Received sensor data: 12.963152 25.693729
+221.092: Received sensor data: 12.959822 25.719990
+221.569: Received sensor data: 14.194942 24.475792
+222.044: Received sensor data: 14.161212 24.632412
+222.519: Received sensor data: 14.236671 24.626387
+222.934: Received sensor data: 14.963934 24.421049
+223.409: Received sensor data: 16.014067 23.844313
+223.824: Received sensor data: 16.056768 23.832439
+224.3: Received sensor data: 16.016991 23.843161
+224.723: Received sensor data: 16.040791 23.855373
+225.199: Received sensor data: 14.526552 24.663824
+225.676: Received sensor data: 14.323224 25.102501
+226.091: Received sensor data: 12.335415 27.137177
+226.57: Received sensor data: 12.420671 26.860058
+226.993: Received sensor data: 12.495599 26.853149
+227.47: Received sensor data: 12.563579 27.239557
+227.947: Received sensor data: 12.563579 27.239557
+228.362: Received sensor data: 12.563579 27.239557
+228.838: Received sensor data: 12.563579 27.239557
+229.265: Received sensor data: 12.563579 27.239557
+229.74: Received sensor data: 11.461186 28.023966
+230.217: Received sensor data: 11.452894 28.055737
+230.634: Received sensor data: 11.452894 28.055737
+231.11: Received sensor data: 11.452894 28.055737
+231.587: Received sensor data: 11.452894 28.055737
+232.002: Received sensor data: 11.439051 27.977940
+232.478: Received sensor data: 11.455716 28.031225
+232.954: Received sensor data: 11.443192 28.031231
+233.369: Received sensor data: 11.401968 27.992870
+233.845: Received sensor data: 11.429516 27.992870
+234.269: Received sensor data: 11.453085 27.992619
+234.744: Received sensor data: 11.441773 28.002314
+235.221: Received sensor data: 11.437816 27.992870
+235.637: Received sensor data: 11.434883 27.984085
+236.111: Received sensor data: 11.430723 27.992035
+236.587: Received sensor data: 11.426865 28.023373
+237.001: Received sensor data: 11.439220 27.976315
+237.476: Received sensor data: 11.436219 27.969639
+237.954: Received sensor data: 11.444682 27.960941
+238.369: Received sensor data: 11.444682 27.960941
+238.845: Received sensor data: 11.444682 27.960941
+239.27: Received sensor data: 11.444682 27.960941
+239.743: Received sensor data: 9.639151 29.339252
+240.278: Received sensor data: 8.431988 30.801199
+240.63: Received sensor data: 5.505605 34.219597
+241.108: Received sensor data: 5.111325 34.168663
+241.583: Received sensor data: 4.677658 35.951225
+242.059: Received sensor data: 4.616803 36.210983
+242.473: Received sensor data: 4.616803 36.134003
+242.896: Received sensor data: 4.616803 36.122562
+243.371: Received sensor data: 4.616803 36.137638
+243.849: Received sensor data: 4.616803 36.821770
+244.266: Received sensor data: 4.616803 36.223274
+244.744: Received sensor data: 4.616803 36.184250
+245.22: Received sensor data: 4.616803 49.067532
+245.633: Received sensor data: 4.616803 35.306927
+246.055: Received sensor data: 4.616803 36.054703
+246.528: Received sensor data: 4.616803 36.248375
+247.002: Received sensor data: 4.616803 35.480408
+247.421: Received sensor data: 4.616803 36.392776
+247.896: Received sensor data: 4.616803 36.808689
+248.37: Received sensor data: 4.616803 36.158775
+248.789: Received sensor data: 4.616803 36.504711
+249.266: Received sensor data: 4.616803 36.235725
+249.691: Received sensor data: 4.616803 35.988106
+250.166: Received sensor data: 4.616803 36.058186
+250.642: Received sensor data: 4.616803 36.120266
+251.055: Received sensor data: 4.616803 36.146290
+251.529: Received sensor data: 4.616803 36.196892
+251.95: Received sensor data: 4.616803 35.994110
+252.426: Received sensor data: 4.616803 36.067924
+252.9: Received sensor data: 4.616803 36.121880
+253.316: Received sensor data: 4.616803 36.093384
+253.791: Received sensor data: 4.616803 36.183346
+254.269: Received sensor data: 4.616803 36.171963
+254.683: Received sensor data: 4.616803 35.492741
+255.16: Received sensor data: 4.616803 36.210255
+255.636: Received sensor data: 4.616803 36.111923
+256.052: Received sensor data: 4.616803 36.070381
+256.527: Received sensor data: 4.616803 36.159996
+256.948: Received sensor data: 4.616803 36.120632
+257.424: Received sensor data: 4.616803 35.866737
+257.9: Received sensor data: 4.616803 36.146648
+258.315: Received sensor data: 4.616803 36.171951
+258.79: Received sensor data: 4.616803 36.171772
+259.211: Received sensor data: 4.616803 36.147709
+259.689: Received sensor data: 4.616803 36.097061
+260.105: Received sensor data: 4.616803 35.759331
+260.58: Received sensor data: 4.616803 36.009903
+261.056: Received sensor data: 4.616803 36.186695
+261.473: Received sensor data: 4.616803 35.993050
+261.951: Received sensor data: 4.616803 36.146828
+262.375: Received sensor data: 4.616803 36.134178
+262.85: Received sensor data: 4.616803 36.451965
+263.326: Received sensor data: 4.616803 36.806145
+263.749: Received sensor data: 4.616803 36.070564
+264.225: Received sensor data: 4.616803 36.133476
+264.702: Received sensor data: 4.616803 36.641064
+265.116: Received sensor data: 4.616803 36.341812
+265.591: Received sensor data: 4.616803 36.224682
+266.067: Received sensor data: 4.616803 39.606758
+266.484: Received sensor data: 4.616803 36.214867
+266.962: Received sensor data: 4.616803 36.184971
+267.383: Received sensor data: 4.616803 36.910713
+267.859: Received sensor data: 7.299424 38.389915
+268.274: Received sensor data: 16.129856 120.000000
+268.752: Received sensor data: 21.127937 30.379278
+269.176: Received sensor data: 24.260834 26.005472
+269.652: Received sensor data: 30.487568 19.548082
+270.128: Received sensor data: 32.036770 13.584555
+270.544: Received sensor data: 31.087620 11.976278
+271.02: Received sensor data: 30.677221 11.753623
+271.445: Received sensor data: 30.495605 12.717005
+271.922: Received sensor data: 29.094263 13.017064
+272.398: Received sensor data: 28.391500 15.585887
+272.821: Received sensor data: 26.640308 21.599173
+273.298: Received sensor data: 120.000000 30.209305
+273.713: Received sensor data: 120.000000 120.000000
+274.19: Received sensor data: 120.000000 120.000000
+274.666: Received sensor data: 120.000000 120.000000
+275.083: Received sensor data: 120.000000 120.000000
+275.559: Received sensor data: 120.000000 16.473122
+276.035: Received sensor data: 120.000000 8.235054
+276.45: Received sensor data: 120.000000 8.382376
+276.926: Received sensor data: 120.000000 8.773890
+277.403: Received sensor data: 120.000000 9.792925
+277.819: Received sensor data: 120.000000 9.900648
+278.295: Received sensor data: 120.000000 9.900661
+278.722: Received sensor data: 120.000000 14.187404
+279.198: Received sensor data: 120.000000 15.587530
+279.624: Received sensor data: 28.911549 9.009067
+280.101: Received sensor data: 120.000000 9.008701
+280.578: Received sensor data: 120.000000 11.508340
+280.993: Received sensor data: 103.550781 34.808071
+281.419: Received sensor data: 120.000000 19.287600
+281.896: Received sensor data: 120.000000 16.995823
+282.372: Received sensor data: 120.000000 12.466277
+282.788: Received sensor data: 120.000000 10.098135
+283.265: Received sensor data: 36.858402 6.139203
+283.741: Received sensor data: 22.756273 4.618010
+284.157: Received sensor data: 30.416279 4.804115
+284.694: Received sensor data: 30.949863 4.973689
+285.11: Received sensor data: 28.924511 5.220647
+285.525: Received sensor data: 27.670025 6.322051
+286.002: Received sensor data: 25.430653 8.004404
+286.417: Received sensor data: 23.532135 9.760417
+286.893: Received sensor data: 22.612654 11.398108
+287.316: Received sensor data: 22.680765 12.524109
+287.793: Received sensor data: 25.360167 11.310564
+288.27: Received sensor data: 31.403561 40.676403
+288.685: Received sensor data: 25.505329 120.000000
+289.161: Received sensor data: 29.090204 28.303341
+289.638: Received sensor data: 19.235912 15.747350
+290.054: Received sensor data: 19.111355 25.157104
+290.531: Received sensor data: 25.486820 22.766693
+290.946: Received sensor data: 23.965815 120.000000
+291.422: Received sensor data: 26.685940 120.000000
+291.843: Received sensor data: 20.521027 71.183365
+292.32: Received sensor data: 16.604988 22.331654
+292.796: Received sensor data: 13.379194 24.727543
+293.212: Received sensor data: 13.696493 26.669590
+293.688: Received sensor data: 14.790912 24.789417
+294.115: Received sensor data: 15.948347 23.740784
+294.533: Received sensor data: 17.994190 22.930950
+295.009: Received sensor data: 21.024750 21.105183
+295.485: Received sensor data: 23.515682 18.656944
+296.023: Received sensor data: 23.315506 17.007130
+296.378: Received sensor data: 22.467779 18.945498
+296.854: Received sensor data: 22.682720 26.465836
+297.274: Received sensor data: 20.107260 120.000000
+297.751: Received sensor data: 62.678642 35.777382
+298.228: Received sensor data: 120.000000 26.019794
+298.644: Received sensor data: 120.000000 18.658955
+299.121: Received sensor data: 120.000000 16.187256
+299.597: Received sensor data: 120.000000 15.429823
+300.013: Received sensor data: 120.000000 15.828043
+300.49: Received sensor data: 120.000000 17.654327
+300.91: Received sensor data: 120.000000 18.203363
+301.386: Received sensor data: 120.000000 17.177101
+301.862: Received sensor data: 120.000000 12.650743
+302.277: Received sensor data: 120.000000 12.536058
+302.812: Received sensor data: 26.356266 22.513348
+303.226: Received sensor data: 28.989521 22.337223
+303.655: Received sensor data: 27.721720 23.033131
+304.132: Received sensor data: 28.218328 15.115229
+304.549: Received sensor data: 27.576035 10.181023
+305.026: Received sensor data: 26.508142 7.875358
+305.451: Received sensor data: 29.249348 7.923373
+305.925: Received sensor data: 30.496161 8.128551
+306.401: Received sensor data: 30.562723 8.232918
+306.817: Received sensor data: 30.471416 8.692549
+307.292: Received sensor data: 28.979013 9.704155
+307.72: Received sensor data: 28.123362 11.136211
+308.196: Received sensor data: 25.720387 12.617807
+308.669: Received sensor data: 24.493084 13.820394
+309.087: Received sensor data: 22.496746 15.393196
+309.562: Received sensor data: 21.139561 16.731873
+310.036: Received sensor data: 19.387659 17.492170
+310.451: Received sensor data: 18.290102 18.656185
+310.925: Received sensor data: 16.622454 19.965876
+311.401: Received sensor data: 14.809443 22.178728
+311.817: Received sensor data: 13.788824 23.783295
+312.294: Received sensor data: 13.499845 25.535822
+312.722: Received sensor data: 14.454004 26.718170
+313.198: Received sensor data: 15.061003 26.796051
+313.675: Received sensor data: 15.513707 25.634344
+314.091: Received sensor data: 17.098450 23.228439
+314.569: Received sensor data: 18.031370 21.346838
+314.994: Received sensor data: 17.108080 22.063150
+315.47: Received sensor data: 15.722380 23.470400
+315.948: Received sensor data: 15.119472 23.746010
+316.363: Received sensor data: 13.899279 23.145145
+316.841: Received sensor data: 12.389832 24.776976
+317.267: Received sensor data: 12.483892 27.067860
+317.743: Received sensor data: 12.929662 26.834507
+318.219: Received sensor data: 12.038660 25.860285
+318.637: Received sensor data: 11.531691 28.135492
+319.112: Received sensor data: 13.184105 27.035233
+319.538: Received sensor data: 14.450111 23.303062
+320.014: Received sensor data: 15.747790 58.404308
+320.487: Received sensor data: 18.007683 120.000000
+320.905: Received sensor data: 19.638699 120.000000
+321.38: Received sensor data: 20.537903 120.000000
+321.854: Received sensor data: 20.365074 25.261486
+322.268: Received sensor data: 20.386959 23.786425
+322.745: Received sensor data: 20.579788 23.735300
+323.222: Received sensor data: 120.000000 13.746895
+323.637: Received sensor data: -nan -nan
+324.114: Received sensor data: 120.000000 120.000000
+324.587: Received sensor data: 120.000000 120.000000
+325: Received sensor data: 120.000000 120.000000
+325.476: Received sensor data: 120.000000 120.000000
+325.899: Received sensor data: 120.000000 120.000000
+326.375: Received sensor data: 120.000000 120.000000
+326.851: Received sensor data: 21.900724 94.751686
+327.326: Received sensor data: 23.566116 120.000000
+327.741: Received sensor data: 29.781464 21.982218
+328.215: Received sensor data: 30.730103 20.622404
+328.634: Received sensor data: 30.542912 20.626499
+329.108: Received sensor data: 30.788275 20.443447
+329.581: Received sensor data: 33.757957 18.897379
+329.998: Received sensor data: 31.962788 120.000000
+330.473: Received sensor data: 31.866169 33.195065
+330.95: Received sensor data: 32.138748 47.947258
+331.366: Received sensor data: 120.000000 120.000000
+331.844: Received sensor data: 120.000000 120.000000
+332.268: Received sensor data: 120.000000 120.000000
+332.743: Received sensor data: 35.365398 120.000000
+333.219: Received sensor data: 37.043221 120.000000
+333.635: Received sensor data: 37.579758 120.000000
+334.112: Received sensor data: 35.542057 120.000000
+334.59: Received sensor data: 35.505177 120.000000
+335.005: Received sensor data: 33.859257 71.068893
+335.479: Received sensor data: 27.810064 33.977718
+335.905: Received sensor data: 13.178723 27.794216
+336.442: Received sensor data: 17.593040 24.527500
+336.855: Received sensor data: 19.311909 22.085598
+337.272: Received sensor data: 21.841190 22.091249
+337.749: Received sensor data: 23.505486 23.769835
+338.166: Received sensor data: 23.936712 24.645237
+338.64: Received sensor data: 25.488489 25.967859
+339.116: Received sensor data: 29.515873 27.205948
+339.532: Received sensor data: 35.681515 30.841503
+340.01: Received sensor data: 33.669201 31.960873
+340.431: Received sensor data: 32.186192 120.000000
+340.909: Received sensor data: 33.792274 120.000000
+341.385: Received sensor data: 87.619507 120.000000
+341.859: Received sensor data: 120.000000 115.987755
+342.273: Received sensor data: 120.000000 120.000000
+342.748: Received sensor data: 120.000000 120.000000
+343.161: Received sensor data: 120.000000 120.000000
+343.638: Received sensor data: 120.000000 107.435791
+344.113: Received sensor data: 120.000000 120.000000
+344.528: Received sensor data: 120.000000 120.000000
+345.003: Received sensor data: 120.000000 120.000000
+345.481: Received sensor data: 120.000000 120.000000
+345.898: Received sensor data: 120.000000 120.000000
+346.375: Received sensor data: 120.000000 120.000000
+346.795: Received sensor data: 120.000000 120.000000
+347.27: Received sensor data: 120.000000 120.000000
+347.744: Received sensor data: 120.000000 120.000000
+348.158: Received sensor data: 120.000000 120.000000
+348.633: Received sensor data: 120.000000 120.000000
+349.11: Received sensor data: 120.000000 120.000000
+349.524: Received sensor data: 120.000000 120.000000
+350.001: Received sensor data: 120.000000 120.000000
+350.425: Received sensor data: 120.000000 120.000000
+350.899: Received sensor data: 120.000000 120.000000
+351.375: Received sensor data: 120.000000 120.000000
+351.789: Received sensor data: 120.000000 120.000000
+352.263: Received sensor data: 120.000000 120.000000
+352.686: Received sensor data: 120.000000 120.000000
+353.16: Received sensor data: 120.000000 120.000000
+353.577: Received sensor data: 120.000000 120.000000
+353.992: Received sensor data: 120.000000 120.000000
+354.471: Received sensor data: 120.000000 120.000000
+354.946: Received sensor data: 120.000000 120.000000
+355.422: Received sensor data: 120.000000 120.000000
+355.838: Received sensor data: 120.000000 120.000000
+356.315: Received sensor data: 120.000000 120.000000
+356.729: Received sensor data: 120.000000 120.000000
+357.153: Received sensor data: 120.000000 120.000000
+357.631: Received sensor data: 120.000000 120.000000
+358.107: Received sensor data: 120.000000 120.000000
+358.523: Received sensor data: 120.000000 120.000000
+358.999: Received sensor data: 120.000000 120.000000
+359.418: Received sensor data: 120.000000 120.000000
+359.841: Received sensor data: 120.000000 120.000000
+360.316: Received sensor data: 120.000000 120.000000
+360.789: Received sensor data: 120.000000 120.000000
+361.205: Received sensor data: 120.000000 120.000000
+361.681: Received sensor data: 120.000000 120.000000
+362.156: Received sensor data: 120.000000 120.000000
+362.633: Received sensor data: 120.000000 83.173721
+363.049: Received sensor data: 120.000000 71.056900
+363.526: Received sensor data: 120.000000 120.000000
+364: Received sensor data: 120.000000 120.000000
+364.415: Received sensor data: 120.000000 120.000000
+364.891: Received sensor data: 120.000000 120.000000
+365.316: Received sensor data: 120.000000 120.000000
+365.79: Received sensor data: 120.000000 120.000000
+366.265: Received sensor data: 37.723907 120.000000
+366.678: Received sensor data: 30.356342 120.000000
+367.153: Received sensor data: 30.997997 120.000000
+367.627: Received sensor data: 30.315762 120.000000
+368.041: Received sensor data: 30.260166 45.888634
+368.516: Received sensor data: 31.025747 26.141651
+368.992: Received sensor data: 30.341808 23.843502
+369.407: Received sensor data: 30.280964 23.993429
+369.942: Received sensor data: 31.080196 23.739992
+370.356: Received sensor data: 31.077463 23.751747
+370.77: Received sensor data: 30.557968 26.072872
+371.244: Received sensor data: 30.545568 28.015863
+371.722: Received sensor data: 30.341516 27.961040
+372.138: Received sensor data: 30.130192 27.892191
+372.614: Received sensor data: 30.155645 27.977091
+373.037: Received sensor data: 30.596430 27.676937
+373.46: Received sensor data: 30.606899 27.954599
+373.935: Received sensor data: 30.146564 27.802120
+374.41: Received sensor data: 30.545689 27.924688
+374.883: Received sensor data: 30.552952 27.645161
+375.301: Received sensor data: 30.702053 27.777094
+375.774: Received sensor data: 30.437244 27.930460
+376.251: Received sensor data: 29.765295 27.946320
+376.664: Received sensor data: 29.037365 28.007776
+377.078: Received sensor data: 29.061722 27.915844
+377.562: Received sensor data: 29.485523 28.402594
+378.039: Received sensor data: 29.164963 29.073597
+378.461: Received sensor data: 29.069683 29.340994
+378.938: Received sensor data: 29.107794 29.426697
+379.414: Received sensor data: 29.140335 28.987583
+379.832: Received sensor data: 29.172586 28.965799
+380.309: Received sensor data: 29.137320 28.604870
+380.787: Received sensor data: 29.105551 29.332312
+381.203: Received sensor data: 29.148727 29.291000
+381.681: Received sensor data: 29.307440 28.547430
+382.107: Received sensor data: 28.983301 29.311291
+382.584: Received sensor data: 29.190266 29.315821
+383.061: Received sensor data: 29.285343 29.351904
+383.48: Received sensor data: 29.180899 29.472034
+383.896: Received sensor data: 29.362713 29.342596
+384.373: Received sensor data: 28.276850 30.859020
+384.849: Received sensor data: 27.615490 30.728313
+385.273: Received sensor data: 27.891094 30.711908
+385.749: Received sensor data: 27.540579 30.961649
+386.225: Received sensor data: 28.117990 30.821646
+386.642: Received sensor data: 28.760096 30.878439
+387.058: Received sensor data: 28.760096 30.878439
+387.536: Received sensor data: 28.760096 30.878439
+388.014: Received sensor data: 28.760096 30.878439
+388.435: Received sensor data: 29.260113 29.963802
+388.908: Received sensor data: 29.206249 29.500942
+389.384: Received sensor data: 29.163372 30.624344
+389.799: Received sensor data: 29.094519 30.090008
+390.276: Received sensor data: 28.998133 29.517071
+390.701: Received sensor data: 29.031246 30.259811
+391.238: Received sensor data: 29.147772 30.011423
+391.597: Received sensor data: 28.950275 30.477194
+392.132: Received sensor data: 28.949585 30.001444
+392.548: Received sensor data: 29.022797 29.859264
+392.97: Received sensor data: 29.037628 29.588306
+393.447: Received sensor data: 29.037628 29.588306
+393.921: Received sensor data: 1.482704 1.473916
+394.337: Received sensor data: 1.482704 1.473916
+394.815: Received sensor data: -nan -nan
+395.291: Received sensor data: 1.482704 1.473916
+395.708: Received sensor data: 1.482704 1.473916
+396.186: Received sensor data: 29.036724 29.646494
+396.604: Received sensor data: 28.452185 30.239355
+397.081: Received sensor data: 27.717646 30.230661
+397.497: Received sensor data: 27.735134 29.821787
+397.973: Received sensor data: 6.912126 30.900772
+398.388: Received sensor data: 4.616803 6.195962
+398.866: Received sensor data: 4.616803 6.240951
+399.283: Received sensor data: 4.616803 6.009666
+399.758: Received sensor data: 4.616803 5.624394
+400.233: Received sensor data: 25.190014 120.000000
+400.658: Received sensor data: 24.730881 120.000000
+401.133: Received sensor data: 23.490543 120.000000
+401.608: Received sensor data: 23.828747 120.000000
+402.024: Received sensor data: 24.446962 120.000000
+402.501: Received sensor data: 24.390451 120.000000
+402.917: Received sensor data: 24.481411 120.000000
+403.392: Received sensor data: 24.489666 120.000000
+403.809: Received sensor data: 24.506733 115.987755
+404.286: Received sensor data: 24.418276 120.000000
+404.763: Received sensor data: 28.639151 120.000000
+405.179: Received sensor data: 120.000000 120.000000
+405.656: Received sensor data: 37.626064 120.000000
+406.133: Received sensor data: 37.173527 120.000000
+406.548: Received sensor data: 35.891205 120.000000
+407.025: Received sensor data: 36.283428 120.000000
+407.449: Received sensor data: 36.846214 120.000000
+407.926: Received sensor data: 37.201225 120.000000
+408.402: Received sensor data: 35.350086 120.000000
+408.878: Received sensor data: 33.508747 120.000000
+409.294: Received sensor data: 33.953194 120.000000
+409.769: Received sensor data: 120.000000 120.000000
+410.183: Received sensor data: 120.000000 111.619530
+410.66: Received sensor data: 120.000000 120.000000
+411.135: Received sensor data: 120.000000 120.000000
+411.55: Received sensor data: 120.000000 120.000000
+412.025: Received sensor data: 120.000000 120.000000
+412.501: Received sensor data: 120.000000 120.000000
+412.915: Received sensor data: 120.000000 120.000000
+413.338: Received sensor data: 120.000000 120.000000
+413.814: Received sensor data: 120.000000 120.000000
+414.29: Received sensor data: 120.000000 120.000000
+414.706: Received sensor data: 120.000000 120.000000
+415.183: Received sensor data: 120.000000 120.000000
+415.662: Received sensor data: 120.000000 120.000000
+416.077: Received sensor data: 120.000000 120.000000
+416.555: Received sensor data: 120.000000 120.000000
+416.979: Received sensor data: 120.000000 120.000000
+417.456: Received sensor data: 120.000000 120.000000
+417.878: Received sensor data: 120.000000 120.000000
+418.352: Received sensor data: 120.000000 120.000000
+418.949: Received sensor data: 120.000000 120.000000
+419.242: Received sensor data: 120.000000 120.000000
+419.659: Received sensor data: 120.000000 120.000000
+420.135: Received sensor data: 120.000000 120.000000
+420.611: Received sensor data: 120.000000 120.000000
+421.089: Received sensor data: 120.000000 120.000000
+421.504: Received sensor data: 120.000000 120.000000
+421.98: Received sensor data: 120.000000 120.000000
+422.456: Received sensor data: 120.000000 120.000000
+422.871: Received sensor data: 120.000000 120.000000
+423.348: Received sensor data: 120.000000 120.000000
+423.824: Received sensor data: 120.000000 120.000000
+424.301: Received sensor data: 120.000000 120.000000
+424.718: Received sensor data: 120.000000 120.000000
+425.136: Received sensor data: 120.000000 120.000000
+425.612: Received sensor data: 120.000000 120.000000
+426.088: Received sensor data: 120.000000 120.000000
+426.504: Received sensor data: 120.000000 120.000000
+426.98: Received sensor data: 120.000000 120.000000
+427.456: Received sensor data: 120.000000 120.000000
+427.873: Received sensor data: 120.000000 120.000000
+428.349: Received sensor data: 120.000000 120.000000
+428.824: Received sensor data: 120.000000 120.000000
+429.237: Received sensor data: 120.000000 120.000000
+429.714: Received sensor data: 120.000000 120.000000
+430.14: Received sensor data: 95.145645 28.048321
+430.617: Received sensor data: 120.000000 26.770023
+431.044: Received sensor data: 120.000000 26.484249
+431.52: Received sensor data: 111.960037 26.759903
+431.995: Received sensor data: 111.692528 26.923471
+432.416: Received sensor data: 120.000000 26.753712
+432.891: Received sensor data: 115.942017 26.687323
+433.367: Received sensor data: 115.942017 26.996151
+433.783: Received sensor data: 111.788551 22.641705
+434.259: Received sensor data: 99.646133 20.199566
+434.736: Received sensor data: 95.865311 14.840571
+435.152: Received sensor data: 107.871780 12.932671
+435.629: Received sensor data: 111.899490 8.552334
+436.107: Received sensor data: 38.039268 6.331157
+436.523: Received sensor data: 38.200523 5.819354
+436.999: Received sensor data: 37.528282 6.555759
+437.424: Received sensor data: 34.061317 8.584612
+437.901: Received sensor data: 30.867512 10.115901
+438.32: Received sensor data: 29.149933 10.886552
+438.797: Received sensor data: 27.083431 12.136719
+439.211: Received sensor data: 26.725735 13.981687
+439.689: Received sensor data: 26.332119 16.166456
+440.166: Received sensor data: 26.793484 17.566872
+440.583: Received sensor data: 25.012356 17.862700
+441.059: Received sensor data: 23.481422 18.755236
+441.482: Received sensor data: 23.537899 20.055603
+441.956: Received sensor data: 24.475492 19.249943
+442.431: Received sensor data: 25.441847 17.664082
+442.853: Received sensor data: 27.660854 13.923944
+443.328: Received sensor data: 30.141790 9.848094
+443.806: Received sensor data: 32.247143 7.810297
+444.22: Received sensor data: 31.495005 7.318035
+444.697: Received sensor data: 28.765848 7.844973
+445.173: Received sensor data: 28.273579 9.181889
+445.586: Received sensor data: 26.417044 10.385149
+446.06: Received sensor data: 26.547073 11.729489
+446.537: Received sensor data: 26.994390 12.819815
+446.953: Received sensor data: 26.274298 12.802378
+447.427: Received sensor data: 25.175058 13.292811
+447.841: Received sensor data: 23.582508 15.063725
+448.315: Received sensor data: 22.432911 16.371117
+448.791: Received sensor data: 20.396749 18.695919
+449.207: Received sensor data: 18.515211 20.520603
+449.68: Received sensor data: 19.747372 21.964527
+450.155: Received sensor data: 21.235371 22.988079
+450.57: Received sensor data: 21.942413 22.127760
+451.045: Received sensor data: 22.304850 21.388401
+451.522: Received sensor data: 21.908907 20.778133
+451.939: Received sensor data: 19.880272 20.171474
+452.415: Received sensor data: 20.260424 18.780613
+452.836: Received sensor data: 18.126085 17.676434
+453.313: Received sensor data: 18.088909 17.148438
+453.789: Received sensor data: 17.049973 17.107761
+454.204: Received sensor data: 18.057987 18.849459
+454.68: Received sensor data: 17.978674 20.665819
+455.157: Received sensor data: 16.574869 22.164509
+455.571: Received sensor data: 16.263662 23.063524
+456.047: Received sensor data: 17.619957 22.155304
+456.471: Received sensor data: 19.229273 19.938862
+456.948: Received sensor data: 20.404642 18.139664
+457.423: Received sensor data: 21.982212 17.901735
+457.841: Received sensor data: 22.647104 16.372431
+458.315: Received sensor data: 22.445574 16.247053
+458.73: Received sensor data: 21.943567 17.153440
+459.205: Received sensor data: 20.958557 17.504086
+459.678: Received sensor data: 21.912678 17.622311
+460.092: Received sensor data: 22.717154 17.643852
+460.567: Received sensor data: 25.445190 15.384929
+460.994: Received sensor data: 26.617746 13.000486
+461.471: Received sensor data: 27.522533 12.995111
+461.943: Received sensor data: 30.669941 12.040816
+462.357: Received sensor data: 31.945217 10.574675
+462.833: Received sensor data: 33.955482 9.584587
+463.26: Received sensor data: 33.923992 9.421790
+463.794: Received sensor data: 33.981346 9.847531
+464.149: Received sensor data: 32.270424 11.701834
+464.625: Received sensor data: 32.187439 13.899678
+465.043: Received sensor data: 32.056206 13.899508
+465.519: Received sensor data: 31.958364 13.913815
+465.945: Received sensor data: 31.629459 13.913721
+466.419: Received sensor data: 32.331734 22.356791
+466.895: Received sensor data: 30.456537 33.691242
+467.311: Received sensor data: 35.380520 22.466335
+467.788: Received sensor data: 35.229546 19.513939
+468.324: Received sensor data: 33.609184 19.936922
+468.68: Received sensor data: 33.728035 15.394191
+469.157: Received sensor data: 35.761333 8.729708
+469.634: Received sensor data: 35.590221 7.718072
+470.049: Received sensor data: 35.785942 7.714932
+470.525: Received sensor data: 34.113945 7.617204
+470.95: Received sensor data: 32.575863 7.126812
+471.428: Received sensor data: 32.456532 7.764155
+471.904: Received sensor data: 30.591166 12.478943
+472.318: Received sensor data: 26.398426 17.459146
+472.795: Received sensor data: 23.518850 18.142303
+473.271: Received sensor data: 22.608166 18.740849
+473.686: Received sensor data: 22.527290 18.712631
+474.162: Received sensor data: 22.643217 18.549473
+474.585: Received sensor data: 21.052401 19.326168
+475.063: Received sensor data: 20.539696 19.516699
+475.541: Received sensor data: 19.650906 19.993874
+475.957: Received sensor data: 19.138384 19.986475
+476.436: Received sensor data: 19.146130 20.010216
+476.862: Received sensor data: 18.650787 20.065825
+477.338: Received sensor data: 18.583139 20.202791
+477.813: Received sensor data: 18.260260 19.963858
+478.228: Received sensor data: 16.643847 18.475456
+478.704: Received sensor data: 16.554749 16.887184
+479.181: Received sensor data: 15.890612 17.689331
+479.598: Received sensor data: 16.011364 18.434364
+480.075: Received sensor data: 15.972315 19.275349
+480.497: Received sensor data: 16.585705 20.427160
+480.972: Received sensor data: 16.642624 22.145267
+481.448: Received sensor data: 16.685186 22.956627
+481.864: Received sensor data: 15.972946 24.377331
+482.34: Received sensor data: 15.233038 23.752943
+482.816: Received sensor data: 14.851468 24.401226
+483.232: Received sensor data: 15.230761 24.585672
+483.706: Received sensor data: 15.559451 24.592312
+484.182: Received sensor data: 15.818026 23.826105
+484.597: Received sensor data: 16.043427 22.851360
+485.072: Received sensor data: 16.574415 22.923901
+485.498: Received sensor data: 15.977041 22.924515
+485.976: Received sensor data: 15.890989 23.145786
+486.453: Received sensor data: 15.963598 24.132084
+486.869: Received sensor data: 15.987497 23.841677
+487.344: Received sensor data: 17.068415 24.400476
+487.768: Received sensor data: 18.031122 23.791805
+488.245: Received sensor data: 18.004309 22.918316
+488.722: Received sensor data: 18.122663 22.961679
+489.135: Received sensor data: 17.615274 23.009869
+489.61: Received sensor data: 16.936413 22.846476
+490.087: Received sensor data: 15.919078 23.798431
+490.507: Received sensor data: 14.839190 24.602945
+490.983: Received sensor data: 14.165370 25.641220
+491.402: Received sensor data: 13.155184 25.687628
+491.879: Received sensor data: 12.226217 25.627283
+492.355: Received sensor data: 13.023546 25.655994
+492.77: Received sensor data: 13.521845 25.016876
+493.245: Received sensor data: 14.528951 25.287203
+493.67: Received sensor data: 14.529104 25.217579
+494.148: Received sensor data: 13.758814 26.526239
+494.624: Received sensor data: 13.104849 28.032757
+495.041: Received sensor data: 12.048670 28.048243
+495.516: Received sensor data: 11.227784 29.128269
+495.989: Received sensor data: 10.625976 29.318130
+496.406: Received sensor data: 9.928347 27.945410
+496.881: Received sensor data: 9.735312 28.720800
+497.357: Received sensor data: 9.722490 29.473461
+497.771: Received sensor data: 9.903578 30.821182
+498.247: Received sensor data: 10.084843 31.798588
+498.723: Received sensor data: 10.827302 30.730438
+499.144: Received sensor data: 11.933746 30.181828
+499.619: Received sensor data: 13.030092 29.274881
+500.092: Received sensor data: 13.519363 29.000507
+500.508: Received sensor data: 14.493520 28.031576
+500.983: Received sensor data: 16.038397 26.795145
+501.409: Received sensor data: 16.634050 25.648220
+501.886: Received sensor data: 16.604826 25.740200
+502.359: Received sensor data: 16.566128 24.720188
+502.772: Received sensor data: 16.648481 23.386387
+503.247: Received sensor data: 15.524508 23.706558
+503.724: Received sensor data: 14.720187 24.651373
+504.14: Received sensor data: 13.506334 25.659718
+504.618: Received sensor data: 12.898735 25.633932
+505.036: Received sensor data: 12.679701 26.761911
+505.511: Received sensor data: 12.682732 26.730816
+505.987: Received sensor data: 13.059525 26.795288
+506.401: Received sensor data: 13.833183 25.622192
+506.877: Received sensor data: 14.479380 25.109066
+507.356: Received sensor data: 14.506989 25.131346
+507.771: Received sensor data: 14.511151 24.928036
+508.248: Received sensor data: 14.480000 24.947470
+508.724: Received sensor data: 14.776281 24.208118
+509.138: Received sensor data: 15.184712 23.797554
+509.614: Received sensor data: 15.670080 22.999298
+510.089: Received sensor data: 16.550518 21.925913
+510.502: Received sensor data: 16.276604 20.491991
+510.978: Received sensor data: 15.602951 21.449543
+511.454: Received sensor data: 15.604800 21.392529
+511.874: Received sensor data: 15.533567 20.502020
+512.348: Received sensor data: 15.208839 19.884584
+512.774: Received sensor data: 15.212290 19.379040
+513.248: Received sensor data: 15.201688 18.726612
+513.727: Received sensor data: 120.000000 35.002739
+514.142: Received sensor data: 120.000000 120.000000
+514.618: Received sensor data: 120.000000 120.000000
+515.035: Received sensor data: 120.000000 120.000000
+515.511: Received sensor data: 120.000000 120.000000
+515.987: Received sensor data: 120.000000 120.000000
+516.402: Received sensor data: 115.987755 120.000000
+516.878: Received sensor data: 120.000000 120.000000
+517.303: Received sensor data: 120.000000 120.000000
+517.778: Received sensor data: 120.000000 120.000000
+518.256: Received sensor data: 120.000000 120.000000
+518.672: Received sensor data: 120.000000 120.000000
+519.149: Received sensor data: 120.000000 120.000000
+519.626: Received sensor data: 120.000000 12.176373
+520.043: Received sensor data: 120.000000 16.325775
+520.52: Received sensor data: 120.000000 120.000000
+520.94: Received sensor data: 120.000000 120.000000
+521.415: Received sensor data: 94.292374 120.000000
+521.891: Received sensor data: 120.000000 120.000000
+522.307: Received sensor data: 120.000000 120.000000
+522.784: Received sensor data: 120.000000 120.000000
+523.26: Received sensor data: 120.000000 120.000000
+523.674: Received sensor data: 120.000000 120.000000
+524.089: Received sensor data: 120.000000 120.000000
+524.565: Received sensor data: 120.000000 120.000000
+524.991: Received sensor data: 120.000000 120.000000
+525.468: Received sensor data: 120.000000 120.000000
+525.942: Received sensor data: 120.000000 120.000000
+526.359: Received sensor data: 120.000000 120.000000
+526.835: Received sensor data: 120.000000 120.000000
+527.31: Received sensor data: 120.000000 120.000000
+527.723: Received sensor data: 120.000000 120.000000
+528.198: Received sensor data: 120.000000 120.000000
+528.673: Received sensor data: 120.000000 120.000000
+529.15: Received sensor data: 120.000000 120.000000
+529.565: Received sensor data: 120.000000 120.000000
+529.982: Received sensor data: 120.000000 120.000000
+530.46: Received sensor data: 120.000000 120.000000
+530.934: Received sensor data: 120.000000 120.000000
+531.35: Received sensor data: 9.463289 120.000000
+531.825: Received sensor data: 4.635002 4.616803
+532.248: Received sensor data: 6.381006 5.816292
+532.725: Received sensor data: 5.787026 5.498175
+533.2: Received sensor data: 5.778964 5.742568
+533.615: Received sensor data: 5.749354 5.892669
+534.089: Received sensor data: 5.812261 6.036539
+534.565: Received sensor data: 5.810508 7.346141
+534.981: Received sensor data: 4.995383 7.506750
+535.457: Received sensor data: 5.373358 7.722849
+535.878: Received sensor data: 5.425792 7.809177
+536.355: Received sensor data: 5.686159 7.809134
+536.831: Received sensor data: 5.550017 7.331783
+537.247: Received sensor data: 5.406497 7.604676
+537.725: Received sensor data: 5.146489 7.612131
+538.147: Received sensor data: 5.207502 7.530141
+538.622: Received sensor data: 5.416994 7.612116
+539.099: Received sensor data: 4.717628 7.622897
+539.515: Received sensor data: 4.812209 7.709161
+539.99: Received sensor data: 4.762547 7.814452
+540.528: Received sensor data: 4.937522 7.811788
+540.883: Received sensor data: 5.044235 7.853726
+541.358: Received sensor data: 5.027919 7.729671
+541.777: Received sensor data: 5.502269 7.804545
+542.254: Received sensor data: 5.313682 7.706530
+542.729: Received sensor data: 5.446975 7.618468
+543.145: Received sensor data: 5.623105 7.733533
+543.623: Received sensor data: 5.702287 7.437381
+544.05: Received sensor data: 5.562964 7.524910
+544.525: Received sensor data: 5.197173 7.289618
+545: Received sensor data: 5.376569 7.368386
+545.414: Received sensor data: 5.494802 7.426338
+545.891: Received sensor data: 5.296828 7.254896
+546.366: Received sensor data: 5.595784 7.218915
+546.783: Received sensor data: 5.580703 7.257778
+547.258: Received sensor data: 5.527971 6.960329
+547.683: Received sensor data: 5.577212 7.086555
+548.157: Received sensor data: 5.432356 7.172030
+548.632: Received sensor data: 5.468617 7.130124
+549.046: Received sensor data: 4.616803 6.207546
+549.582: Received sensor data: 4.616803 5.978693
+549.938: Received sensor data: 4.616803 6.042507
+550.412: Received sensor data: 4.616803 6.020419
+550.837: Received sensor data: 5.114591 6.614542
+551.311: Received sensor data: 5.072661 6.698118
+551.785: Received sensor data: 5.145575 6.699546
+552.198: Received sensor data: 5.166205 6.627501
+552.611: Received sensor data: 5.333787 6.558844
+553.087: Received sensor data: 5.265624 6.826770
+553.563: Received sensor data: 5.430701 6.776166
+553.978: Received sensor data: 5.441377 6.850137
+554.455: Received sensor data: 5.478235 6.776155
+554.932: Received sensor data: 5.430031 6.752163
+555.349: Received sensor data: 5.576575 7.056445
+555.824: Received sensor data: 5.714891 7.005223
+556.246: Received sensor data: 5.825018 6.782288
+556.722: Received sensor data: 4.853753 6.867679
+557.198: Received sensor data: 4.973750 6.974243
+557.611: Received sensor data: 5.553973 6.917179
+558.084: Received sensor data: 5.004652 6.779204
+558.559: Received sensor data: 4.909705 6.842603
+558.972: Received sensor data: 5.064836 6.840554
+559.448: Received sensor data: 5.237708 6.917717
+559.864: Received sensor data: 4.691085 7.041459
+560.34: Received sensor data: 5.236102 7.249734
+560.818: Received sensor data: 5.220377 7.190392
+561.233: Received sensor data: 5.576528 7.172029
+561.71: Received sensor data: 5.691673 7.185714
+562.134: Received sensor data: 5.724072 7.219547
+562.61: Received sensor data: 5.706565 7.249149
+563.086: Received sensor data: 5.733802 7.108927
+563.5: Received sensor data: 5.705468 7.022684
+563.976: Received sensor data: 5.677228 7.169195
+564.452: Received sensor data: 5.683653 7.215002
+564.865: Received sensor data: 5.730951 7.172666
+565.342: Received sensor data: 5.681139 7.251049
+565.816: Received sensor data: 5.708395 7.322698
+566.23: Received sensor data: 5.737841 7.327390
+566.706: Received sensor data: 5.771981 7.257205
+567.182: Received sensor data: 5.846523 7.253750
+567.599: Received sensor data: 5.839688 7.248594
+568.074: Received sensor data: 5.849172 7.250274
+568.549: Received sensor data: 5.798027 7.253177
+568.963: Received sensor data: 5.785527 7.254312
+569.44: Received sensor data: 5.856564 7.340843
+569.865: Received sensor data: 5.783140 7.433598
+570.342: Received sensor data: 46.701572 6.722071
+570.818: Received sensor data: 120.000000 6.680099
+571.234: Received sensor data: 120.000000 115.927223
+571.711: Received sensor data: 120.000000 36.369564
+588.177: It's been 16487.45ms since last heard from other end. connectionLostTimeout=15000.00ms, so closing connection.
+588.181: MessageConnection::Close(500 msecs): Disconnecting. connectionState = ConnectionClosed, readOpen:true, writeOpen:true.
+588.181: MessageConnection::Close: Closed connection to 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:40064, peer: 139.78.87.89:4101, socket: 4, this: 0x861260).
+588.227: NetworkWorkerThread quit.
+588.237: Thread::Stop() called.
+588.237: Deleted a NetworkWorkerThread. There are now 0 worker threads left.
+588.237: Socket::Close(): Closing socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:40064, peer: 139.78.87.89:4101, socket: 4, this: 0x861260).
+588.237: Socket::Close(): Socket shutdown(SD_BOTH) succeeded on socket 139.78.87.89:4101 (UDP, connected=true, readOpen: true, writeOpen: true, maxSendSize=1400, sock: 10.205.238.51:40064, peer: 139.78.87.89:4101, socket: 4, this: 0x861260).
+588.237: Network::DeleteSocket: Closed socket 0x861260.
+nathan@IceRaptor:~/Projects/Mercury-2016/Headquarters/Debug$ 
+

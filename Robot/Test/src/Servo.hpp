@@ -48,50 +48,50 @@ public:
 			printf("ERROR!!!\n\n\n");
 		}
 	}
-	void Set(float v)
-	{
-		Set((signed char) (v * 127));
-	}
-	void Set(int i)
-	{
-		Set((signed char)i);
-	}
-	void Set(signed char v)
-	{
-		value = v;
-//		wiringPiI2CWrite(wiringFD, value);
-////		wiringPiI2CWriteReg8(wiringFD, 2, v);
-//		printf("I Set Servo: %d\n", v);
-//		unsigned char test[2] ={0};
-		int test = v;//0x0f0f0fff;
-		int fd,e;
-		int dID = 0x0c;
-		// data to be sent
-//		test[0]=0x01;
-//		test[1]=0xff;
-
-		if((fd=wiringPiI2CSetup(dID))==-1)
-		printf("error opening i2c channel\n\r");
-
-		if((e= wiringPiI2CWrite(fd,test))==-1){
-		printf("error writing to slave %x EC: %d\n\r", dID, errno);
-		}else{
-
-		printf("writing hex:0x%i size:%i\n\r",test,sizeof(test));
-		}
-//		sleep(1);
+//	void Set(float v)
+//	{
+//		Set((signed char) (v * 127));
+//	}
+//	void Set(int i)
+//	{
+//		Set((signed char)i);
+//	}
+//	void Set(signed char v)
+//	{
 //		value = v;
-//		I2C::Write(0x0c,v);
-	}
-	signed char Get() const
-	{
-		return value;
-	}
-
-	void Update()
-	{
-
-	}
+////		wiringPiI2CWrite(wiringFD, value);
+//////		wiringPiI2CWriteReg8(wiringFD, 2, v);
+////		printf("I Set Servo: %d\n", v);
+////		unsigned char test[2] ={0};
+//		int test = v;//0x0f0f0fff;
+//		int fd,e;
+//		int dID = 0x0c;
+//		// data to be sent
+////		test[0]=0x01;
+////		test[1]=0xff;
+//
+//		if((fd=wiringPiI2CSetup(dID))==-1)
+//		printf("error opening i2c channel\n\r");
+//
+//		if((e= wiringPiI2CWrite(fd,test))==-1){
+//		printf("error writing to slave %x EC: %d\n\r", dID, errno);
+//		}else{
+//
+//		printf("writing hex:0x%i size:%i\n\r",test,sizeof(test));
+//		}
+////		sleep(1);
+////		value = v;
+////		I2C::Write(0x0c,v);
+//	}
+//	signed char Get() const
+//	{
+//		return value;
+//	}
+//
+//	void Update()
+//	{
+//
+//	}
 
 //	signed char value;
 	int value;

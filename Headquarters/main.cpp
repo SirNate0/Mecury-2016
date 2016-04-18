@@ -181,7 +181,7 @@ int main(int argc, char **argv)
 
 //    ServerListener serverListener;
 	// Start listening on a port.
-	const unsigned short cServerPort = 4321;//
+	const unsigned short cServerPort = 4101;//1234;//4321;//
 	   Network network;
 	   MessageListener listener;
 	   SensorHandler sensors;
@@ -226,7 +226,8 @@ int main(int argc, char **argv)
 				if (nm->data )// && nm->Size() == sizeof(Data))
 				{
 					Data d = *((Data *) nm->data);
-					LOGUSER("Received sensor data: %f %f %f %f", d.l, d.r, d.b, d.f);
+//					LOGUSER("Received sensor data: %f %f %f %f", d.l, d.r, d.b, d.f);
+					LOGUSER("Received sensor data: %f %f", d.r, d.l);
 					FILE* f = fopen("out.txt","w");
 #define GUI(str) fprintf(f,"%s\n",str)
 					GUI("Connected");
